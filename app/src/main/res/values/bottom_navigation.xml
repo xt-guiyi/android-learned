@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigation"  parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@android:color/holo_orange_light</item>
+    </style>
+</resources>
