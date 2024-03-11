@@ -25,20 +25,14 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentHomeBinding.inflate(inflater,container,false)
-        Log.i("test","homeLayoutInfoList[0].title")
-
-//        initRecycleView(binding)
-        Log.i("test","homeLayoutInfoList[0].title")
-
-        binding.homeRecycleList.adapter = HomeFragmentAdapter(mutableListOf(HomeLayoutInfo("1","2")))
+        initRecycleView(binding)
         return binding.root
 
     }
 
     fun initRecycleView(binding: FragmentHomeBinding) {
-//        binding.homeRecycleList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
-
-        binding.homeRecycleList.adapter = HomeFragmentAdapter(mutableListOf(HomeLayoutInfo("1","2")))
+        binding.homeRecycleList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+        binding.homeRecycleList.adapter = HomeFragmentAdapter(HomeDataSource.loadRecycleInfoList())
     }
 
 }
