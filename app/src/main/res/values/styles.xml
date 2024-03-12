@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- toolbar文字样式-->
+    <style name="ToolbarTitleStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="ToolbarSubTitleStyle" parent="Widget.Material3.Toolbar">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 底部导航栏主题样式    -->
+    <style name="BottomNavigationStyle"  parent="Theme.MaterialComponents.DayNight">
+        <item name="colorPrimary">@color/primary_color</item>
+    </style>
+</resources>

@@ -25,7 +25,7 @@
         android:id="@+id/bottom_nav_view"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:theme="@style/BottomNavigation"
+        android:theme="@style/BottomNavigationStyle"
         app:itemBackground="@color/white"
         app:itemPaddingBottom="10dp"
         app:itemPaddingTop="10dp"

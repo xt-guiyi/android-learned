@@ -7,30 +7,25 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.androidlearned.ui.HomeFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
-        <action
-            android:id="@+id/action_homeFragment_to_studyFragFragment"
-            app:destination="@id/studyFragFragment"
-            app:enterAnim="@anim/nav_default_enter_anim"
-            app:exitAnim="@anim/nav_default_exit_anim"
-            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
-            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+<!--        <action-->
+<!--            android:id="@+id/action_homeFragment_to_studyFragFragment"-->
+<!--            app:destination="@id/studyFragFragment"-->
+<!--            app:enterAnim="@anim/nav_default_enter_anim"-->
+<!--            app:exitAnim="@anim/nav_default_exit_anim"-->
+<!--            app:popEnterAnim="@anim/nav_default_pop_enter_anim"-->
+<!--            app:popExitAnim="@anim/nav_default_pop_exit_anim" />-->
     </fragment>
     <fragment
         android:id="@+id/centerFragment"
-        android:name="com.example.androidlearned.ui.CenterFragment"
+        android:name="com.example.androidlearned.ui.center.fragments.CenterFragment"
         android:label="fragment_center"
         tools:layout="@layout/fragment_center" />
     <fragment
         android:id="@+id/meFragment"
-        android:name="com.example.androidlearned.ui.MeFragment"
+        android:name="com.example.androidlearned.ui.me.fragments.MeFragment"
         android:label="fragment_me"
         tools:layout="@layout/fragment_me" />
-    <fragment
-        android:id="@+id/studyFragFragment"
-        android:name="com.example.androidlearned.ui.StudyFragFragment"
-        android:label="fragment_study_frag"
-        tools:layout="@layout/fragment_study_frag" />
 </navigation>
