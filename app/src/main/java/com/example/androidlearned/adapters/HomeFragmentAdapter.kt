@@ -5,14 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlearned.domain.HomeLayoutInfo
 import com.example.androidlearned.R
 
-class HomeFragmentAdapter(val homeLayoutInfoList: MutableList<HomeLayoutInfo>): RecyclerView.Adapter<HomeFragmentAdapter.ViewHolder> ()
+class HomeFragmentAdapter(private val homeLayoutInfoList: MutableList<HomeLayoutInfo>):AdapterHelper<HomeLayoutInfo>, RecyclerView.Adapter<HomeFragmentAdapter.ViewHolder> ()
 {
-
+    override lateinit var mClickCall: (HomeLayoutInfo,View) -> Unit
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.i("test","onCreateViewHolder")
 
@@ -21,10 +20,11 @@ class HomeFragmentAdapter(val homeLayoutInfoList: MutableList<HomeLayoutInfo>): 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.title.text  = homeLayoutInfoList[position].title
-        holder.description.text = homeLayoutInfoList[position].description
+        val layoutInfo = homeLayoutInfoList[position]
+        holder.title.text  = layoutInfo.title
+        holder.description.text = layoutInfo.description
         holder.itemView.setOnClickListener {
-            Toast.makeText(it.context, "标题为:${homeLayoutInfoList[position].title}", Toast.LENGTH_SHORT).show()
+            mClickCall.invoke(layoutInfo,it)
         }
     }
 
@@ -39,5 +39,9 @@ class HomeFragmentAdapter(val homeLayoutInfoList: MutableList<HomeLayoutInfo>): 
             title = itemView.findViewById(R.id.title)
             description = itemView.findViewById(R.id.description)
         }
+    }
+
+     public override fun setOnClickListener(clickCall: (HomeLayoutInfo,View) -> Unit ) {
+        mClickCall = clickCall
     }
 }

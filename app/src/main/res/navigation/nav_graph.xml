@@ -17,6 +17,14 @@
 <!--            app:exitAnim="@anim/nav_default_exit_anim"-->
 <!--            app:popEnterAnim="@anim/nav_default_pop_enter_anim"-->
 <!--            app:popExitAnim="@anim/nav_default_pop_exit_anim" />-->
+        <action
+            android:id="@+id/action_homeFragment_to_coordinationLayout1Activity"
+            app:destination="@id/coordinationLayout1Activity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <fragment
         android:id="@+id/centerFragment"
@@ -28,4 +36,9 @@
         android:name="com.example.androidlearned.ui.me.fragments.MeFragment"
         android:label="fragment_me"
         tools:layout="@layout/fragment_me" />
+    <activity
+        android:id="@+id/coordinationLayout1Activity"
+        android:name="com.example.androidlearned.ui.home.activitys.CoordinationLayout1Activity"
+        android:label="activity_coordination_layout1"
+        tools:layout="@layout/activity_coordination_layout1" />
 </navigation>
