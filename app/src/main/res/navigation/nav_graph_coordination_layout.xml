@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_coordination_layout"
+    app:startDestination="@id/coordinationLayoutFragment">
+    <fragment
+        android:id="@+id/coordinationLayoutFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutFragment"
+        android:label="fragment_coordination_layout"
+        tools:layout="@layout/fragment_coordination_layout" >
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample1Fragment"
+            app:destination="@id/coordinationLayoutExample1Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coordinationLayoutExample1Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample1Fragment"
+        android:label="fragment_coordination_layout_example1"
+        tools:layout="@layout/fragment_coordination_layout_example1" />
+</navigation>

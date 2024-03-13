@@ -3,13 +3,13 @@ package com.example.androidlearned.ui.home.activitys
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.ActivityNavigator
-import com.example.androidlearned.databinding.ActivityCoordinationLayout1Binding
+import com.example.androidlearned.databinding.ActivityCoordinationLayoutBinding
 
-class CoordinationLayout1Activity : AppCompatActivity() {
-    lateinit var binding: ActivityCoordinationLayout1Binding
+class CoordinationLayoutActivity : AppCompatActivity() {
+    lateinit var binding: ActivityCoordinationLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityCoordinationLayout1Binding.inflate(layoutInflater,null,false)
+        binding = ActivityCoordinationLayoutBinding.inflate(layoutInflater,null,false)
         setContentView(binding.root)
     }
 

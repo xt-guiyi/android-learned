@@ -38,7 +38,7 @@
         tools:layout="@layout/fragment_me" />
     <activity
         android:id="@+id/coordinationLayout1Activity"
-        android:name="com.example.androidlearned.ui.home.activitys.CoordinationLayout1Activity"
+        android:name="com.example.androidlearned.ui.home.activitys.CoordinationLayoutActivity"
         android:label="activity_coordination_layout1"
-        tools:layout="@layout/activity_coordination_layout1" />
+        tools:layout="@layout/activity_coordination_layout" />
 </navigation>

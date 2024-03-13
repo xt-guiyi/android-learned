@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="31">
         <activity
-            android:name=".ui.home.activitys.CoordinationLayout1Activity"
+            android:name=".ui.home.activitys.CoordinationLayoutActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
