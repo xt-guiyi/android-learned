@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.example.androidlearned.R
+import com.example.androidlearned.databinding.FragmentCoordinationLayoutBinding
 
 
 class CoordinationLayoutFragment : Fragment() {
-
+    private lateinit var binding: FragmentCoordinationLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -19,7 +21,16 @@ class CoordinationLayoutFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_coordination_layout, container, false)
+        binding = FragmentCoordinationLayoutBinding.inflate(inflater,container,false)
+        initListener()
+        return binding.root
+    }
+
+    private fun initListener() {
+        binding.button1.setOnClickListener {
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample1Fragment)
+        }
+
     }
 
 }

@@ -6,7 +6,7 @@ import androidx.navigation.ActivityNavigator
 import com.example.androidlearned.databinding.ActivityCoordinationLayoutBinding
 
 class CoordinationLayoutActivity : AppCompatActivity() {
-    lateinit var binding: ActivityCoordinationLayoutBinding
+    private lateinit var binding: ActivityCoordinationLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCoordinationLayoutBinding.inflate(layoutInflater,null,false)
