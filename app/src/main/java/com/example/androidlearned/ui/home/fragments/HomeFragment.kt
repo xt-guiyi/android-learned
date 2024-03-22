@@ -30,16 +30,17 @@ class HomeFragment : Fragment() {
     }
 
 
-    /*
-    * 初始化列表
-    * */
+    /**
+     * 初始化列表
+     * */
     private fun initRecycleView(binding: FragmentHomeBinding) {
         binding.homeRecycleList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
         val adapter = HomeFragmentAdapter(HomeDataSource.loadRecycleInfoList())
         adapter.setOnClickListener { layoutInfo,view ->
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             when(layoutInfo.id) {
-                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayout1Activity)
+                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
+                2 -> view.findNavController().navigate(R.id.action_homeFragment_to_buttonWidgetActivity)
             }
         }
         binding.homeRecycleList.adapter = adapter

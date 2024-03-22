@@ -4,14 +4,20 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import androidx.navigation.ActivityNavigator
+import androidx.navigation.fragment.NavHostFragment
+import com.example.androidlearned.R
+import com.example.androidlearned.customNavgination.FragmentNavigator
 import com.example.androidlearned.databinding.ActivityCoordinationLayoutBinding
+import com.example.androidlearned.utils.CommonCode
 
 class CoordinationLayoutActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCoordinationLayoutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCoordinationLayoutBinding.inflate(layoutInflater,null,false)
+        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_cla,R.navigation.nav_graph_home_coordination_layout)
         setContentView(binding.root)
     }
 

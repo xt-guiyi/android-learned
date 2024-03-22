@@ -10,16 +10,17 @@
         android:name="com.example.androidlearned.ui.home.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home">
-<!--        <action-->
-<!--            android:id="@+id/action_homeFragment_to_studyFragFragment"-->
-<!--            app:destination="@id/studyFragFragment"-->
-<!--            app:enterAnim="@anim/nav_default_enter_anim"-->
-<!--            app:exitAnim="@anim/nav_default_exit_anim"-->
-<!--            app:popEnterAnim="@anim/nav_default_pop_enter_anim"-->
-<!--            app:popExitAnim="@anim/nav_default_pop_exit_anim" />-->
         <action
-            android:id="@+id/action_homeFragment_to_coordinationLayout1Activity"
-            app:destination="@id/coordinationLayout1Activity"
+            android:id="@+id/action_homeFragment_to_coordinationLayoutActivity"
+            app:destination="@id/coordinationLayoutActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_buttonWidgetActivity"
+            app:destination="@id/buttonWidgetActivity"
             app:enterAnim="@anim/slider_in_right_enter"
             app:exitAnim="@anim/slider_out_left_exit"
             app:launchSingleTop="false"
@@ -37,8 +38,13 @@
         android:label="fragment_me"
         tools:layout="@layout/fragment_me" />
     <activity
-        android:id="@+id/coordinationLayout1Activity"
+        android:id="@+id/coordinationLayoutActivity"
         android:name="com.example.androidlearned.ui.home.activitys.CoordinationLayoutActivity"
         android:label="activity_coordination_layout1"
         tools:layout="@layout/activity_coordination_layout" />
+    <activity
+        android:id="@+id/buttonWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.ButtonWidgetActivity"
+        android:label="activity_button_widget"
+        tools:layout="@layout/activity_button_widget" />
 </navigation>
