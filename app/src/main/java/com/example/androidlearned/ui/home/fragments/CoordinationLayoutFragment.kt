@@ -30,7 +30,24 @@ class CoordinationLayoutFragment : Fragment() {
         binding.button1.setOnClickListener {
             it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample1Fragment)
         }
-
+        binding.button2.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample2Fragment)
+        }
+        binding.button3.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample3Fragment)
+        }
+        binding.button4.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample4Fragment)
+        }
+        binding.advanceButton1.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample5Fragment)
+        }
+        binding.advanceButton2.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample6Fragment)
+        }
+        binding.totalButton1.setOnClickListener{
+            it.findNavController().navigate(R.id.action_coordinationLayoutFragment_to_coordinationLayoutExample7Fragment)
+        }
     }
 
 }

@@ -19,14 +19,15 @@
             android:textSize="22sp"
             android:textColor="@color/white"
             android:textStyle="bold"
-            app:layout_scrollFlags="scroll|enterAlways"
+            android:minHeight="50dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
             />
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="基础示例1"
+            app:title="基础示例3"
             app:titleCentered="true"
-            app:subtitle="scrollFlags = enterAlways"
+            app:subtitle="scrollFlags = exitUntilCollapsed"
             app:subtitleCentered="true"
             android:background="@color/primary_color"/>
     </com.google.android.material.appbar.AppBarLayout>

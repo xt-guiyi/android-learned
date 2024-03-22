@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.home.fragments.CoordinationLayoutExample1Fragment">
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/coordination_layout_apb_7">
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="200dp"
+           android:scaleType="centerCrop"
+           app:layout_scrollFlags="scroll|snap"
+           android:src="@drawable/lbxx"/>
+      <com.google.android.material.tabs.TabLayout
+          android:background="@drawable/tab_background_7"
+          android:layout_width="match_parent"
+          android:elevation="2dp"
+          android:layout_height="50dp"
+          app:tabIndicatorFullWidth="true"
+          app:tabRippleColor="@color/white"
+          app:tabMode="auto"
+          android:id="@+id/coordination_layout_tab_7"/>
+   </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/coordination_layout_rcv_7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="0dp"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -16,6 +16,48 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample2Fragment"
+            app:destination="@id/coordinationLayoutExample2Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample4Fragment"
+            app:destination="@id/coordinationLayoutExample4Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample5Fragment"
+            app:destination="@id/coordinationLayoutExample5Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample3Fragment"
+            app:destination="@id/coordinationLayoutExample3Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample6Fragment"
+            app:destination="@id/coordinationLayoutExample6Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_coordinationLayoutFragment_to_coordinationLayoutExample7Fragment"
+            app:destination="@id/coordinationLayoutExample7Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
     </fragment>
 
     <fragment
@@ -23,4 +65,35 @@
         android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample1Fragment"
         android:label="fragment_coordination_layout_example1"
         tools:layout="@layout/fragment_coordination_layout_example1" />
+    <fragment
+        android:id="@+id/coordinationLayoutExample2Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample2Fragment"
+        android:label="fragment_coordination_layout_example2"
+        tools:layout="@layout/fragment_coordination_layout_example2" />
+    <fragment
+        android:id="@+id/coordinationLayoutExample3Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample3Fragment"
+        android:label="CoordinationLayoutExample3Fragment"
+        tools:layout="@layout/fragment_coordination_layout_example3" />
+    <fragment
+        android:id="@+id/coordinationLayoutExample4Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample4Fragment"
+        android:label="CoordinationLayoutExample4Fragment"
+        tools:layout="@layout/fragment_coordination_layout_example4"/>
+    <fragment
+        android:id="@+id/coordinationLayoutExample5Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample5Fragment"
+        android:label="CoordinationLayoutExample5Fragment"
+        tools:layout="@layout/fragment_coordination_layout_example5"/>
+    <fragment
+        android:id="@+id/coordinationLayoutExample6Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample6Fragment"
+        android:label="CoordinationLayoutExample6Fragment"
+        tools:layout="@layout/fragment_coordination_layout_example6"/>
+    <fragment
+        android:id="@+id/coordinationLayoutExample7Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.CoordinationLayoutExample7Fragment"
+        android:label="CoordinationLayoutExample7Fragment"
+        tools:layout="@layout/fragment_coordination_layout_example7"/>
+    />
 </navigation>

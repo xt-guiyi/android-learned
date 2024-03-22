@@ -6,21 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.androidlearned.R
-import com.example.androidlearned.databinding.FragmentCoordinationLayoutExample1Binding
+import com.example.androidlearned.databinding.FragmentCoordinationLayoutExample5Binding
 
-
-class CoordinationLayoutExample1Fragment : Fragment() {
-    lateinit var binding: FragmentCoordinationLayoutExample1Binding
-
+class CoordinationLayoutExample5Fragment : Fragment() {
+    lateinit var binding:FragmentCoordinationLayoutExample5Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentCoordinationLayoutExample1Binding.inflate(inflater,container,false)
+        binding = FragmentCoordinationLayoutExample5Binding.inflate(inflater,container,false)
         return binding.root
     }
+
 }

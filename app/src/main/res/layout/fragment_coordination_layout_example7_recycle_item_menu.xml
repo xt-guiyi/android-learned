@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/launcher_round" />
+
+    <TextView
+        android:id="@+id/coordination_layout_example7_rcy_item_menu_title"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:gravity="left|center"
+        android:text="TextView"
+        android:textSize="14sp" />
+</LinearLayout>

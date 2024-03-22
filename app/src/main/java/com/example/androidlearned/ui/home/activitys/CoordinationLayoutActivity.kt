@@ -1,7 +1,9 @@
 package com.example.androidlearned.ui.home.activitys
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.navigation.ActivityNavigator
 import com.example.androidlearned.databinding.ActivityCoordinationLayoutBinding
 
