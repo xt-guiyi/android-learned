@@ -41,6 +41,7 @@ class HomeFragment : Fragment() {
             when(layoutInfo.id) {
                 1 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
                 2 -> view.findNavController().navigate(R.id.action_homeFragment_to_buttonWidgetActivity)
+                4 -> view.findNavController().navigate(R.id.action_homeFragment_to_imageViewWidgetActivity)
             }
         }
         binding.homeRecycleList.adapter = adapter
