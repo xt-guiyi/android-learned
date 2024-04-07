@@ -30,16 +30,6 @@
             android:textColor="@color/blue"
             android:textSize="16sp"/>
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_gravity="center"
-            android:text="这是一段使用阿里巴巴字体的文本"
-            android:textColor="@color/blue"
-            android:textSize="16sp"/>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
