@@ -27,8 +27,8 @@
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
         <action
-            android:id="@+id/action_homeFragment_to_textviewWidgetActivity"
-            app:destination="@id/textviewWidgetActivity"
+            android:id="@+id/action_homeFragment_to_textViewWidgetActivity"
+            app:destination="@id/textViewWidgetActivity"
             app:enterAnim="@anim/slider_in_right_enter"
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
@@ -62,10 +62,10 @@
         android:label="activity_button_widget"
         tools:layout="@layout/activity_button_widget" />
     <activity
-        android:id="@+id/textviewWidgetActivity"
-        android:name="com.example.androidlearned.ui.home.activitys.TextviewWidgetActivity"
+        android:id="@+id/textViewWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.TextViewWidgetActivity"
         android:label="activity_textview_widget"
-        tools:layout="@layout/activity_textview_widget" />
+        tools:layout="@layout/activity_text_view_widget" />
     <activity
         android:id="@+id/imageViewWidgetActivity"
         android:name="com.example.androidlearned.ui.home.activitys.ImageViewWidgetActivity"

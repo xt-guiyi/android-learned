@@ -16,7 +16,7 @@
             android:name=".ui.home.activitys.ImageViewWidgetActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.activitys.TextviewWidgetActivity"
+            android:name=".ui.home.activitys.TextViewWidgetActivity"
             android:exported="false" />
         <activity
             android:name=".ui.home.activitys.ButtonWidgetActivity"
