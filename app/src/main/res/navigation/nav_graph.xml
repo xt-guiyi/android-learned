@@ -33,6 +33,13 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_imageViewWidgetActivity"
+            app:destination="@id/imageViewWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <fragment
         android:id="@+id/centerFragment"
@@ -59,4 +66,11 @@
         android:name="com.example.androidlearned.ui.home.activitys.TextviewWidgetActivity"
         android:label="activity_textview_widget"
         tools:layout="@layout/activity_textview_widget" />
+    <activity
+        android:id="@+id/imageViewWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.ImageViewWidgetActivity"
+        android:label="activity_image_view_widget"
+        tools:layout="@layout/activity_image_view_widget"  />
+
+        
 </navigation>

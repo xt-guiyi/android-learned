@@ -63,9 +63,49 @@
         <item name="cornerSize">2dp</item>
     </style>
 
-    <!-- 字体大小 -->
+    <!-- 按钮字体大小 -->
     <style name="ButtonTextAppearance" >
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">22sp</item>
+    </style>
+    
+    <style name="RoundCornerStyle" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="RoundCornerStyle2" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="RoundCornerStyle3" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeTopLeft">50%</item>
+    </style>
+
+    <style name="RoundCornerStyle4" >
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeTopLeft">50%</item>
+    </style>
+
+    <style name="CutCornerStyle" >
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="CutCornerStyle1" >
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="CutCornerStyle2" >
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSizeTopRight">50%</item>
+        <item name="cornerSizeTopLeft">50%</item>
+        <item name="cornerSizeBottomRight">50%</item>
+        <item name="cornerSizeBottomLeft">50%</item>
     </style>
 </resources>
