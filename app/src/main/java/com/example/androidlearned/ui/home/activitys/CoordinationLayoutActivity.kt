@@ -17,8 +17,8 @@ class CoordinationLayoutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCoordinationLayoutBinding.inflate(layoutInflater,null,false)
-        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_cla,R.navigation.nav_graph_home_coordination_layout)
         setContentView(binding.root)
+        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_cla,R.navigation.nav_graph_home_coordination_layout)
     }
 
     /**

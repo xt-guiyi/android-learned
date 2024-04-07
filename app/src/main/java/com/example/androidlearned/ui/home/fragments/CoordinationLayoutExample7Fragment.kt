@@ -158,6 +158,8 @@ class CoordinationLayoutExample7Fragment : Fragment() {
                     if(position!=0) outRect.top = 60;
                 }
             }
+
+
         })
         // 监听滚动事件
         rcv_7.addOnScrollListener(object: RecyclerView.OnScrollListener() {

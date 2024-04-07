@@ -12,4 +12,60 @@
     <style name="BottomNavigationStyle"  parent="Theme.MaterialComponents.DayNight">
         <item name="colorPrimary">@color/primary_color</item>
     </style>
+
+    <!--只有icon的toggleButtonGroups样式-->
+    <style name="Widget.App.Button.OutLineButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <!-- 配置基本按钮的形状   -->
+    <style name="Widget.App.Button" parent="Widget.Material3.Button" >
+<!--        <item name="enforceTextAppearance">false</item>-->
+<!--        <item name="android:maxWidth">@dimen/m3_btn_max_width</item>-->
+<!--        <item name="android:paddingLeft">@dimen/m3_btn_padding_left</item>-->
+<!--        <item name="android:paddingRight">@dimen/m3_btn_padding_right</item>-->
+<!--        <item name="android:paddingTop">@dimen/m3_btn_padding_top</item>-->
+<!--        <item name="android:paddingBottom">@dimen/m3_btn_padding_bottom</item>-->
+<!--        <item name="android:insetTop">@dimen/m3_btn_inset</item>-->
+<!--        <item name="android:insetBottom">@dimen/m3_btn_inset</item>-->
+<!--        <item name="android:textAppearance">@macro/m3_comp_filled_button_label_text_type</item>-->
+        <item name="shapeAppearance">@style/ShapeAppearance.M3.Sys.Shape.Corner.Medium</item>
+<!--        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.Button</item>-->
+<!--        <item name="android:stateListAnimator" ns1:ignore="NewApi">@animator/m3_btn_state_list_anim</item>-->
+        <item name="elevation">20dp</item>
+<!--        <item name="android:textColor">@color/m3_button_foreground_color_selector</item>-->
+<!--        <item name="iconTint">@color/m3_button_foreground_color_selector</item>-->
+<!--        <item name="iconSize">@dimen/m3_comp_filled_button_with_icon_icon_size</item>-->
+        <item name="backgroundTint">@color/blue</item>
+<!--        <item name="rippleColor">@color/m3_button_ripple_color_selector</item>-->
+    </style>
+
+    <!-- 配置outline按钮的形状   -->
+    <style name="Widget.App.OutlinedButton" parent="Widget.Material3.Button.OutlinedButton" >
+        <item name="android:paddingLeft">@dimen/m3_btn_padding_left</item>
+        <item name="android:paddingRight">@dimen/m3_btn_padding_right</item>
+        <item name="strokeColor">@color/blue</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:textColor">@color/design_default_color_secondary</item>
+        <item name="android:textAppearance">@style/ButtonTextAppearance</item>
+    </style>
+
+
+    <!-- 按钮形状样式 -->
+    <style name="ShapeAppearance.APP.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">2dp</item>
+    </style>
+
+    <!-- 字体大小 -->
+    <style name="ButtonTextAppearance" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+    </style>
 </resources>

@@ -1,19 +1,30 @@
 package com.example.androidlearned.ui.home.activitys
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.ActivityNavigator
 import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivityButtonWidgetBinding
+import com.example.androidlearned.databinding.ActivityTextviewWidgetBinding
 import com.example.androidlearned.utils.CommonCode
 
-class ButtonWidgetActivity : AppCompatActivity() {
-    lateinit var binding: ActivityButtonWidgetBinding
+class TextviewWidgetActivity : AppCompatActivity() {
+    lateinit var binding: ActivityTextviewWidgetBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityButtonWidgetBinding.inflate(layoutInflater,null,false)
+        enableEdgeToEdge()
+        binding = ActivityTextviewWidgetBinding.inflate(layoutInflater,null,false)
         setContentView(binding.root)
-        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_abw,R.navigation.nav_graph_button_widget)
+        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_atw,R.navigation.nav_graph_textview_widget)
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+//            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+//            insets
+//        }
     }
 
     /**

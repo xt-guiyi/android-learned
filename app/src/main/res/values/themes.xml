@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.AndroidLearned" parent="Base.Theme.AndroidLearned" />
+
+    <style name="Theme.AndroidLearned.Button" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="materialButtonStyle">@style/Widget.App.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.App.OutlinedButton</item>
+    </style>
 </resources>
