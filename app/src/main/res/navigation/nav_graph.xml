@@ -40,6 +40,27 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_editTextWidgetActivity"
+            app:destination="@id/editTextWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_radioButtonWidgetActivity"
+            app:destination="@id/radioButtonWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_checkBoxWidgetActivity"
+            app:destination="@id/checkBoxWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <fragment
         android:id="@+id/centerFragment"
@@ -71,6 +92,21 @@
         android:name="com.example.androidlearned.ui.home.activitys.ImageViewWidgetActivity"
         android:label="activity_image_view_widget"
         tools:layout="@layout/activity_image_view_widget"  />
+    <activity
+        android:id="@+id/editTextWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.EditTextWidgetActivity"
+        android:label="activity_edit_text_widget"
+        tools:layout="@layout/activity_edit_text_widget" />
+    <activity
+        android:id="@+id/radioButtonWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.RadioButtonWidgetActivity"
+        android:label="activity_radio_button_widget"
+        tools:layout="@layout/activity_radio_button_widget" />
+    <activity
+        android:id="@+id/checkBoxWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.CheckBoxWidgetActivity"
+        android:label="activity_check_box_widget"
+        tools:layout="@layout/activity_check_box_widget" />
 
-        
+
 </navigation>

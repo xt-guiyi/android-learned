@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_edit_text_widget"
+    app:startDestination="@id/editTextWidgetFragment">
+
+    <fragment
+        android:id="@+id/editTextWidgetFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.EditTextWidgetFragment"
+        android:label="fragment_edit_text_widget"
+        tools:layout="@layout/fragment_edit_text_widget" />
+</navigation>

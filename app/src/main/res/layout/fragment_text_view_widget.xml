@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/primary_color"
-            app:title="TextView控件"
+            app:title="文本控件"
             app:titleCentered="true"
             android:fitsSystemWindows="true"/>
 

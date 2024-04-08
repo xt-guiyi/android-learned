@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_radio_button_widget"
+    app:startDestination="@id/radioButtonWidgetFragment">
+
+    <fragment
+        android:id="@+id/radioButtonWidgetFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RadioButtonWidgetFragment"
+        android:label="fragment_radio_button_widget"
+        tools:layout="@layout/fragment_radio_button_widget" />
+</navigation>

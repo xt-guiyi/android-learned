@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fragments.RadioButtonWidgetFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="单选按钮控件"
+        app:titleCentered="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/radio_text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="性别(垂直布局)"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:labelFor="@id/radio_text1"
+                android:checkedButton="@id/radioButton3">
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="女" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="未知" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/radio_text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="年龄(水平布局)"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:labelFor="@id/radio_text2"
+                android:orientation="horizontal"
+                android:checkedButton="@id/radioButton3">
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18岁" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88岁" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/radio_text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义主题"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:labelFor="@id/radio_text3"
+                android:orientation="horizontal"
+                android:checkedButton="@id/radioButton3">
+
+                <RadioButton
+                    style="@style/Widget.App.RadioButton"
+                    android:id="@+id/radioButtonCustom1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18岁" />
+
+                <RadioButton
+                    style="@style/Widget.App.RadioButton"
+                    android:id="@+id/radioButtonCustom2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="88岁" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

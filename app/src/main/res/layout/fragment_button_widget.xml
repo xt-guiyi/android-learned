@@ -15,7 +15,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="Button控件"
+            app:title="按钮控件"
             app:titleCentered="true"
             android:layout_marginBottom="12dp"
             android:background="@color/primary_color"/>

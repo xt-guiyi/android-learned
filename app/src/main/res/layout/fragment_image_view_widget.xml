@@ -9,6 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="图片控件"
+            app:titleCentered="true"
+            android:background="@color/primary_color"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"

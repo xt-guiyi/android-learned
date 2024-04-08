@@ -108,4 +108,16 @@
         <item name="cornerSizeBottomRight">50%</item>
         <item name="cornerSizeBottomLeft">50%</item>
     </style>
+
+
+   <!-- 配置单选按钮样式-->
+    <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.RadioButton</item>
+        <item name="buttonTint">@color/design_default_color_error</item>
+    </style>
+
+    <style name="ThemeOverlay.App.RadioButton" parent="">
+        <item name="colorOnSurface">@color/silver</item>
+        <item name="colorPrimary">@color/blue</item>
+    </style>
 </resources>
