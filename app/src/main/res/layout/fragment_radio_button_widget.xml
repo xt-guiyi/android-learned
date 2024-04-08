@@ -73,16 +73,19 @@
                 android:layout_height="match_parent"
                 android:labelFor="@id/radio_text2"
                 android:orientation="horizontal"
-                android:checkedButton="@id/radioButton3">
+                >
 
                 <RadioButton
-                    android:id="@+id/radioButtonAge2"
+                    android:id="@+id/radio_age_1"
+                    android:checked="true"
+                    app:buttonTint="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="18岁" />
 
                 <RadioButton
-                    android:id="@+id/radioButtonAge"
+                    android:id="@+id/radio_age_2"
+                    app:buttonTint="@color/blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="88岁" />
@@ -101,21 +104,160 @@
                 android:layout_height="match_parent"
                 android:labelFor="@id/radio_text3"
                 android:orientation="horizontal"
-                android:checkedButton="@id/radioButton3">
+                >
 
                 <RadioButton
+                    android:id="@+id/radio_custom_style_1"
                     style="@style/Widget.App.RadioButton"
-                    android:id="@+id/radioButtonCustom1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18岁" />
+                    android:checked="true"
+                    android:text="自定义样式1" />
 
                 <RadioButton
+                    android:id="@+id/radio_custom_style_2"
                     style="@style/Widget.App.RadioButton"
-                    android:id="@+id/radioButtonCustom2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="88岁" />
+                    android:text="自定义样式2" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_custom_icon_1"
+                    android:checked="true"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_status_1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义图标1" />
+
+                <RadioButton
+                    android:id="@+id/radio_custom_icon_2"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_status_1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义图标2" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="3dp"
+                android:paddingEnd="3dp"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_custom_rang_1"
+                    android:checked="true"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_status_2"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义方形图标1" />
+
+                <RadioButton
+                    android:id="@+id/radio_custom_rang_2"
+                    style="@style/Widget.App.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_status_2"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义方形图标2" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_bg_1"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:background="@drawable/background_1"
+                    android:gravity="center"
+                    android:text="自定义背景1"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_bg_2"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:background="@drawable/background_1"
+                    android:gravity="center"
+                    android:text="自定义背景2"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
+            </RadioGroup>
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_bg_img_1"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:background="@drawable/background_1"
+                    android:drawableStart="@drawable/bottom_nav_person_24"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义背景1"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
+
+                <RadioButton
+                    android:id="@+id/radio_bg_img_2"
+                    android:layout_weight="1"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:button="@null"
+                    android:background="@drawable/background_1"
+                    android:drawableStart="@drawable/bottom_nav_home_24"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="自定义背景2"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"/>
             </RadioGroup>
         </LinearLayout>
     </ScrollView>

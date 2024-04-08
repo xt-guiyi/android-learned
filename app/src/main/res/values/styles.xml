@@ -113,11 +113,12 @@
    <!-- 配置单选按钮样式-->
     <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.RadioButton</item>
-        <item name="buttonTint">@color/design_default_color_error</item>
+        <item name="buttonTint">@color/button_tint</item>
     </style>
 
     <style name="ThemeOverlay.App.RadioButton" parent="">
-        <item name="colorOnSurface">@color/silver</item>
-        <item name="colorPrimary">@color/blue</item>
+        <!--   都改成白色，与使用的地方背景色相同，就不会有波浪效果     -->
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
     </style>
 </resources>
