@@ -2,11 +2,16 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AndroidLearned" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@android:color/holo_orange_light</item>
+         <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorSecondary">@color/second_color</item>
+        <item name="android:statusBarColor" >@color/primary_color</item>
+        <item name="toolbarStyle">@style/ToolbarTitleStyle</item>
     </style>
 
     <style name="Theme.AndroidLearned" parent="Base.Theme.AndroidLearned" />
 
+
+    <!-- 按钮主题   -->
     <style name="Theme.AndroidLearned.Button" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="materialButtonStyle">@style/Widget.App.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.App.OutlinedButton</item>

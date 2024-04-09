@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- toolbar文字样式-->
+    <!-- toolbar标题样式-->
     <style name="ToolbarTitleStyle" parent="Widget.Material3.Toolbar">
         <item name="android:textSize">18sp</item>
-    </style>
-    <style name="ToolbarSubTitleStyle" parent="Widget.Material3.Toolbar">
-        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/a_li_mama_dao_li_ti</item>
     </style>
 
-    <!-- 底部导航栏主题样式    -->
-    <style name="BottomNavigationStyle"  parent="Theme.MaterialComponents.DayNight">
+    <!-- 底部导航栏主题样式, 使用Material2的样式    -->
+    <style name="BottomNavigationStyle"  parent="Theme.MaterialComponents.DayNight" >
         <item name="colorPrimary">@color/primary_color</item>
     </style>
 
+     <!--  按钮样式  -->
     <!--只有icon的toggleButtonGroups样式-->
     <style name="Widget.App.Button.OutLineButton.IconOnly" parent="Widget.Material3.Button.OutlinedButton">
         <item name="iconPadding">0dp</item>
@@ -52,7 +51,7 @@
         <item name="android:paddingRight">@dimen/m3_btn_padding_right</item>
         <item name="strokeColor">@color/blue</item>
         <item name="strokeWidth">2dp</item>
-        <item name="android:textColor">@color/design_default_color_secondary</item>
+        <item name="android:textColor">@color/primary_color</item>
         <item name="android:textAppearance">@style/ButtonTextAppearance</item>
     </style>
 
@@ -68,7 +67,8 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">22sp</item>
     </style>
-    
+
+    <!-- 图片圆角设置   -->
     <style name="RoundCornerStyle" >
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">10dp</item>
@@ -90,7 +90,7 @@
         <item name="cornerSizeTopRight">50%</item>
         <item name="cornerSizeTopLeft">50%</item>
     </style>
-
+    <!-- 图片切角设置   -->
     <style name="CutCornerStyle" >
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">10dp</item>
@@ -121,4 +121,22 @@
         <item name="colorOnSurface">@color/white</item>
         <item name="colorPrimary">@color/white</item>
     </style>
+
+    <!-- 配置多选按钮样式-->
+    <style name="Widget.App.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/design_default_color_secondary</item>
+        <item name="buttonIconTint">@color/design_default_color_error</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CheckBox</item>
+    </style>
+
+    <style name="ThemeOverlay.App.CheckBox" parent="">
+        <!--   都改成白色，与使用的地方背景色相同，就不会有波浪效果     -->
+        <!-- Container colors -->
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorPrimary">@color/white</item>
+        <!-- Icon colors -->
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
 </resources>

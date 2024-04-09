@@ -13,6 +13,10 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.activitys.SwitchWidgetActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AndroidLearned" />
+        <activity
             android:name=".ui.home.activitys.CheckBoxWidgetActivity"
             android:exported="false" />
         <activity

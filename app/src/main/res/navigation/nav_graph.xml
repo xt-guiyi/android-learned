@@ -61,17 +61,14 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_switchWidgetActivity"
+            app:destination="@id/switchWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
-    <fragment
-        android:id="@+id/centerFragment"
-        android:name="com.example.androidlearned.ui.center.fragments.CenterFragment"
-        android:label="fragment_center"
-        tools:layout="@layout/fragment_center" />
-    <fragment
-        android:id="@+id/meFragment"
-        android:name="com.example.androidlearned.ui.me.fragments.MeFragment"
-        android:label="fragment_me"
-        tools:layout="@layout/fragment_me" />
     <activity
         android:id="@+id/coordinationLayoutActivity"
         android:name="com.example.androidlearned.ui.home.activitys.CoordinationLayoutActivity"
@@ -107,6 +104,21 @@
         android:name="com.example.androidlearned.ui.home.activitys.CheckBoxWidgetActivity"
         android:label="activity_check_box_widget"
         tools:layout="@layout/activity_check_box_widget" />
+    <activity
+        android:id="@+id/switchWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.SwitchWidgetActivity"
+        android:label="activity_switch_widget"
+        tools:layout="@layout/activity_switch_widget" />
+    <fragment
+        android:id="@+id/centerFragment"
+        android:name="com.example.androidlearned.ui.center.fragments.CenterFragment"
+        android:label="fragment_center"
+        tools:layout="@layout/fragment_center" />
+    <fragment
+        android:id="@+id/meFragment"
+        android:name="com.example.androidlearned.ui.me.fragments.MeFragment"
+        android:label="fragment_me"
+        tools:layout="@layout/fragment_me" />
 
 
 </navigation>

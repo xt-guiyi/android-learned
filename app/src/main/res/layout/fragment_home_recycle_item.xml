@@ -36,7 +36,7 @@
                 android:textSize="16sp"
                 android:maxLines="2"
                 android:ellipsize="end"
-                android:textColor="@color/text_desc"
+                android:textColor="@color/silver_2"
                 android:layout_marginTop="4dp"
                 android:breakStrategy="balanced"
                 android:text="描述"/>
