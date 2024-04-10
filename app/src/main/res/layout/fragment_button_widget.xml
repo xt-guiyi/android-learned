@@ -35,7 +35,28 @@
             android:layout_marginBottom="12dp"
             android:text="按钮"
             app:backgroundTint="@color/blue"
-            app:rippleColor="@color/blue"/>
+            />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="修改波纹"
+            app:backgroundTint="@color/blue"
+            app:rippleColor="@color/bilibili_pink"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="取消波纹（rippleColor和背景颜色设置一致即可）"
+            app:backgroundTint="@color/blue"
+            app:rippleColor="@color/blue"
+            />
 
         <TextView
             android:layout_width="match_parent"

@@ -44,7 +44,8 @@
                     android:id="@+id/radioButton3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="男" />
+                    android:background="@android:color/transparent"
+                    android:text="男(ps:这个去除了波纹效果)" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
@@ -95,7 +96,7 @@
                 android:id="@+id/radio_text3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="自定义主题"
+                android:text="自定义样式"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"/>
@@ -197,7 +198,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:button="@null"
-                    android:background="@drawable/background_1"
+                    android:background="@drawable/background_shap_1"
                     android:gravity="center"
                     android:text="自定义背景1"
                     android:textColor="@color/white"
@@ -211,7 +212,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:button="@null"
-                    android:background="@drawable/background_1"
+                    android:background="@drawable/background_shap_1"
                     android:gravity="center"
                     android:text="自定义背景2"
                     android:textColor="@color/white"
@@ -235,7 +236,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:button="@null"
-                    android:background="@drawable/background_1"
+                    android:background="@drawable/background_shap_1"
                     android:drawableStart="@drawable/bottom_nav_person_24"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"
@@ -251,7 +252,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:button="@null"
-                    android:background="@drawable/background_1"
+                    android:background="@drawable/background_shap_1"
                     android:drawableStart="@drawable/bottom_nav_home_24"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp"

@@ -40,6 +40,7 @@
                 android:gravity="start"
                 android:paddingTop="4dp"
                 android:text="已阅读并同意联通统一认证服务条款和《用户协议》，《隐私保护政策》"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -52,7 +53,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:checked="true"
-                android:text="支付宝"/>
+                android:background="@color/transparent"
+                android:text="支付宝(ps：去掉波纹效果)"/>
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -106,7 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:gravity="center_vertical"
-                android:text="自定义主题和样式"
+                android:text="自定义样式"
                 android:textStyle="bold"
                 android:textSize="22sp"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"/>
@@ -116,7 +118,7 @@
                 android:layout_height="wrap_content"
                 app:buttonTint="@color/silver"
                 app:buttonIconTint="@color/blue"
-                android:text="自定义颜色（通过属性设置）"/>
+                android:text="自定义颜色（通过属性修改样式）"/>
 
             <CheckBox
                 style="@style/Widget.App.CheckBox"
@@ -135,6 +137,7 @@
                 android:layout_marginStart="4dp"
                 android:text="自定义图标"/>
             <CheckBox
+                style="@style/Widget.App.CheckBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
@@ -145,7 +148,6 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:layout_marginStart="4dp"
-                style="@style/Widget.App.CheckBox"
                 android:text="(自定义图标，去掉了波纹效果)已阅读并同意联通统一认证服务条款和《用户协议》，《隐私保护政策》"/>
 
         </LinearLayout>

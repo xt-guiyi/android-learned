@@ -42,7 +42,7 @@
 <!--        <item name="iconTint">@color/m3_button_foreground_color_selector</item>-->
 <!--        <item name="iconSize">@dimen/m3_comp_filled_button_with_icon_icon_size</item>-->
         <item name="backgroundTint">@color/blue</item>
-<!--        <item name="rippleColor">@color/m3_button_ripple_color_selector</item>-->
+        <item name="rippleColor">@color/blue</item>
     </style>
 
     <!-- 配置outline按钮的形状   -->
@@ -112,31 +112,34 @@
 
    <!-- 配置单选按钮样式-->
     <style name="Widget.App.RadioButton" parent="Widget.Material3.CompoundButton.RadioButton">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.RadioButton</item>
         <item name="buttonTint">@color/button_tint</item>
+        <!--   去除波浪效果     -->
+        <item name="android:background">@color/transparent</item>
     </style>
 
-    <style name="ThemeOverlay.App.RadioButton" parent="">
-        <!--   都改成白色，与使用的地方背景色相同，就不会有波浪效果     -->
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorPrimary">@color/white</item>
-    </style>
+
 
     <!-- 配置多选按钮样式-->
     <style name="Widget.App.CheckBox" parent="Widget.Material3.CompoundButton.CheckBox">
-        <item name="buttonTint">@color/design_default_color_secondary</item>
-        <item name="buttonIconTint">@color/design_default_color_error</item>
-        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CheckBox</item>
+        <item name="buttonTint">@color/button_tint</item>
+        <item name="buttonIconTint">@color/white</item>
+        <!--   去除波浪效果     -->
+        <item name="android:background">@color/transparent</item>
     </style>
 
-    <style name="ThemeOverlay.App.CheckBox" parent="">
-        <!--   都改成白色，与使用的地方背景色相同，就不会有波浪效果     -->
-        <!-- Container colors -->
-        <item name="colorOnSurface">@color/white</item>
-        <item name="colorPrimary">@color/white</item>
-        <!-- Icon colors -->
-        <item name="colorSurface">@color/white</item>
-        <item name="colorOnPrimary">@color/white</item>
+
+
+    <!-- 配置switch按钮样式-->
+    <style name="Widget.App.Switch" parent="Widget.Material3.CompoundButton.MaterialSwitch">
+        <!--   自定义thumb图片，取消掉默认动画,需要32dp大小图片     -->
+        <item name="android:thumb">@drawable/circle</item>
+        <item name="thumbTint">@color/white</item>
+        <item name="trackTint">@color/switch_track_tint</item>
+        <item name="trackDecorationTint">@color/white</item>
+        <!--   去除波浪效果     -->
+        <item name="android:background">@color/transparent</item>
     </style>
+
+
 
 </resources>
