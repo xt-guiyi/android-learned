@@ -47,6 +47,7 @@ class HomeFragment : Fragment() {
                 6 -> view.findNavController().navigate(R.id.action_homeFragment_to_radioButtonWidgetActivity)
                 7 -> view.findNavController().navigate(R.id.action_homeFragment_to_checkBoxWidgetActivity)
                 8 -> view.findNavController().navigate(R.id.action_homeFragment_to_switchWidgetActivity)
+                9 -> view.findNavController().navigate(R.id.action_homeFragment_to_chipsWidgetActivity)
             }
         }
         binding.homeRecycleList.adapter = adapter

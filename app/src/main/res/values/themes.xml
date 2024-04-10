@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/primary_color</item>
         <item name="colorSecondary">@color/second_color</item>
+        <item name="colorOnSurfaceVariant">@color/bilibili_pink</item>
         <item name="android:statusBarColor" >@color/primary_color</item>
         <item name="toolbarStyle">@style/ToolbarTitleStyle</item>
     </style>

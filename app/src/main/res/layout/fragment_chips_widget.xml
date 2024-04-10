@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.fragments.ChipsWidgetFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Chips控件"
+        app:titleCentered="true" />
+
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="辅助chip,代表可以跨越多个应用程序的智能或自动化操作，例如从主屏幕打开日历事件。辅助芯片的功能就像用户要求助手完成操作一样："
+                android:textAlignment="textStart"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开联系人应用"
+                app:chipIcon="@mipmap/launcher_round"
+                app:ensureMinTouchTargetSize="true"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.Material3.Chip.Assist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="打开日历应用，无波纹效果"
+               android:backgroundTint="@color/transparent"
+                app:chipIcon="@mipmap/launcher_round"
+                app:ensureMinTouchTargetSize="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="过滤chip使用标签或描述性文字来过滤内容。过滤器chip在紧凑的区域中清晰地描绘和显示选项。它们是切换按钮或复选框的一个很好的替代方案:"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_color"
+                android:text="单选filter："/>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 1"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="filter 2"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter.Elevated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 3"/>
+            </com.google.android.material.chip.ChipGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_color"
+                android:text="多选filter："/>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="false"
+                >
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 1"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="filter 2"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 3"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 4"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 5"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 6"/>
+            </com.google.android.material.chip.ChipGroup>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_color"
+                android:text="水平布局(自定义图标)"/>
+          <HorizontalScrollView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:scrollbars="none"
+              >
+              <com.google.android.material.chip.ChipGroup
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:selectionRequired="true"
+                  app:singleSelection="false"
+                  app:singleLine="true"
+                  >
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:checkedIcon="@drawable/baseline_check_circle_24"
+                      app:checkedIconTint="@color/primary_color"
+                      android:text="filter 1"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:checkedIcon="@drawable/baseline_check_circle_24"
+                      app:checkedIconTint="@color/primary_color"
+                      android:checked="true"
+                      android:text="filter 2"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      app:checkedIcon="@drawable/baseline_check_circle_24"
+                      app:checkedIconTint="@color/primary_color"
+                      android:text="filter 3"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="filter 4"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="filter 5"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="filter 6"/>
+                  <com.google.android.material.chip.Chip
+                      style="@style/Widget.Material3.Chip.Filter"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="filter 7"/>
+              </com.google.android.material.chip.ChipGroup>
+          </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="输入芯片以紧凑的形式表示离散的信息，例如实体（人、地点或事物）或文本。它们支持用户输入并通过将文本转换为芯片来验证输入："/>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 1"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 2"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:closeIcon="@drawable/clear"
+                    android:text="filter 3"/>
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="建议芯片通过呈现动态生成的建议（例如提供可能的响应或提供搜索过滤器）来帮助缩小用户的意图："/>
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Suggestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="filter 1"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Suggestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="filter 2"/>
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.Material3.Chip.Suggestion.Elevated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:closeIcon="@drawable/clear"
+                    android:text="filter 3"/>
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
