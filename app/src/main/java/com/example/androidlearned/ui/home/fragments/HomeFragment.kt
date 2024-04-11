@@ -50,6 +50,7 @@ class HomeFragment : Fragment() {
                 9 -> view.findNavController().navigate(R.id.action_homeFragment_to_chipsWidgetActivity)
                 10 -> view.findNavController().navigate(R.id.action_homeFragment_to_fabWidgetActivity)
                 11 -> view.findNavController().navigate(R.id.action_homeFragment_to_navigationWidgetActivity)
+                12 -> view.findNavController().navigate(R.id.action_homeFragment_to_menusWidgetActivity)
             }
         }
         binding.homeRecycleList.adapter = adapter

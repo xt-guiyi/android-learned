@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_navigation_widget"
-    app:startDestination="@id/navigatonWidgetFragment">
+    app:startDestination="@id/navigationWidgetFragment">
 
     <fragment
-        android:id="@+id/navigatonWidgetFragment"
-        android:name="com.example.androidlearned.ui.home.fragments.NavigatonWidgetFragment"
-        android:label="fragment_navigaton_widget"
-        tools:layout="@layout/fragment_navigaton_widget" />
+        android:id="@+id/navigationWidgetFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.NavigationWidgetFragment"
+        android:label="fragment_navigation_widget"
+        tools:layout="@layout/fragment_navigation_widget" />
 </navigation>

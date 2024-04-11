@@ -17,8 +17,9 @@ class HomeDataSource {
             homeLayoutInfos.add(HomeLayoutInfo(9,"Chips控件","学习Chips的各种使用方式"))
             homeLayoutInfos.add(HomeLayoutInfo(10,"fab按钮控件","学习Floating action buttons的各种使用方式"))
             homeLayoutInfos.add(HomeLayoutInfo(11,"导航栏控件","学习各种导航栏实现效果"))
+            homeLayoutInfos.add(HomeLayoutInfo(12,"菜单项","学习Menus的各种使用方式"))
+
 //            homeLayoutInfos.add(HomeLayoutInfo(11,"Dialogs弹框","学习Dialogs的各种使用方式"))
-//            homeLayoutInfos.add(HomeLayoutInfo(12,"菜单项","学习Menus的各种使用方式"))
 //            homeLayoutInfos.add(HomeLayoutInfo(13,"导航","学习底部导航栏，导航抽屉的各种使用方式"))
 //            homeLayoutInfos.add(HomeLayoutInfo(14,"进度条","学习Progress indicators的各种使用方式"))
 //            homeLayoutInfos.add(HomeLayoutInfo(14,"sheet控件","学习sheet的各种使用方式"))

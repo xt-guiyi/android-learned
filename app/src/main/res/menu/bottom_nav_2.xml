@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/bottom_nav_home_24"
+        android:title="@string/bottom_nav_home" />
+
+    <item
+        android:icon="@drawable/baseline_audio_file_24"
+        android:title="文件" />
+
+    <item
+        android:icon="@null"
+        android:title="" />
+
+    <item
+        android:icon="@drawable/baseline_airplanemode_active_24"
+        android:title="共享" />
+    <item
+        android:icon="@drawable/bottom_nav_person_24"
+        android:title="@string/bottom_nav_me" />
+</menu>

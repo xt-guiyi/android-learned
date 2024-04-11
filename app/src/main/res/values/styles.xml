@@ -141,5 +141,24 @@
     </style>
 
 
+    <style name="Widget.App.BottomAppBar" parent="Widget.Material3.BottomAppBar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomAppBar</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.Material3.FloatingActionButton.Primary">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomAppBar" parent="">
+        <item name="colorPrimary">@color/bilibili_pink</item>
+        <item name="colorOnPrimary">@color/silver_2</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/red_2</item>
+        <item name="colorOnSecondary">@color/red</item>
+        <item name="shapeAppearanceSmallComponent">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
 
 </resources>
