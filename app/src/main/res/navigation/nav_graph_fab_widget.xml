@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap_fab_widget"
+    app:startDestination="@id/fabWidgetFragment">
+
+    <fragment
+        android:id="@+id/fabWidgetFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.FabWidgetFragment"
+        android:label="fragment_fab_widget"
+        tools:layout="@layout/fragment_fab_widget" />
+</navigation>

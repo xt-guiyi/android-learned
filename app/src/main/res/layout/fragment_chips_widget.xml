@@ -80,7 +80,7 @@
                     android:checked="true"
                     android:text="filter 2"/>
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Filter.Elevated"
+                    style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="filter 3"/>
@@ -97,17 +97,20 @@
                 app:selectionRequired="true"
                 app:singleSelection="false"
                 >
+
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="filter 1"/>
+
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="filter 2"/>
+                    app:chipBackgroundColor="@color/button_tint"
+                    android:text="filter 2(自定义背景)"/>
                 <com.google.android.material.chip.Chip
                     style="@style/Widget.Material3.Chip.Filter"
                     android:layout_width="wrap_content"
@@ -123,11 +126,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="filter 5"/>
+
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Filter"
+                    style="@style/Widget.Material3.Chip.Filter.Elevated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="filter 6"/>
+                    android:text="filter 6(有海拔高度) "/>
             </com.google.android.material.chip.ChipGroup>
 
 
@@ -244,7 +248,6 @@
                     android:checked="true"
                     android:text="filter 2"/>
                 <com.google.android.material.chip.Chip
-                    style="@style/Widget.Material3.Chip.Suggestion.Elevated"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:closeIcon="@drawable/clear"

@@ -9,11 +9,11 @@ import androidx.navigation.ActivityNavigator
 import com.example.androidlearned.R
 import com.example.androidlearned.utils.CommonCode
 
-class CheckBoxWidgetActivity : AppCompatActivity() {
+class navigationWidgetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_check_box_widget)
-        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_acbw,R.navigation.nav_graph_check_box_widget)
+        setContentView(R.layout.activity_navigation_widget)
+        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_anw,R.navigation.nav_graph_navigation_widget)
     }
 
     /**

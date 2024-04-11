@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.fragments.FabWidgetFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="fab控件"
+        app:titleCentered="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="50dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="FloatingActionButton,扩展性不强"/>
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:background="@drawable/background_shap_3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/button_tint"
+                    app:srcCompat="@drawable/baseline_add_24"
+                    app:tint="@color/black"
+                    android:layout_gravity="bottom|start"
+                    app:borderWidth="2dp"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/bilibili_pink"
+                    app:shapeAppearance="@style/RoundCornerStyle2"
+                    app:rippleColor="@color/primary_color"
+                    app:srcCompat="@drawable/baseline_add_24"
+                    app:tint="@color/black"
+                    android:layout_gravity="bottom|center"
+                    />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/primary_color"
+                    app:rippleColor="@color/primary_color"
+                    app:srcCompat="@drawable/baseline_add_24"
+                    app:tint="@color/black"
+                    />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <TextView
+                android:id="@+id/ss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:text="ExtendedFloatingActionButton，功能更加强大"/>
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:background="@drawable/background_shap_3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+
+
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:shapeAppearance="@style/RoundCornerStyle2"
+                    app:strokeColor="@color/silver_2"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@color/bilibili_pink"
+                    app:rippleColor="@color/bilibili_pink"
+                    app:icon="@drawable/baseline_add_24"
+                    app:iconSize="34dp"
+                    app:iconTint="@color/black"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top|start"
+                    />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:strokeColor="@color/primary_color"
+                    app:strokeWidth="2dp"
+                    android:backgroundTint="@color/button_tint"
+                    app:icon="@drawable/baseline_add_24"
+                    app:iconTint="@color/black"
+                    android:text="扩展按钮1"
+                    android:textColor="@color/black"
+                    android:layout_gravity="top|end"
+                    />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/bilibili_pink"
+                    app:rippleColor="@color/primary_color"
+                    app:icon="@drawable/baseline_add_24"
+                    app:iconTint="@color/black"
+                    android:text="扩展按钮2"
+                    app:shapeAppearance="@style/RoundCornerStyle2"
+                    android:textColor="@color/black"
+                    android:layout_gravity="bottom|start"
+                    />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    style="?attr/floatingActionButtonPrimaryStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/primary_color"
+                    app:rippleColor="@color/primary_color"
+                    app:icon="@drawable/baseline_add_24"
+                    app:iconTint="@color/black"
+                    android:text="扩展按钮2"
+                    android:textColor="@color/black"
+                    />
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>

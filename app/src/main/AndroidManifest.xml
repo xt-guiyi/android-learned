@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.activitys.navigationWidgetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.activitys.FabWidgetActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.activitys.ChipsWidgetActivity"
             android:exported="false" />
         <activity

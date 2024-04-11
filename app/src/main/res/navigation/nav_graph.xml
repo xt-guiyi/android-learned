@@ -75,6 +75,20 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_fabWidgetActivity"
+            app:destination="@id/fabWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_navigationWidgetActivity"
+            app:destination="@id/navigationWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -131,6 +145,16 @@
         android:name="com.example.androidlearned.ui.home.activitys.ChipsWidgetActivity"
         android:label="activity_chips_widget"
         tools:layout="@layout/activity_chips_widget" />
+    <activity
+        android:id="@+id/fabWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.FabWidgetActivity"
+        android:label="activity_fab_widget"
+        tools:layout="@layout/activity_fab_widget" />
+    <activity
+        android:id="@+id/navigationWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.navigationWidgetActivity"
+        android:label="activity_navigation_widget"
+        tools:layout="@layout/activity_navigation_widget" />
 
 
 </navigation>
