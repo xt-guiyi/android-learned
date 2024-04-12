@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_navigation_draw"
+    app:startDestination="@id/navigationDrawFragment">
+
+    <fragment
+        android:id="@+id/navigationDrawFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.NavigationDrawFragment"
+        android:label="fragment_navigation_draw"
+        tools:layout="@layout/fragment_navigation_draw" />
+</navigation>

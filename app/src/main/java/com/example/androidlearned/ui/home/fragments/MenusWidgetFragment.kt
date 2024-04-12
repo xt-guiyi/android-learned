@@ -1,33 +1,25 @@
 package com.example.androidlearned.ui.home.fragments
 
 import android.os.Bundle
+import android.util.Log
+import android.view.ContextMenu
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.Toast
 import com.example.androidlearned.R
+import com.example.androidlearned.databinding.FragmentMenusWidgetBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [MenusWidgetFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class MenusWidgetFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
+    lateinit var  binding:FragmentMenusWidgetBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
@@ -35,26 +27,38 @@ class MenusWidgetFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menus_widget, container, false)
+        binding = FragmentMenusWidgetBinding.inflate(inflater,container,false)
+        registerForContextMenu(binding.menuContextTextView)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MenusWidgetFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MenusWidgetFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onCreateContextMenu(
+        menu: ContextMenu,
+        v: View,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        val inflater: MenuInflater = requireActivity().menuInflater
+        inflater.inflate(R.menu.menu, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId) {
+            R.id.menu_1 -> {
+                Toast.makeText(requireActivity(),item.title,Toast.LENGTH_SHORT).show()
+                true
             }
+            R.id.menu_2 -> {
+                Toast.makeText(requireActivity(),item.title,Toast.LENGTH_SHORT).show()
+                 true
+            }
+            R.id.menu_3 -> {
+                Toast.makeText(requireActivity(),item.title,Toast.LENGTH_SHORT).show()
+                 true
+            }
+            else -> {
+                super.onContextItemSelected(item)
+            }
+        }
     }
 }
