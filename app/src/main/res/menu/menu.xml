@@ -6,7 +6,13 @@
         android:id="@+id/menu_1"
         android:icon="@drawable/bottom_nav_home_24"
         android:title="菜单1"
-        />
+        >
+
+        <menu>
+            <item android:title="111"/>
+            <item android:title="2222"/>
+        </menu>
+    </item>
     <item
         android:id="@+id/menu_2"
         android:icon="@drawable/bottom_nav_api_service_24"
@@ -15,4 +21,14 @@
         android:id="@+id/menu_3"
         android:icon="@drawable/bottom_nav_person_24"
         android:title="菜单3" />
+    <group android:id="@+id/group_delete" android:menuCategory="secondary">
+        <item
+            android:id="@+id/menu_delete_1"
+            android:icon="@drawable/bottom_nav_person_24"
+            android:title="菜单组1" />
+        <item
+            android:id="@+id/menu_delete_2"
+            android:icon="@drawable/bottom_nav_person_24"
+            android:title="菜单组2" />
+    </group>
 </menu>

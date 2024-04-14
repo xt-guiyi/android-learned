@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_badge_drawable"
+    app:startDestination="@id/badgeDrawableFragment">
+
+    <fragment
+        android:id="@+id/badgeDrawableFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.BadgeDrawableFragment"
+        android:label="fragment_badge_drawable"
+        tools:layout="@layout/fragment_badge_drawable" />
+</navigation>

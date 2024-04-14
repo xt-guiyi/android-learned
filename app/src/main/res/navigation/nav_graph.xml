@@ -103,6 +103,34 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_progressIndicatorsWidgetActivity"
+            app:destination="@id/progressIndicatorsWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_snackbarWidgetActivity"
+            app:destination="@id/snackbarWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_badgeDrawableActivity"
+            app:destination="@id/badgeDrawableActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_dialogActivity"
+            app:destination="@id/dialogActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -179,6 +207,26 @@
         android:name="com.example.androidlearned.ui.home.activitys.NavigationDrawActivity"
         android:label="activity_navigation_draw"
         tools:layout="@layout/activity_navigation_draw" />
+    <activity
+        android:id="@+id/progressIndicatorsWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.ProgressIndicatorsWidgetActivity"
+        android:label="activity_progress_indicators_widget"
+        tools:layout="@layout/activity_progress_indicators_widget" />
+    <activity
+        android:id="@+id/snackbarWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.SnackbarWidgetActivity"
+        android:label="activity_snackbar_widget"
+        tools:layout="@layout/activity_snackbar_widget" />
+    <activity
+        android:id="@+id/badgeDrawableActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.BadgeDrawableActivity"
+        android:label="activity_badge_drawable"
+        tools:layout="@layout/activity_badge_drawable" />
+    <activity
+        android:id="@+id/dialogActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.DialogActivity"
+        android:label="activity_dialog"
+        tools:layout="@layout/activity_dialog" />
 
 
 </navigation>

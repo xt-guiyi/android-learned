@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    tools:context=".ui.home.fragments.BadgeDrawableFragment">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="BadgeDrawable控件"
+        android:background="@color/primary_color"
+        app:titleCentered="true"/>
+    <TextView
+        android:id="@+id/textview_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:text="小红点文本" />
+
+    <ImageView
+        android:id="@+id/imageView_badge"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center"
+        android:src="@drawable/img_5"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/iconButton_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="?attr/materialIconButtonOutlinedStyle"
+        app:icon="@drawable/baseline_add_24"/>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center"
+       >
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:layout_marginStart="16dp"
+           android:layout_marginTop="24dp"
+           android:layout_marginEnd="16dp"
+           android:text="小红点文本(布局实现)"
+           android:textSize="12dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:background="@drawable/background_shap_1"
+           android:backgroundTint="@color/red"
+           android:paddingLeft="2dp"
+           android:paddingTop="2dp"
+           android:paddingRight="2dp"
+           android:paddingBottom="2dp"
+           android:scaleX="0.8"
+           android:scaleY="0.8"
+           android:text="99+"
+           android:textColor="@color/white"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

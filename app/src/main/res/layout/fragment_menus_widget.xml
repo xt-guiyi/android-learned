@@ -7,7 +7,7 @@
     tools:context=".ui.home.fragments.MenusWidgetFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar6"
+        android:id="@+id/toolbar_menu"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/primary_color"
@@ -26,17 +26,84 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar6">
+        >
 
-        <TextView
-            android:id="@+id/menu_context_textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:textColor="@color/bilibili_pink"
-            android:text="上下文菜单" />
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/other_toolbar_menu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/primary_color"
+                app:menu="@menu/menu"
+                app:title="第三方实现菜单项"
+                app:titleCentered="true" />
+
+            <TextView
+                android:id="@+id/menu_context_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/bilibili_pink"
+                android:text="上下文菜单" />
+
+            <Button
+                android:id="@+id/menu_popup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="弹出式菜单(PopupMenu)"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/menu_levitate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="悬浮菜单，可自定义布局(PopupWindow)"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/menu_list_popup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="列表弹出式菜单"
+                android:layout_marginTop="12dp"/>
+
+
+            <Button
+                android:id="@+id/menu_other_popup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="第三方弹出式菜单，功能强大"
+                android:layout_marginTop="12dp"/>
+
+            <Button
+                android:id="@+id/menu_other_levitate_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="第三方悬浮框，可定义布局"
+                android:layout_marginTop="12dp"/>
+        </LinearLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

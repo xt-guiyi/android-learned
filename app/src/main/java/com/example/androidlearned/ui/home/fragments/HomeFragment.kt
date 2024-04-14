@@ -39,19 +39,24 @@ class HomeFragment : Fragment() {
         adapter.setOnClickListener { layoutInfo,view ->
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             when(layoutInfo.id) {
-                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
-                2 -> view.findNavController().navigate(R.id.action_homeFragment_to_buttonWidgetActivity)
-                3 -> view.findNavController().navigate(R.id.action_homeFragment_to_textViewWidgetActivity)
-                4 -> view.findNavController().navigate(R.id.action_homeFragment_to_imageViewWidgetActivity)
-                5 -> view.findNavController().navigate(R.id.action_homeFragment_to_editTextWidgetActivity)
-                6 -> view.findNavController().navigate(R.id.action_homeFragment_to_radioButtonWidgetActivity)
-                7 -> view.findNavController().navigate(R.id.action_homeFragment_to_checkBoxWidgetActivity)
-                8 -> view.findNavController().navigate(R.id.action_homeFragment_to_switchWidgetActivity)
-                9 -> view.findNavController().navigate(R.id.action_homeFragment_to_chipsWidgetActivity)
-                10 -> view.findNavController().navigate(R.id.action_homeFragment_to_fabWidgetActivity)
-                11 -> view.findNavController().navigate(R.id.action_homeFragment_to_navigationWidgetActivity)
-                12 -> view.findNavController().navigate(R.id.action_homeFragment_to_navigationDrawActivity)
-                13 -> view.findNavController().navigate(R.id.action_homeFragment_to_menusWidgetActivity)
+                1 -> view.findNavController().navigate(R.id.action_homeFragment_to_buttonWidgetActivity)
+                2 -> view.findNavController().navigate(R.id.action_homeFragment_to_textViewWidgetActivity)
+                3 -> view.findNavController().navigate(R.id.action_homeFragment_to_imageViewWidgetActivity)
+                4 -> view.findNavController().navigate(R.id.action_homeFragment_to_editTextWidgetActivity)
+                5 -> view.findNavController().navigate(R.id.action_homeFragment_to_radioButtonWidgetActivity)
+                6 -> view.findNavController().navigate(R.id.action_homeFragment_to_checkBoxWidgetActivity)
+                7 -> view.findNavController().navigate(R.id.action_homeFragment_to_switchWidgetActivity)
+                8 -> view.findNavController().navigate(R.id.action_homeFragment_to_chipsWidgetActivity)
+                9 -> view.findNavController().navigate(R.id.action_homeFragment_to_fabWidgetActivity)
+                10 -> view.findNavController().navigate(R.id.action_homeFragment_to_navigationWidgetActivity)
+                11 -> view.findNavController().navigate(R.id.action_homeFragment_to_navigationDrawActivity)
+                12 -> view.findNavController().navigate(R.id.action_homeFragment_to_menusWidgetActivity)
+                13 -> view.findNavController().navigate(R.id.action_homeFragment_to_progressIndicatorsWidgetActivity)
+                14-> view.findNavController().navigate(R.id.action_homeFragment_to_snackbarWidgetActivity)
+                15-> view.findNavController().navigate(R.id.action_homeFragment_to_dialogActivity)
+                18-> view.findNavController().navigate(R.id.action_homeFragment_to_badgeDrawableActivity)
+                23 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
+
             }
         }
         binding.homeRecycleList.adapter = adapter

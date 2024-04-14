@@ -69,4 +69,7 @@ dependencies {
     implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
     // Testing Navigation
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
+    // 弹出式弹框 https://saket.github.io/cascade/
+    implementation("me.saket.cascade:cascade:2.3.0")
+
 }
