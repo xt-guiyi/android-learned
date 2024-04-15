@@ -41,7 +41,7 @@ class HomeFragmentAdapter(private val homeLayoutInfoList: MutableList<HomeLayout
         }
     }
 
-     public override fun setOnClickListener(clickCall: (HomeLayoutInfo,View) -> Unit ) {
-        mClickCall = clickCall
+     public override fun setOnClickListener(mClickCall: (HomeLayoutInfo, View) -> Unit ) {
+        this.mClickCall = mClickCall
     }
 }

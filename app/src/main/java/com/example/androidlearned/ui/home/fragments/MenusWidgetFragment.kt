@@ -41,9 +41,14 @@ class MenusWidgetFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         binding = FragmentMenusWidgetBinding.inflate(inflater,container,false)
+        init()
+        return binding.root
+    }
 
+    fun init(){
+
+        // toolbar菜单
         binding.otherToolbarMenu.overrideAllPopupMenus{ context, anchor ->
             val toolbarMenu = CascadePopupMenu(context, anchor)
             // 设置屏幕变暗
@@ -61,7 +66,10 @@ class MenusWidgetFragment : Fragment() {
             showLevitateMenu(it,R.menu.menu)
         }
         // 列表弹出式菜单
-        showMenuList()
+
+        binding.menuListPopupButton.setOnClickListener {
+            showMenuList()
+        }
         // 第三方弹出式菜单
         binding.menuOtherPopupButton.setOnClickListener {
             showOtherMenu(it,R.menu.menu)
@@ -71,9 +79,8 @@ class MenusWidgetFragment : Fragment() {
         binding.menuOtherLevitateButton.setOnClickListener {
             showOtherLevitateMenu(it,R.menu.menu)
         }
-        return binding.root
     }
-
+    // 创建上下文菜单
     override fun onCreateContextMenu(
         menu: ContextMenu,
         v: View,
@@ -108,8 +115,6 @@ class MenusWidgetFragment : Fragment() {
     private fun showMenu(v: View?, menuRes: Int) {
         val popup = PopupMenu(requireContext(),v,Gravity.END)
         popup.menuInflater.inflate(menuRes,popup.menu)
-        Toast.makeText(requireContext(),popup.gravity.toString(),Toast.LENGTH_SHORT).show()
-
         popup.setOnMenuItemClickListener {
             Toast.makeText(requireContext(),it.title, Toast.LENGTH_SHORT).show()
             true
@@ -136,22 +141,15 @@ class MenusWidgetFragment : Fragment() {
         val listPopupWindow = ListPopupWindow(requireContext(),null, com.google.android.material.R.attr.listPopupWindowStyle)
         // Set button as the list popup's anchor
         listPopupWindow.anchorView = binding.menuListPopupButton
-
         // Set list popup's content
         val items = listOf("Item 1", "Item 2", "Item 3", "Item 4")
         val adapter = ArrayAdapter(requireContext(), R.layout.fragment_menus_widget_list_popup_window_item, items)
         listPopupWindow.setAdapter(adapter)
 
-        // Set list popup's item click listener
         listPopupWindow.setOnItemClickListener { parent: AdapterView<*>?, view: View?, position: Int, id: Long ->
-            // Respond to list popup window item click.
-
-            // Dismiss popup.
             listPopupWindow.dismiss()
         }
-
-        // Show list popup window on button click.
-        binding.menuListPopupButton.setOnClickListener { v: View? -> listPopupWindow.show() }
+        listPopupWindow.show()
     }
 
 
