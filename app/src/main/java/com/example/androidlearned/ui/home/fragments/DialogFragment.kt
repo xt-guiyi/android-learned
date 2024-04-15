@@ -6,6 +6,7 @@ import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -95,8 +96,16 @@ class DialogFragment : Fragment() {
             builder
                 .setView(dialogCustom1View)
             val alertDialog = builder.create()
-            // 去除白色背景
-            alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            alertDialog.window?.let {
+                // 去除白色背景
+                it.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+                // 设置谈框出现位置
+                it.attributes.gravity = Gravity.BOTTOM
+                // 设置谈框外背景不透明度
+                it.setDimAmount(0.2f)
+                // 设置谈框内不透明度
+                it.attributes.alpha = 1f
+            }
             return  alertDialog
         }
     }
