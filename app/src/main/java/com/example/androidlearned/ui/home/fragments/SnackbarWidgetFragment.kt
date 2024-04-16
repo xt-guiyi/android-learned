@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.androidlearned.R
-import com.example.androidlearned.commonpents.CustomSnackBar
+import com.example.androidlearned.components.CustomSnackBar
 import com.example.androidlearned.databinding.FragmentSnackbarWidgetBinding
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar

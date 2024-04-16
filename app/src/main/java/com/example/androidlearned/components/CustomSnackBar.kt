@@ -1,4 +1,4 @@
-package com.example.androidlearned.commonpents
+package com.example.androidlearned.components
 
 import android.content.Context
 import android.graphics.drawable.Drawable

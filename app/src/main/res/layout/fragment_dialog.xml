@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.fragments.DialogFragment">
+    tools:context=".ui.home.fragments.DialogWidgetFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar6"
@@ -34,7 +34,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="onCreateDialogs使用方式，适合ui简单，没有多线程的情况下"
+        android:text="onCreateDialogs使用方式，适合对话框，提示框等ui简单，交互简单的情况下"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="164dp"
-        android:text="原生的AlertDiaolog"
+        android:text="AlertDiaolog(默认使用方式)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,10 +55,21 @@
         android:id="@+id/bottom_origin_dialog_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="232dp"
-        android:text="原生的AlertDiaolog(自定义布局，背景不透明度，圆角，出现位置)"
+        android:layout_marginTop="224dp"
+        android:text="AlertDiaolog提醒框(自定义布局)"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar6" />
+
+    <Button
+        android:id="@+id/bottom_origin_dialog_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="292dp"
+        android:text="AlertDiaolog(自定义布局，背景不透明度，圆角，出现位置)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialToolbar6" />
 
@@ -67,7 +78,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="14dp"
-        android:text="onCreateView使用方式，适合ui复杂，需要完全自定义ui，要多线程的情况下"
+        android:text="onCreateView使用方式，适合需要完全自定义ui，ui结构复杂的情况下"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_dialog_1"
         app:layout_constraintEnd_toEndOf="parent"
