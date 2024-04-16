@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_shap_2">
+    android:background="@drawable/background_shape_2">
 
     <ImageView
         android:id="@+id/custom_snackbar_img"

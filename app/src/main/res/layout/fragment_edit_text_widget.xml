@@ -160,7 +160,7 @@
                 android:layout_height="50dp"
                 android:hint="自定义背景图片，去掉自带的下划线"
                 android:ems="10"
-                android:background="@drawable/background_shap_2"
+                android:background="@drawable/background_shape_2"
                 android:inputType="text"/>
 
             <EditText

@@ -33,7 +33,7 @@
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:text="FloatingActionButton,扩展性不强"/>
             <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:background="@drawable/background_shap_3"
+                android:background="@drawable/background_shape_3"
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
 
@@ -82,7 +82,7 @@
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:text="ExtendedFloatingActionButton，功能更加强大"/>
             <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:background="@drawable/background_shap_3"
+                android:background="@drawable/background_shape_3"
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
 

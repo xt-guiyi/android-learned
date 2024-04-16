@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.androidlearned.components.CustomDialogFragment1
+import com.example.androidlearned.components.CustomDialogFragment2
 import com.example.androidlearned.components.SimpleDialogFragment1
 import com.example.androidlearned.components.SimpleDialogFragment2
 import com.example.androidlearned.components.SimpleDialogFragment3
@@ -39,7 +41,7 @@ class DialogWidgetFragment : Fragment() {
                 .setNegativeButton("取消", null)
                 .show()
         }
-
+        // onCreateDialog使用方式
         binding.bottomOriginDialog1.setOnClickListener {
             SimpleDialogFragment1().show(requireActivity().supportFragmentManager,"SimpleDialogFragment1")
         }
@@ -60,6 +62,13 @@ class DialogWidgetFragment : Fragment() {
                 .show(requireActivity().supportFragmentManager,"SimpleDialogFragment3")
         }
 
+        // onCreateView使用方式,推荐这种
+        binding.bottomCustomViewDialog1.setOnClickListener {
+            CustomDialogFragment1().show(requireActivity().supportFragmentManager,"CustomDialogFragment1")
+        }
+        binding.bottomCustomViewDialog2.setOnClickListener {
+            CustomDialogFragment2().show(requireActivity().supportFragmentManager,"CustomDialogFragment2")
+        }
 
     }
 

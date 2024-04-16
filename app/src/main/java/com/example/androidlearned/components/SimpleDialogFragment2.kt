@@ -13,10 +13,6 @@ import com.example.androidlearned.R
 import com.example.androidlearned.utils.Display
 
 class SimpleDialogFragment2(): DialogFragment(),ComponentsHelper<CharSequence,SimpleDialogFragment2> {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setStyle(STYLE_NO_TITLE,android.R.style.Theme_Light_NoTitleBar)
-    }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
@@ -26,16 +22,19 @@ class SimpleDialogFragment2(): DialogFragment(),ComponentsHelper<CharSequence,Si
         // 添加事件监听
         cancelButton.setOnClickListener {
             mClickCall.invoke("了解",it)
+            this.dismiss()
         }
         confirmButton.setOnClickListener {
             mClickCall.invoke("放弃注销",it)
+            this.dismiss()
+
         }
         // 添加自定义布局
         builder.setView(customView)
         return builder.create()
     }
 
-    // 设置dialog样式
+    // 设置dialog
     override fun onStart() {
         super.onStart()
         dialog?.window?.apply {

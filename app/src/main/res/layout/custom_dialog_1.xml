@@ -2,14 +2,14 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/background_shap_1">
+    android:background="@drawable/background_shape_1">
     <ImageView
         android:src="@mipmap/launcher_round"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:contentDescription="@string/app_name" />
     <EditText
-        android:id="@+id/dialog_custom_1_edit_content"
+        android:id="@+id/custom_dialog_1_edit_content"
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         android:fontFamily="sans-serif"
         android:hint="问题"/>
     <Button
-        android:id="@+id/dialog_custom_1_button_submit"
+        android:id="@+id/custom_dialog_1_button_submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

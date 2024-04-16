@@ -136,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:src="@drawable/img_1"
-            android:background="@drawable/background_shap_2"
+            android:background="@drawable/background_shape_2"
             android:layout_gravity="center"
             android:scaleType="fitXY"
             />
