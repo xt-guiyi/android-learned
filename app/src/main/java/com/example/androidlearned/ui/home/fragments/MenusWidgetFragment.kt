@@ -55,18 +55,17 @@ class MenusWidgetFragment : Fragment() {
             applyBackgroundDim(toolbarMenu.popup,anchor,100)
             toolbarMenu
         }
-        // 上下文菜单
+        // 上下文菜单(contextMenu)
         registerForContextMenu(binding.menuContextTextView)
-        // 弹出式菜单
+        // 弹出式菜单(PopupMenu)
         binding.menuPopupButton.setOnClickListener {
             showMenu(it,R.menu.menu)
         }
-        // 悬浮菜单
+        // 悬浮菜单(PopupWindow)
         binding.menuLevitateButton.setOnClickListener {
             showLevitateMenu(it,R.menu.menu)
         }
-        // 列表弹出式菜单
-
+        // 列表弹出式菜单(ListPopupWindow)
         binding.menuListPopupButton.setOnClickListener {
             showMenuList()
         }
