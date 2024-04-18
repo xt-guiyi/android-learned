@@ -1,14 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".ui.home.fragments.ToastFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/a_li_mama_dao_li_ti"
+            android:text="自己实现一个简单的toast，理解实现原理" />
+
+        <Button
+            android:id="@+id/custom_Toast_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast1"/>
+
+        <Button
+            android:id="@+id/custom_Toast_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/a_li_mama_dao_li_ti"
+            android:text="借助第三方Toast框架实现，简单易使用" />
+
+        <Button
+            android:id="@+id/open_Toast_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单使用一个Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示一个短Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示一个长Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示一个跨页面的Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="延迟2秒显示一个Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="在子线程中使用Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义白色样式(当次生效)"/>
+
+        <Button
+            android:id="@+id/open_Toast_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast成功样式，使用布局文件(当次生效)"/>
+
+        <Button
+            android:id="@+id/open_Toast_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast错误样式，使用布局文件(当次生效)"/>
+
+        <Button
+            android:id="@+id/open_Toast_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast警告样式，使用布局文件(当次生效)"/>
+
+        <Button
+            android:id="@+id/open_Toast_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义Toast布局(全局生效)"/>
+
+
+        <Button
+            android:id="@+id/open_Toast_12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改显示策略，会等待上一个Toast显示完了在显示下一个，不会立刻替换"/>
+
+        <Button
+            android:id="@+id/open_Toast_13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示一个底部Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="显示一个顶部Toast"/>
+
+        <Button
+            android:id="@+id/open_Toast_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Debug模式，控制台打印"/>
+
+        <Button
+            android:id="@+id/open_Toast_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取消Toast"/>
+    </LinearLayout>
+</ScrollView>
