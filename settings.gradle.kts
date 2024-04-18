@@ -6,10 +6,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
+    repositories  {
         google()
         mavenCentral()
+        // JitPack 远程仓库：https://jitpack.io
+        maven { url = uri("https://jitpack.io") }
     }
 }
 

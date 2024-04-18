@@ -72,4 +72,8 @@ dependencies {
     // 弹出式弹框 https://saket.github.io/cascade/
     implementation("me.saket.cascade:cascade:2.3.0")
 
+    // 吐司框架：https://github.com/getActivity/Toaster
+    implementation("com.github.getActivity:Toaster:12.6")
+
+
 }

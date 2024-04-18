@@ -12,6 +12,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
+
+
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -20,6 +22,83 @@
             android:layout_marginBottom="12dp"
             android:background="@color/primary_color"/>
 
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原生按钮控件，非material，还是用这种的好"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:fontFamily="@font/a_li_mama_dao_li_ti"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="android:stateListAnimator=@null就可以去除默认阴影和点击效果"
+            android:gravity="center"
+            android:fontFamily="@font/a_li_mama_dao_li_ti"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="原生按钮"
+            android:background="@drawable/background_shape_5"
+            app:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+           />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="圆形按钮"
+            android:layout_gravity="center"
+            android:background="@drawable/background_shape_1"
+            android:textColor="@color/white"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="12dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="有按下效果的按钮"
+            android:background="@drawable/background_shape_4"
+            android:textColor="@color/white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:stateListAnimator="@null"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:text="有按下效果的按钮，仿微信"
+            android:background="@drawable/background_shape_7"
+            android:textColor="@color/white"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:stateListAnimator="@null"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="material按钮控件,不好用，波纹去不掉,坑"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:fontFamily="@font/a_li_mama_dao_li_ti"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,6 +106,7 @@
             android:textSize="14sp"
             android:layout_marginBottom="12dp"
             android:text="填充按钮" />
+
 
         <Button
             android:layout_width="wrap_content"
@@ -48,6 +128,7 @@
             app:rippleColor="@color/bilibili_pink"
             />
 
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,6 +138,8 @@
             app:backgroundTint="@color/blue"
             app:rippleColor="@color/blue"
             />
+
+
 
         <TextView
             android:layout_width="match_parent"
@@ -342,21 +425,9 @@
                 android:text="按钮4"/>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="原生按钮控件，非material，适合自定义程度高的情况使用"
-            android:layout_gravity="center"
-            android:layout_marginBottom="12dp"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="原生按钮"
-            android:layout_gravity="center"
-            android:background="@drawable/button_background"
-            android:textColor="@color/white"
-            android:layout_marginBottom="12dp"/>
+
+
 
     </LinearLayout>
 </ScrollView>

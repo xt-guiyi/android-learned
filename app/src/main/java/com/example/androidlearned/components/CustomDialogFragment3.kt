@@ -38,18 +38,21 @@ class CustomDialogFragment3: DialogFragment() {
              view.findViewById<TextView>(R.id.custom_dialog_5_text).text = it
          }
         // 设置动画
-        animateContentIn(view)
+        animateContentUp(view)
     }
 
-    fun animateContentIn(view:View) {
+
+    // 从下到上
+    private fun animateContentUp(view:View) {
         val scaleX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0f, 1f)
         val scaleY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0f, 1f)
         val animatorSet = AnimatorSet().apply {
-            setDuration(200)
+            setDuration(400)
             playTogether(scaleX, scaleY)
         }
         animatorSet.start()
     }
+
 
     override fun onStart() {
         super.onStart()

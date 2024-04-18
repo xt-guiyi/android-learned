@@ -35,6 +35,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="onCreateDialogs使用方式，适合对话框，提示框等ui简单，交互简单的情况下"
+            android:textStyle="bold"
+            android:textColor="@color/bilibili_pink"
             android:textSize="18sp"
            />
 
@@ -66,9 +68,10 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="28dp"
             android:text="onCreateView使用方式，适合各种情况下的使用，推荐使用这种方式"
             android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/bilibili_pink"
              />
 
         <Button
@@ -86,6 +89,12 @@
             android:layout_marginTop="16dp"
             android:text="自定义方式创建底部弹窗"
            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义通知,反馈Diaolog，类似toast的提示，仅学习，实际不可使用，触发时没办法滑动页面了"
+            />
 
         <Button
             android:id="@+id/bottom_custom_view_dialog_3"
@@ -123,6 +132,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="自定义反馈Diaolog(底部)"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义加载Diaolog，用于加载数据的时候使用"
             />
 
         <Button

@@ -14,6 +14,7 @@ import com.example.androidlearned.components.CustomDialogFragment1
 import com.example.androidlearned.components.CustomDialogFragment2
 import com.example.androidlearned.components.CustomDialogFragment3
 import com.example.androidlearned.components.CustomDialogFragment4
+import com.example.androidlearned.components.CustomDialogFragment5
 import com.example.androidlearned.components.SimpleDialogFragment1
 import com.example.androidlearned.components.SimpleDialogFragment2
 import com.example.androidlearned.components.SimpleDialogFragment3
@@ -119,6 +120,12 @@ class DialogWidgetFragment : Fragment() {
                 .setMessage("反馈成功，请稍后联系")
             dialog.show(requireActivity().supportFragmentManager,"CustomDialogFragment4")
             Handler(requireActivity().mainLooper).postDelayed({ dialog.dismiss() },2000)
+        }
+
+        binding.bottomCustomViewDialog8.setOnClickListener {
+            val dialog =  CustomDialogFragment5()
+            dialog.show(requireActivity().supportFragmentManager,"CustomDialogFragment5")
+            Handler(requireActivity().mainLooper).postDelayed({ dialog.dismiss() },5000)
         }
 
     }

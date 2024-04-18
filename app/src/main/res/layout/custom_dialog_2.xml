@@ -50,24 +50,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/custom_dialog_cancel"
-        style="@style/Widget.Material3.Button.TextButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="了解"
-        app:rippleColor="@color/white"
+        android:textColor="@color/primary_color"
+        android:stateListAnimator="@null"
+        android:background="@drawable/background_shape_9"
         app:layout_constraintEnd_toStartOf="@+id/divider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/divider" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/custom_dialog_confirm"
-        style="@style/Widget.Material3.Button.TextButton"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="放弃注销"
-        app:rippleColor="@color/white"
+        android:textColor="@color/primary_color"
+        android:stateListAnimator="@null"
+        android:background="@drawable/background_shape_10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/divider"
         app:layout_constraintTop_toTopOf="@+id/divider" />

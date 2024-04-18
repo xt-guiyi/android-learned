@@ -131,6 +131,13 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_toastActivity"
+            app:destination="@id/toastActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_in_right_enter" />
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -227,6 +234,11 @@
         android:name="com.example.androidlearned.ui.home.activitys.DialogActivity"
         android:label="activity_dialog"
         tools:layout="@layout/activity_dialog" />
+    <activity
+        android:id="@+id/toastActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.ToastActivity"
+        android:label="activity_toast"
+        tools:layout="@layout/activity_toast" />
 
 
 </navigation>

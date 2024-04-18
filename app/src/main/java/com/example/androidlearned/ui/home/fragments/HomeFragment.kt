@@ -53,7 +53,8 @@ class HomeFragment : Fragment() {
                 12 -> view.findNavController().navigate(R.id.action_homeFragment_to_menusWidgetActivity)
                 13 -> view.findNavController().navigate(R.id.action_homeFragment_to_progressIndicatorsWidgetActivity)
                 14-> view.findNavController().navigate(R.id.action_homeFragment_to_snackbarWidgetActivity)
-                15-> view.findNavController().navigate(R.id.action_homeFragment_to_dialogActivity)
+                15-> view.findNavController().navigate(R.id.action_homeFragment_to_toastActivity)
+                16-> view.findNavController().navigate(R.id.action_homeFragment_to_dialogActivity)
                 18-> view.findNavController().navigate(R.id.action_homeFragment_to_badgeDrawableActivity)
                 23 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
 
