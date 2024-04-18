@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         badge.verticalOffset = Display.dip2px(this,2f)  // px
         // 添加吐司框架
         Toaster.init(application)
-
-        val sh = Handler(mainLooper)
     }
 
 }
