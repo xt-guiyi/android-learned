@@ -6,6 +6,7 @@
         <item name="colorSecondary">@color/second_color</item>
         <item name="android:statusBarColor" >@color/primary_color</item>
         <item name="toolbarStyle">@style/ToolbarTitleStyle</item>
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
     </style>
 
     <style name="Theme.AndroidLearned" parent="Base.Theme.AndroidLearned" />
@@ -15,5 +16,9 @@
     <style name="Theme.AndroidLearned.Button" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="materialButtonStyle">@style/Widget.App.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.App.OutlinedButton</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
     </style>
 </resources>

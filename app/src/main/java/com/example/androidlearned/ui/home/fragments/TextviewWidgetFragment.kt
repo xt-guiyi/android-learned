@@ -77,7 +77,7 @@ class TextviewWidgetFragment : Fragment() {
         binding.span5.text = spanStringClient5
 
         val spanStringClient6 = SpannableStringBuilder("6.这是使用SpannableStringBuilder设置的图片")
-        spanStringClient6.setSpan(activity?.let { ImageSpan(it, R.mipmap.ic_launcher, DynamicDrawableSpan.ALIGN_BASELINE) },6,7,Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+        spanStringClient6.setSpan(activity?.let { ImageSpan(it, R.drawable.bottom_nav_home_24, DynamicDrawableSpan.ALIGN_BASELINE) },6,7,Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
         binding.span6.text = spanStringClient6
 
         val spanStringClient7 = SpannableStringBuilder("7.通过span可以设置点击事件，来点我")

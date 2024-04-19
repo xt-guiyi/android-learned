@@ -2,10 +2,12 @@ package com.example.androidlearned.ui.home.fragments
 
 import android.content.Context
 import android.graphics.Color
+import android.graphics.PixelFormat
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.os.Handler
 import android.util.TypedValue
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -42,29 +44,43 @@ class ToastFragment : Fragment() {
     private fun init() {
 
         binding.customToast1.setOnClickListener {
-            val view = LayoutInflater.from(requireContext()).inflate(R.layout.custom_dialog_6,null,false)
+            val mView = LayoutInflater.from(requireContext()).inflate(R.layout.custom_dialog_6,null,false)
             val windowParams = WindowManager.LayoutParams()
+            val displayWidth = resources.displayMetrics.widthPixels // 屏幕宽度
             windowParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_PANEL
             windowParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
             windowParams.gravity = Gravity.CENTER
             windowParams.height = WindowManager.LayoutParams.WRAP_CONTENT
-            windowParams.width = WindowManager.LayoutParams.MATCH_PARENT
-            windowParams.dimAmount = 0.5f
-//            windowParams.alpha = 0.5f
-            requireActivity().windowManager.addView(view,windowParams)
+            // 最大宽度为屏幕宽度 - 100,保证有间距
+            windowParams.width = (displayWidth - 100).coerceAtMost(WindowManager.LayoutParams.WRAP_CONTENT)
+            // 半透明
+            windowParams.format = PixelFormat.TRANSLUCENT
+            val mWindowManager = requireActivity().windowManager
+            mWindowManager.addView(mView,windowParams)
+            Handler(requireActivity().mainLooper).postDelayed({
+                if (mView?.parent != null) {
+                    mWindowManager.removeView(mView)
+                }
+            },1500)
         }
         // 自定义
         binding.customToast2.setOnClickListener {
-            val view = LayoutInflater.from(requireContext()).inflate(R.layout.custom_toast_2,null,false)
+            val mView = LayoutInflater.from(requireContext()).inflate(R.layout.custom_toast_2,null,false)
             val windowParams = WindowManager.LayoutParams()
             windowParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_PANEL
             windowParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
             windowParams.gravity = Gravity.CENTER
             windowParams.height = WindowManager.LayoutParams.WRAP_CONTENT
-            windowParams.width = Display.dip2px(requireContext(),120f)
-            windowParams.dimAmount = 0.1f
-//            windowParams.alpha = 0.5f
-            requireActivity().windowManager.addView(view,windowParams)
+            windowParams.width = Display.dip2px(requireContext(),180f)
+            // 半透明
+            windowParams.format = PixelFormat.TRANSLUCENT
+            val mWindowManager = requireActivity().windowManager
+            mWindowManager.addView(mView,windowParams)
+            Handler(requireActivity().mainLooper).postDelayed({
+                if (mView?.parent != null) {
+                    mWindowManager.removeView(mView)
+                }
+            },1500)
         }
 
 

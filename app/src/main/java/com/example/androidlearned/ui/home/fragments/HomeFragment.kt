@@ -55,8 +55,9 @@ class HomeFragment : Fragment() {
                 14-> view.findNavController().navigate(R.id.action_homeFragment_to_snackbarWidgetActivity)
                 15-> view.findNavController().navigate(R.id.action_homeFragment_to_toastActivity)
                 16-> view.findNavController().navigate(R.id.action_homeFragment_to_dialogActivity)
+                17-> view.findNavController().navigate(R.id.action_homeFragment_to_bottomSheetWidgetActivity)
                 19-> view.findNavController().navigate(R.id.action_homeFragment_to_badgeDrawableActivity)
-                23 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
+                24 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
 
             }
         }

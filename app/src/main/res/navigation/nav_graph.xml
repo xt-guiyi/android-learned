@@ -138,6 +138,13 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_in_right_enter" />
+        <action
+            android:id="@+id/action_homeFragment_to_bottomSheetWidgetActivity"
+            app:destination="@id/bottomSheetWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -239,6 +246,11 @@
         android:name="com.example.androidlearned.ui.home.activitys.ToastActivity"
         android:label="activity_toast"
         tools:layout="@layout/activity_toast" />
+    <activity
+        android:id="@+id/bottomSheetWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.BottomSheetWidgetActivity"
+        android:label="activity_bottom_sheet_widget"
+        tools:layout="@layout/activity_bottom_sheet_widget" />
 
 
 </navigation>
