@@ -2,11 +2,10 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.AndroidLearned" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimary">@color/primary_color</item>
         <item name="colorSecondary">@color/second_color</item>
-        <item name="android:statusBarColor" >@color/primary_color</item>
+        <item name="android:statusBarColor">@color/primary_color</item>
         <item name="toolbarStyle">@style/ToolbarTitleStyle</item>
-        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.App.BottomSheetDialog</item>
     </style>
 
     <style name="Theme.AndroidLearned" parent="Base.Theme.AndroidLearned" />
@@ -18,7 +17,4 @@
         <item name="materialButtonOutlinedStyle">@style/Widget.App.OutlinedButton</item>
     </style>
 
-    <style name="ThemeOverlay.App.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/ModalBottomSheetDialog</item>
-    </style>
 </resources>

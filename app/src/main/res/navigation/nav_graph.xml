@@ -145,6 +145,27 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_seekBarWidgetActivity"
+            app:destination="@id/seekBarWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_otherWidgetActivity"
+            app:destination="@id/otherWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_bannerWidgetActivity"
+            app:destination="@id/bannerWidgetActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -251,6 +272,21 @@
         android:name="com.example.androidlearned.ui.home.activitys.BottomSheetWidgetActivity"
         android:label="activity_bottom_sheet_widget"
         tools:layout="@layout/activity_bottom_sheet_widget" />
+    <activity
+        android:id="@+id/seekBarWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.SeekBarWidgetActivity"
+        android:label="activity_seek_bar_widget"
+        tools:layout="@layout/activity_seek_bar_widget" />
+    <activity
+        android:id="@+id/otherWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.OtherWidgetActivity"
+        android:label="activity_other_widget"
+        tools:layout="@layout/activity_other_widget" />
+    <activity
+        android:id="@+id/bannerWidgetActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.BannerWidgetActivity"
+        android:label="activity_banner_widget"
+        tools:layout="@layout/activity_banner_widget" />
 
 
 </navigation>

@@ -26,10 +26,11 @@ class HomeDataSource {
             homeLayoutInfos.add(HomeLayoutInfo(18,"SeekBar控件","学习SeekBar控件的各种使用方式"))
             homeLayoutInfos.add(HomeLayoutInfo(19,"BadgeDrawable控件","学习BadgeDrawable控件的各种使用方式"))
             homeLayoutInfos.add(HomeLayoutInfo(20,"轮播图控件","学习Banner控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(21,"tabs控件","学习TableLayout,TabItem控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(22,"RecycleView控件","学习RecycleView控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(23,"其他控件","学习一些杂类控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(24,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
+            homeLayoutInfos.add(HomeLayoutInfo(21,"Tabs控件","学习TableLayout,TabItem控件的各种使用方式"))
+            homeLayoutInfos.add(HomeLayoutInfo(22,"ViewPage控件","学习ViewPage控件的各种使用方式"))
+            homeLayoutInfos.add(HomeLayoutInfo(23,"RecycleView控件","学习RecycleView控件的各种使用方式"))
+            homeLayoutInfos.add(HomeLayoutInfo(24,"其他控件","学习一些杂类控件的各种使用方式"))
+            homeLayoutInfos.add(HomeLayoutInfo(25,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
 
 
 //             for (i in 1..20) {

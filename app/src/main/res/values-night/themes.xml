@@ -4,6 +4,6 @@
         <!-- Customize your dark theme here. -->
         <item name="colorPrimary">@color/primary_color</item>
         <item name="colorSecondary">@color/second_color</item>
-        <item name="android:statusBarColor" >@color/second_color</item>
+        <item name="android:statusBarColor">@color/second_color</item>
     </style>
 </resources>

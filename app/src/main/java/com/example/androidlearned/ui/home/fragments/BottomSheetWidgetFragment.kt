@@ -2,16 +2,14 @@ package com.example.androidlearned.ui.home.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.androidlearned.components.ModalBottomSheet1
 import com.example.androidlearned.databinding.FragmentBottomSheetWidgetBinding
 import com.example.androidlearned.utils.Display
 import com.google.android.material.bottomsheet.BottomSheetBehavior
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.hjq.toast.Toaster
 
 
 class BottomSheetWidgetFragment : Fragment() {
@@ -35,7 +33,6 @@ class BottomSheetWidgetFragment : Fragment() {
         binding.modalBottomSheetControl.setOnClickListener {
             val modalBottomSheet = ModalBottomSheet1()
             modalBottomSheet.show(requireActivity().supportFragmentManager, ModalBottomSheet1.TAG)
-
         }
     }
 

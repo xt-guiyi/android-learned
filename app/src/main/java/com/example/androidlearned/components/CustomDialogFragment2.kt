@@ -36,7 +36,7 @@ class CustomDialogFragment2: DialogFragment() {
             我们在这里可以重新设定view的各个数据，但是不能修改对话框最外层的ViewGroup的布局参数。
             因为这里的view还没添加到父级中，我们需要在下面onStart生命周期里修改对话框尺寸参数
          */
-        // 拦截弹窗触摸事件，防止被父容器触发触发事件
+        // 拦截弹窗触摸事件，防止被父容器触发事件
         mRootView.setOnTouchListener { v, event -> true }
         // 添加开始动画
         slideToUp()

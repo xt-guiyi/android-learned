@@ -44,7 +44,7 @@
                 style="@style/Widget.App.Switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="打开标准类型的BottomSheet"
+                android:text="打开标准类型的BottomSheet(自定义样式)"
                 />
 
 
@@ -55,7 +55,7 @@
         android:id="@+id/standard_bottom_sheet"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        style="@style/Widget.Material3.BottomSheet"
+        style="@style/BottomSheetDialog"
         android:padding="16dp"
         app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 

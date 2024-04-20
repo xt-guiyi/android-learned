@@ -71,9 +71,10 @@ dependencies {
     androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
     // 弹出式弹框 https://saket.github.io/cascade/
     implementation("me.saket.cascade:cascade:2.3.0")
-
     // 吐司框架：https://github.com/getActivity/Toaster
     implementation("com.github.getActivity:Toaster:12.6")
+    // banner控件：https://github.com/youth5201314/banner
+    implementation("io.github.youth5201314:banner:2.2.3")
 
 
 }

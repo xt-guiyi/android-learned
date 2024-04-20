@@ -22,7 +22,6 @@ class ModalBottomSheet1:BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        setStyle(DialogFragment.STYLE_NORMAL, R.style.ModalBottomSheetDialog)
         val mView = inflater.inflate(R.layout.custom_dialog_4, container, false)
         // 一句话实现全屏，爽歪歪
         mView.minimumHeight = resources.displayMetrics.heightPixels
@@ -34,6 +33,7 @@ class ModalBottomSheet1:BottomSheetDialogFragment() {
         // 设置行为属性
         val standardBottomSheetBehavior = (dialog as BottomSheetDialog).behavior
         standardBottomSheetBehavior.state = BottomSheetBehavior.STATE_EXPANDED
+        // 跳过折叠，向下滑动直接隐藏
         standardBottomSheetBehavior.skipCollapsed = true
     }
 

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.home.fragments.SeekBarWidgetFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:titleCentered="true"
+        app:title="SeekBar控件"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:splitTrack="false"
+        android:thumb="@drawable/circle"
+        android:thumbTint="@color/primary_color"
+        android:background="@null"
+        android:progressTint="@color/bilibili_pink"
+        android:secondaryProgressTint="@color/silver"
+        android:progressBackgroundTint="@color/black"
+        android:max="100"
+        android:progress="30"
+        android:secondaryProgress="80"
+        android:layout_margin="16dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义样式"
+        android:gravity="center"
+        android:textSize="14sp"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="32dp"
+        android:splitTrack="false"
+        android:thumb="@drawable/circle"
+        android:thumbTint="@color/primary_color"
+        android:background="@null"
+        android:progressDrawable="@drawable/seek_bar_style"
+        android:max="100"
+        android:progress="30"
+        android:secondaryProgress="80"
+        android:layout_margin="16dp"
+        />
+
+</LinearLayout>
