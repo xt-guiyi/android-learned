@@ -188,7 +188,7 @@
         <item name="shapeAppearance">@style/ShapeAppearance.App.LargeComponent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
-
+    <!--  定制标准 BottomSheet的形状  -->
     <style name="ShapeAppearance.App.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
         <item name="cornerFamily">cut</item>
         <item name="cornerSize">0dp</item>
@@ -196,11 +196,18 @@
 <!--        <item name="cornerSize">8dp</item>-->
     </style>
 
+    <!--  定制TabLayout的文字样式  -->
+    <style name="TabsTextAppearance" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="textAllCaps">true</item>
+        <item name="fontFamily">@font/a_li_mama_dao_li_ti</item>
+    </style>
+
     <!--RatingBar自定义,注意，这里的的图片只能是位图，不是是矢量图-->
     <style name="RatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/rating_style</item>
         <item name="android:minHeight">32dp</item>
         <item name="android:maxHeight">32dp</item>
-
     </style>
 </resources>
