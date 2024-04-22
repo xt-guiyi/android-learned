@@ -173,6 +173,13 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_homeFragment_to_viewPageActivity"
+            app:destination="@id/viewPageActivity"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
     </fragment>
     <activity
         android:id="@+id/coordinationLayoutActivity"
@@ -299,6 +306,11 @@
         android:name="com.example.androidlearned.ui.home.activitys.TabsActivity"
         android:label="activity_tabs"
         tools:layout="@layout/activity_tabs" />
+    <activity
+        android:id="@+id/viewPageActivity"
+        android:name="com.example.androidlearned.ui.home.activitys.ViewPageActivity"
+        android:label="activity_view_page"
+        tools:layout="@layout/activity_view_page" />
 
 
 </navigation>

@@ -60,6 +60,7 @@ class HomeFragment : Fragment() {
                 19-> view.findNavController().navigate(R.id.action_homeFragment_to_badgeDrawableActivity)
                 20-> view.findNavController().navigate(R.id.action_homeFragment_to_bannerWidgetActivity)
                 21-> view.findNavController().navigate(R.id.action_homeFragment_to_tabsActivity)
+                22-> view.findNavController().navigate(R.id.action_homeFragment_to_viewPageActivity)
                 24-> view.findNavController().navigate(R.id.action_homeFragment_to_otherWidgetActivity)
                 25 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
 

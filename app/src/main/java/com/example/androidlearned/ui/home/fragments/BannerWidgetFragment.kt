@@ -1,24 +1,18 @@
 package com.example.androidlearned.ui.home.fragments
 
-import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.core.content.res.ResourcesCompat
-import androidx.core.view.marginLeft
 import com.example.androidlearned.R
-import com.example.androidlearned.adapters.ImageAdapter
+import com.example.androidlearned.adapters.BannerAdapter
 import com.example.androidlearned.databinding.FragmentBannerWidgetBinding
-import com.example.androidlearned.utils.Display
-import com.hjq.toast.Toaster
 import com.youth.banner.adapter.BannerImageAdapter
 import com.youth.banner.holder.BannerImageHolder
 import com.youth.banner.indicator.CircleIndicator
-import com.youth.banner.indicator.Indicator
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -113,7 +107,7 @@ class BannerWidgetFragment : Fragment() {
 
 
         binding.banner4
-            .setAdapter(ImageAdapter(images))
+            .setAdapter(BannerAdapter(images))
             .addBannerLifecycleObserver(requireActivity())
             .setIndicator(CircleIndicator(requireContext()))
             .setIndicatorSelectedColorRes(R.color.primary_color)

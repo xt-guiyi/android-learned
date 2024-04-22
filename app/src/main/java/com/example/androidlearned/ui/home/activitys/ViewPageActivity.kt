@@ -9,11 +9,11 @@ import androidx.navigation.ActivityNavigator
 import com.example.androidlearned.R
 import com.example.androidlearned.utils.CommonCode
 
-class ToastActivity : AppCompatActivity() {
+class ViewPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_toast)
-        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_at,R.navigation.nav_graph_toast)
+        setContentView(R.layout.activity_view_page)
+        CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragment_container_view_avp,R.navigation.nav_graph_view_page)
     }
 
     /**

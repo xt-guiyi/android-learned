@@ -13,8 +13,8 @@ import com.youth.banner.util.BannerUtils
 /**
  * 自定义布局，下面是常见的图片样式，更多实现可以看demo，可以自己随意发挥
  */
-class ImageAdapter(mData: List<Drawable?>?) :
-    BannerAdapter<Drawable?, ImageAdapter.BannerViewHolder?>(mData) {
+class BannerAdapter(mData: List<Drawable?>?) :
+    BannerAdapter<Drawable?, com.example.androidlearned.adapters.BannerAdapter.BannerViewHolder?>(mData) {
     //创建ViewHolder，可以用viewType这个字段来区分不同的ViewHolder
     override fun onCreateHolder(parent: ViewGroup, viewType: Int): BannerViewHolder {
         val imageView = ImageView(parent.context)
