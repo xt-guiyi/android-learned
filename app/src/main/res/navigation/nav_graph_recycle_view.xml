@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_recycle_view"
+    app:startDestination="@id/recycleViewFragment">
+
+    <fragment
+        android:id="@+id/recycleViewFragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewFragment"
+        android:label="fragment_recycle_view"
+        tools:layout="@layout/fragment_recycle_view" >
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample1Fragment"
+            app:destination="@id/recycleViewExample1Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample2Fragment"
+            app:destination="@id/recycleViewExample2Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample3Fragment"
+            app:destination="@id/recycleViewExample3Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample4Fragment"
+            app:destination="@id/recycleViewExample4Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample5Fragment"
+            app:destination="@id/recycleViewExample5Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/recycleViewExample4Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample4Fragment"
+        android:label="fragment_recycle_view_example4"
+        tools:layout="@layout/fragment_recycle_view_example4" />
+    <fragment
+        android:id="@+id/recycleViewExample1Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample1Fragment"
+        android:label="fragment_recycle_view_example1"
+        tools:layout="@layout/fragment_recycle_view_example1" />
+    <fragment
+        android:id="@+id/recycleViewExample3Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample3Fragment"
+        android:label="fragment_recycle_view_example3"
+        tools:layout="@layout/fragment_recycle_view_example3" />
+    <fragment
+        android:id="@+id/recycleViewExample2Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample2Fragment"
+        android:label="fragment_recycle_view_example2"
+        tools:layout="@layout/fragment_recycle_view_example2" />
+    <fragment
+        android:id="@+id/recycleViewExample5Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample5Fragment"
+        android:label="fragment_recycle_view_example5"
+        tools:layout="@layout/fragment_recycle_view_example5" />
+</navigation>

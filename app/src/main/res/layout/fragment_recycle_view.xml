@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.fragments.RecycleViewFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="recycleView列表"
+        app:titleCentered="true"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16px"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例1(分割线、新增项、删除项、以及对应的动画)"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例2(编辑列表，可以多选进行操作)"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例3(下拉加载，上拉加载更多)"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例4(自定义下拉加载，上拉加载更多的样式)"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例4(使用paging库实现下拉加载，上拉加载更多)"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
