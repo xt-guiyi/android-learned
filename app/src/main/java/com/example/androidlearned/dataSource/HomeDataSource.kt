@@ -41,7 +41,7 @@ class HomeDataSource {
 
         fun loadRecycleView1List(): MutableList<String> {
             val list:MutableList<String>  = mutableListOf()
-            for (i in 1..20) {
+            for (i in 0..<20) {
                 list.add("第${i}项")
             }
             return list

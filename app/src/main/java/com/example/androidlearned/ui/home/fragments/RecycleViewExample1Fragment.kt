@@ -1,24 +1,29 @@
 package com.example.androidlearned.ui.home.fragments
 
-import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_DRAG
+import androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_IDLE
+import androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_SWIPE
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.ItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlearned.R
 import com.example.androidlearned.adapters.RecycleViewExample1Adapter
 import com.example.androidlearned.dataSource.HomeDataSource
 import com.example.androidlearned.databinding.FragmentRecycleViewExample1Binding
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.hjq.toast.Toaster
+import java.util.Collections
+
 
 class RecycleViewExample1Fragment : Fragment() {
-   lateinit var binding: FragmentRecycleViewExample1Binding
+    lateinit var binding: FragmentRecycleViewExample1Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,14 +58,52 @@ class RecycleViewExample1Fragment : Fragment() {
             data.add(4,"新增项-${newIndex++}")
             adapter.notifyItemInserted(4)
         }
-        // 删除项
-        adapter.setOnClickListener { position, text, view ->
+        // 点击删除项
+        adapter.setOnClickListener { position, text, _ ->
             Toaster.show("删除了${text}，位置在${position}")
+            if (data.size <=  4) return@setOnClickListener
             data.removeAt(position)
             adapter.notifyItemRemoved(position)
-//            adapter.notifyDataSetChanged()
-//            adapter.notifyItemRangeChanged(position,2)
+            adapter.notifyItemRangeChanged(position,data.size - position)
         }
+
+        // 滑动-移动项、删除项
+        ItemTouchHelper(object :ItemTouchHelper.Callback(){
+            override fun getMovementFlags(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder
+            ): Int {
+                val idleStatus = makeFlag(ACTION_STATE_IDLE, ItemTouchHelper.RIGHT) // 空闲时允许向右移动
+                val swipeStatus = makeFlag(ACTION_STATE_SWIPE, ItemTouchHelper.LEFT) // 只能向左滑
+                val dragStatus = makeFlag(ACTION_STATE_DRAG, ItemTouchHelper.UP or ItemTouchHelper.DOWN) // 上下移动
+                return idleStatus or swipeStatus or dragStatus
+            }
+
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                val firstPosition = viewHolder.absoluteAdapterPosition
+                val lastPosition = target.absoluteAdapterPosition
+                Log.i("1","${firstPosition}-${lastPosition}")
+                Collections.swap(data, firstPosition, lastPosition)
+                adapter.notifyItemMoved(firstPosition, lastPosition)
+//                adapter.notifyDataSetChanged()
+//                adapter.notifyItemRangeChanged(firstPosition, data.size)
+                return true
+
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.absoluteAdapterPosition
+                data.removeAt(position)
+                adapter.notifyItemRemoved(position)
+                adapter.notifyItemRangeChanged(position, data.size - position)
+            }
+
+        }).attachToRecyclerView(binding.list)
+
         // 动画
     }
 
