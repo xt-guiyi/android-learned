@@ -67,7 +67,7 @@ class RecycleViewExample1Fragment : Fragment() {
             adapter.notifyItemRangeChanged(position,data.size - position)
         }
 
-        // 滑动-移动项、删除项
+        // 触摸帮助类
         ItemTouchHelper(object :ItemTouchHelper.Callback(){
             override fun getMovementFlags(
                 recyclerView: RecyclerView,
@@ -79,22 +79,31 @@ class RecycleViewExample1Fragment : Fragment() {
                 return idleStatus or swipeStatus or dragStatus
             }
 
+
+            // 拖拽移动位置
             override fun onMove(
                 recyclerView: RecyclerView,
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
-                val firstPosition = viewHolder.absoluteAdapterPosition
-                val lastPosition = target.absoluteAdapterPosition
-                Log.i("1","${firstPosition}-${lastPosition}")
-                Collections.swap(data, firstPosition, lastPosition)
-                adapter.notifyItemMoved(firstPosition, lastPosition)
-//                adapter.notifyDataSetChanged()
-//                adapter.notifyItemRangeChanged(firstPosition, data.size)
+                val formPosition = viewHolder.absoluteAdapterPosition
+                val targetPosition = target.absoluteAdapterPosition
+                // 移动数据
+                val oldVal = data.removeAt(formPosition)
+                data.add(targetPosition, oldVal)
+                // 通知适配器更新，触发视觉(ui)上的移动效果
+                adapter.notifyItemMoved(formPosition, targetPosition)
+                // 更新影响范围内的ViewHolder,从而触发onBindViewHolder
+                if(formPosition > targetPosition) {
+                    adapter.notifyItemRangeChanged(targetPosition,formPosition + 1,1)
+                }else {
+                    adapter.notifyItemRangeChanged(formPosition,targetPosition + 1,1)
+                }
                 return true
 
             }
 
+            // 滑动删除
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.absoluteAdapterPosition
                 data.removeAt(position)

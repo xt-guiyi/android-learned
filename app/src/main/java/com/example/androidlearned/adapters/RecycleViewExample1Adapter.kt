@@ -1,5 +1,6 @@
 package com.example.androidlearned.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,11 +20,19 @@ class RecycleViewExample1Adapter(val list: MutableList<String>) : RecyclerView.A
         return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_recycle_view_item_1, parent, false))
     }
 
+
+
     override fun getItemCount(): Int {
         return list.size
     }
-
+    // 默认实现
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        TODO("Not yet implemented")
+    }
+
+    // payload可以用来进行局部更新，例如有文本和图片，通过判断 payload只去更新文本，避免图片被更新而照成的闪烁问题
+    override fun onBindViewHolder(holder: ViewHolder, position: Int, payload:List<Any>) {
+        Log.i("onBindViewHolder",position.toString())
         holder.title.text = list[position]
         holder.itemView.setOnClickListener {
             mClickCall?.invoke(position, list[position] ,it)
