@@ -1,6 +1,7 @@
 package com.example.androidlearned.dataSource
 
 import com.example.androidlearned.domain.HomeLayoutInfo
+import com.example.androidlearned.domain.People
 
 class HomeDataSource {
     companion object Factory {
@@ -39,10 +40,18 @@ class HomeDataSource {
             return homeLayoutInfos
         }
 
-        fun loadRecycleView1List(): MutableList<String> {
+        fun loadRecycleViewList(): MutableList<String> {
             val list:MutableList<String>  = mutableListOf()
             for (i in 0..<20) {
                 list.add("第${i}项")
+            }
+            return list
+        }
+
+        fun loadRecycleViewPeopleList(): MutableList<People> {
+            val list:MutableList<People>  = mutableListOf()
+            for (i in 1..20) {
+                list.add(People(i,"王 $i"))
             }
             return list
         }

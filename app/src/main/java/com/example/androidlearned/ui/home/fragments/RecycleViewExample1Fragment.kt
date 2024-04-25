@@ -1,7 +1,6 @@
 package com.example.androidlearned.ui.home.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +18,6 @@ import com.example.androidlearned.dataSource.HomeDataSource
 import com.example.androidlearned.databinding.FragmentRecycleViewExample1Binding
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.hjq.toast.Toaster
-import java.util.Collections
 
 
 class RecycleViewExample1Fragment : Fragment() {
@@ -40,7 +38,7 @@ class RecycleViewExample1Fragment : Fragment() {
     }
 
     private fun init() {
-        val data = HomeDataSource.loadRecycleView1List()
+        val data = HomeDataSource.loadRecycleViewList()
         val adapter = RecycleViewExample1Adapter(data)
         // 设置布局
         binding.list.layoutManager = LinearLayoutManager(requireContext())
@@ -86,8 +84,8 @@ class RecycleViewExample1Fragment : Fragment() {
                 viewHolder: RecyclerView.ViewHolder,
                 target: RecyclerView.ViewHolder
             ): Boolean {
-                val formPosition = viewHolder.absoluteAdapterPosition
-                val targetPosition = target.absoluteAdapterPosition
+                val formPosition = viewHolder.layoutPosition
+                val targetPosition = target.layoutPosition
                 // 移动数据
                 val oldVal = data.removeAt(formPosition)
                 data.add(targetPosition, oldVal)
@@ -105,7 +103,7 @@ class RecycleViewExample1Fragment : Fragment() {
 
             // 滑动删除
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                val position = viewHolder.absoluteAdapterPosition
+                val position = viewHolder.layoutPosition
                 data.removeAt(position)
                 adapter.notifyItemRemoved(position)
                 adapter.notifyItemRangeChanged(position, data.size - position)

@@ -5,56 +5,97 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.androidlearned.R
+import com.example.androidlearned.adapters.RecycleViewExample1Adapter
+import com.example.androidlearned.adapters.RecycleViewExample2Adapter
+import com.example.androidlearned.dataSource.HomeDataSource
+import com.example.androidlearned.databinding.FragmentRecycleViewExample2Binding
+import com.example.androidlearned.domain.People
+import java.util.Collections
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [RecycleViewExample2Fragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class RecycleViewExample2Fragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
+    lateinit var binding: FragmentRecycleViewExample2Binding
+    lateinit var adapter:  RecycleViewExample2Adapter
+    lateinit var data: MutableList<People>
+    var index: Int = 10001
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recycle_view_example2, container, false)
+        binding = FragmentRecycleViewExample2Binding.inflate(inflater, container, false)
+        init()
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment RecycleViewExample2Fragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            RecycleViewExample2Fragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    private fun init() {
+        data = HomeDataSource.loadRecycleViewPeopleList()
+        adapter = RecycleViewExample2Adapter(object : DiffUtil.ItemCallback<People>(){
+            // 比较item是否相同
+            override fun areItemsTheSame(oldItem: People, newItem: People): Boolean {
+                return oldItem.id == newItem.id
             }
+            // 比较内容是否相同
+            override fun areContentsTheSame(oldItem: People, newItem: People): Boolean {
+                return oldItem.name == newItem.name
+            }
+
+        })
+        adapter.submitList(data)
+        binding.list.adapter = adapter
+        binding.list.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
+
+
+        // 新增
+        binding.add.setOnClickListener {
+            add()
+        }
+
+        ItemTouchHelper(object: ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP or ItemTouchHelper.DOWN,ItemTouchHelper.LEFT){
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                move(viewHolder.layoutPosition,target.layoutPosition)
+                return true
+            }
+
+            // 删除
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                remove(viewHolder.layoutPosition)
+            }
+
+        }).attachToRecyclerView(binding.list)
+    }
+
+    private fun add() {
+        val item = People(index,"李$index")
+        // 获取副本
+        data = data.toMutableList()
+        data.add(4,item)
+        adapter.submitList(data)
+        index++
+    }
+
+    fun remove(position: Int) {
+        // 获取副本
+        data = data.toMutableList()
+        data.removeAt(position)
+        adapter.submitList(data)
+    }
+
+    fun move(formPosition:Int, targetPosition: Int) {
+        // 获取副本
+        data = data.toMutableList()
+        Collections.swap(data, formPosition, targetPosition)
+        adapter.submitList(data)
     }
 }

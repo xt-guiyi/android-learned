@@ -23,7 +23,7 @@
         android:orientation="horizontal"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:gravity="end"
+        android:gravity="center"
         >
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/add"
@@ -36,12 +36,6 @@
             android:background="@color/primary_color"
             android:stateListAnimator="@null"
             />
-        <com.google.android.material.materialswitch.MaterialSwitch
-            style="@style/Widget.App.Switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="切换动画:"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
