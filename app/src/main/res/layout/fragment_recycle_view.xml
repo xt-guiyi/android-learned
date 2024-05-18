@@ -30,7 +30,7 @@
                 android:id="@+id/recycle_view_example_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="示例1\n1.新增项、删除项\n2.分割线)"
+                android:text="示例1\n1.新增项、删除项、移动项\n2.分割线)"
                 android:textColor="@color/white"
                 android:padding="8dp"
                 android:background="@drawable/background_shape_7"
@@ -53,6 +53,7 @@
                     android:id="@+id/recycle_view_example_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAllCaps="false"
                     android:text="示例3\n1.自定义ItemDecoration,实现粘性标题\n2.滚动到指定地点"
                     android:textColor="@color/white"
                     android:padding="8dp"
@@ -60,16 +61,16 @@
                     android:stateListAnimator="@null"
                     android:layout_margin="16dp"/>
 
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:id="@+id/recycle_view_example_2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="示例2(编辑列表，可以多选进行操作,自定义分割线效果)"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:padding="8dp"-->
-<!--                android:background="@drawable/background_shape_7"-->
-<!--                android:stateListAnimator="@null"-->
-<!--                android:layout_margin="16dp"/>-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例4\n编辑列表，可以进行多选、全选操作"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
 
 <!--            <androidx.appcompat.widget.AppCompatButton-->
 <!--                android:id="@+id/recycle_view_example_3"-->

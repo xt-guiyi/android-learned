@@ -9,9 +9,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidlearned.R
-import com.example.androidlearned.adapters.RecycleViewExample1Adapter
 import com.example.androidlearned.adapters.RecycleViewExample2Adapter
+import com.example.androidlearned.components.CustomItemDecoration1
 import com.example.androidlearned.dataSource.HomeDataSource
 import com.example.androidlearned.databinding.FragmentRecycleViewExample2Binding
 import com.example.androidlearned.domain.People
@@ -49,6 +48,7 @@ class RecycleViewExample2Fragment : Fragment() {
 
         })
         adapter.submitList(data)
+        binding.list.addItemDecoration(CustomItemDecoration1(requireContext()))
         binding.list.adapter = adapter
         binding.list.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
 
@@ -59,6 +59,7 @@ class RecycleViewExample2Fragment : Fragment() {
         }
 
         ItemTouchHelper(object: ItemTouchHelper.SimpleCallback(ItemTouchHelper.UP or ItemTouchHelper.DOWN,ItemTouchHelper.LEFT){
+            // 移动位置
             override fun onMove(
                 recyclerView: RecyclerView,
                 viewHolder: RecyclerView.ViewHolder,

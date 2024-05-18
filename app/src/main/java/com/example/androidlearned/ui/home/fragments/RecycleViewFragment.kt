@@ -32,12 +32,12 @@ class RecycleViewFragment : Fragment() {
         binding.recycleViewExample2.setOnClickListener{
             it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample2Fragment)
         }
-//        binding.recycleViewExample3.setOnClickListener{
-//            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample3Fragment)
-//        }
-//        binding.recycleViewExample4.setOnClickListener{
-//            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample4Fragment)
-//        }
+        binding.recycleViewExample3.setOnClickListener{
+            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample3Fragment)
+        }
+        binding.recycleViewExample4.setOnClickListener{
+            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample4Fragment)
+        }
 //        binding.recycleViewExample5.setOnClickListener{
 //            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample5Fragment)
 //        }

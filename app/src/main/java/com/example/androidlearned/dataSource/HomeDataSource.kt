@@ -1,7 +1,9 @@
 package com.example.androidlearned.dataSource
 
+import com.example.androidlearned.adapters.RecycleViewExample3Adapter
 import com.example.androidlearned.domain.HomeLayoutInfo
 import com.example.androidlearned.domain.People
+import com.example.androidlearned.domain.StickHeadInfo
 
 class HomeDataSource {
     companion object Factory {
@@ -52,6 +54,36 @@ class HomeDataSource {
             val list:MutableList<People>  = mutableListOf()
             for (i in 1..20) {
                 list.add(People(i,"王 $i"))
+            }
+            return list
+        }
+
+        fun loadRecycleViewStickHeadList(): MutableList<StickHeadInfo> {
+            val list:MutableList<StickHeadInfo>  = mutableListOf()
+            // 食品
+            list.add(StickHeadInfo("食品分组", RecycleViewExample3Adapter.VIEW_TYPE_TITLE, "食品分组"))
+            for (i in 1..15) {
+                list.add(StickHeadInfo("食品-$i", RecycleViewExample3Adapter.VIEW_TYPE_CONTENT,"食品分组"))
+            }
+            // 水果
+            list.add(StickHeadInfo("水果分组", RecycleViewExample3Adapter.VIEW_TYPE_TITLE,"水果分组"))
+            for (i in 1..8) {
+                list.add(StickHeadInfo("水果-$i", RecycleViewExample3Adapter.VIEW_TYPE_CONTENT,"水果分组"))
+            }
+            // 手机
+            list.add(StickHeadInfo("手机分组", RecycleViewExample3Adapter.VIEW_TYPE_TITLE, "手机分组"))
+            for (i in 1..18) {
+                list.add(StickHeadInfo("手机-$i", RecycleViewExample3Adapter.VIEW_TYPE_CONTENT, "手机分组"))
+            }
+            // 电脑
+            list.add(StickHeadInfo("电脑分组", RecycleViewExample3Adapter.VIEW_TYPE_TITLE, "电脑分组"))
+            for (i in 1..4) {
+                list.add(StickHeadInfo("电脑-$i", RecycleViewExample3Adapter.VIEW_TYPE_CONTENT, "电脑分组"))
+            }
+            // 百货
+            list.add(StickHeadInfo("百货分组", RecycleViewExample3Adapter.VIEW_TYPE_TITLE, "百货分组"))
+            for (i in 1..30) {
+                list.add(StickHeadInfo("百货-$i", RecycleViewExample3Adapter.VIEW_TYPE_CONTENT, "百货分组"))
             }
             return list
         }

@@ -14,7 +14,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:title="示例1"
+        app:title="示例3"
         app:titleCentered="true"
         />
     <LinearLayout

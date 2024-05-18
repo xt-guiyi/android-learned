@@ -34,17 +34,19 @@ class CoordinationLayoutExample7FragmentAdapter(private val data: MutableList<Ba
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        when (viewType) {
+        return when (viewType) {
             VIEW_TYPE_TITLE -> {
-                return ViewHolderByTitle(LayoutInflater.from(parent.context).inflate(R.layout.fragment_coordination_layout_example7_recycle_item_title,parent,false))
+                ViewHolderByTitle(LayoutInflater.from(parent.context).inflate(R.layout.fragment_coordination_layout_example7_recycle_item_title,parent,false))
             }
+
             VIEW_TYPE_MENU -> {
-                return ViewHolderByMenu(LayoutInflater.from(parent.context).inflate(R.layout.fragment_coordination_layout_example7_recycle_item_menu,parent,false))
+                ViewHolderByMenu(LayoutInflater.from(parent.context).inflate(R.layout.fragment_coordination_layout_example7_recycle_item_menu,parent,false))
             }
+
             else -> {
                 val view = View(parent.context)
                 view.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,lastH)
-                return ViewHolderByFooter(view)
+                ViewHolderByFooter(view)
             }
         }
     }
