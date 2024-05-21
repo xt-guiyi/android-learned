@@ -38,9 +38,9 @@ class RecycleViewFragment : Fragment() {
         binding.recycleViewExample4.setOnClickListener{
             it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample4Fragment)
         }
-//        binding.recycleViewExample5.setOnClickListener{
-//            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample5Fragment)
-//        }
+        binding.recycleViewExample5.setOnClickListener{
+            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample5Fragment)
+        }
     }
 
 }

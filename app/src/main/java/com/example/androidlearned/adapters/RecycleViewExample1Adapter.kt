@@ -17,7 +17,7 @@ class RecycleViewExample1Adapter(val list: MutableList<String>) : RecyclerView.A
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_recycle_view_item_1, parent, false))
+        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.fragment_recycle_view_example1_item, parent, false))
     }
 
 

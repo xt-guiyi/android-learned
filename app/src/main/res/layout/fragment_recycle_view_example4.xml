@@ -11,13 +11,62 @@
     <com.google.android.material.appbar.MaterialToolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="示例4"
         app:titleCentered="true"
-        android:background="@color/primary_color" />
+        android:background="@color/primary_color" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="示例4"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:paddingStart="100dp"
+                />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/no_all_selected_button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="打开多选"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/all_selected_button"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:background="@color/primary_color"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="全选"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            />
+
+
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/action_list"
+        android:id="@+id/multiply_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
