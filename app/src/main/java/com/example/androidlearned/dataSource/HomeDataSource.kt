@@ -4,6 +4,8 @@ import com.example.androidlearned.adapters.RecycleViewExample3Adapter
 import com.example.androidlearned.domain.HomeLayoutInfo
 import com.example.androidlearned.domain.People
 import com.example.androidlearned.domain.StickHeadInfo
+import java.util.Collections
+
 
 class HomeDataSource {
     companion object Factory {
@@ -48,6 +50,20 @@ class HomeDataSource {
                 list.add("第${i}项")
             }
             return list
+        }
+
+        fun loadRecycleViewListByPage(currentPage: Int = 1, pageSize: Int = 10): MutableList<String> {
+            val list:MutableList<String>  = mutableListOf()
+            for (i in 0..<200) {
+                list.add("第${i}项")
+            }
+            // 验证开始索引是否在列表范围内
+            val fromIndex: Int = (currentPage - 1) * pageSize
+            val toIndex = (fromIndex + pageSize).coerceAtMost(list.size)
+            // 验证开始索引是否在列表范围内
+            return if (fromIndex >= list.size || fromIndex < 0) {
+               return Collections.emptyList() // 如果开始索引超出范围，返回空列表
+            } else list.subList(fromIndex, toIndex)
         }
 
         fun loadRecycleViewPeopleList(): MutableList<People> {
