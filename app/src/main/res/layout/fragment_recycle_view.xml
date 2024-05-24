@@ -30,7 +30,7 @@
                 android:id="@+id/recycle_view_example_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="示例1\n1.新增项、删除项、移动项\n2.分割线)"
+                android:text="示例1\n1.新增项、删除项、移动项\n2.分割线"
                 android:textColor="@color/white"
                 android:padding="8dp"
                 android:background="@drawable/background_shape_7"
@@ -76,34 +76,35 @@
                 android:id="@+id/recycle_view_example_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="示例5\n下拉加载，上拉加载更多"
+                android:text="示例5\n1.简单的下拉加载，上拉加载更多实现"
                 android:textColor="@color/white"
                 android:padding="8dp"
                 android:background="@drawable/background_shape_7"
                 android:stateListAnimator="@null"
                 android:layout_margin="16dp" />
 
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:id="@+id/recycle_view_example_4"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="示例4(自定义下拉加载，上拉加载更多的样式)"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:padding="8dp"-->
-<!--                android:background="@drawable/background_shape_7"-->
-<!--                android:stateListAnimator="@null"-->
-<!--                android:layout_margin="16dp"/>-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例4\n自定义下拉加载，上拉加载更多的样式"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
 
-<!--            <androidx.appcompat.widget.AppCompatButton-->
-<!--                android:id="@+id/recycle_view_example_5"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="示例4(使用paging库实现下拉加载，上拉加载更多)"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:padding="8dp"-->
-<!--                android:background="@drawable/background_shape_7"-->
-<!--                android:stateListAnimator="@null"-->
-<!--                android:layout_margin="16dp"/>-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/recycle_view_example_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="示例4\n使用paging库实现下拉加载，上拉加载更多"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:background="@drawable/background_shape_7"
+                android:stateListAnimator="@null"
+                android:layout_margin="16dp"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

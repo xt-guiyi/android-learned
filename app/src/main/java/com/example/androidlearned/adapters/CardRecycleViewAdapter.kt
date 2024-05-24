@@ -6,12 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidlearned.domain.HomeLayoutInfo
+import com.example.androidlearned.domain.CardInfo
 import com.example.androidlearned.R
 
-class HomeFragmentAdapter(private val homeLayoutInfoList: MutableList<HomeLayoutInfo>):RecyclerView.Adapter<HomeFragmentAdapter.ViewHolder> ()
+class CardRecycleViewAdapter(private val homeLayoutInfoList: MutableList<CardInfo>):RecyclerView.Adapter<CardRecycleViewAdapter.ViewHolder> ()
 {
-    private  var mClickCall: ( (HomeLayoutInfo,View) -> Unit)? = null
+    private  var mClickCall: ( (CardInfo, View) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.i("test","onCreateViewHolder")
 
@@ -41,7 +41,7 @@ class HomeFragmentAdapter(private val homeLayoutInfoList: MutableList<HomeLayout
         }
     }
 
-     public  fun setOnClickListener(mClickCall: (HomeLayoutInfo, View) -> Unit ) {
+     public  fun setOnClickListener(mClickCall: (CardInfo, View) -> Unit ) {
         this.mClickCall = mClickCall
     }
 }

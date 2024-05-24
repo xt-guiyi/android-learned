@@ -1,7 +1,7 @@
 package com.example.androidlearned.dataSource
 
 import com.example.androidlearned.adapters.RecycleViewExample3Adapter
-import com.example.androidlearned.domain.HomeLayoutInfo
+import com.example.androidlearned.domain.CardInfo
 import com.example.androidlearned.domain.People
 import com.example.androidlearned.domain.StickHeadInfo
 import java.util.Collections
@@ -9,39 +9,72 @@ import java.util.Collections
 
 class HomeDataSource {
     companion object Factory {
-        fun loadRecycleInfoList():MutableList<HomeLayoutInfo> {
-            val homeLayoutInfos = mutableListOf<HomeLayoutInfo>()
-            homeLayoutInfos.add(HomeLayoutInfo(1,"按钮控件","学习button的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(2,"文本控件","学习TextView的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(3,"图片控件","学习imageView,ShapeableImageView的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(4,"输入控件","学习editText控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(5,"单选按钮控件","学习radioButton控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(6,"多选按钮控件","学习checkBox控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(7,"切换按钮控件","学习switch控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(8,"Chips控件","学习Chips的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(9,"fab按钮控件","学习Floating action buttons的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(10,"导航栏控件","学习各种导航栏实现效果"))
-            homeLayoutInfos.add(HomeLayoutInfo(11,"导航抽屉控件","学习drawLayout,navigationView实现效果"))
-            homeLayoutInfos.add(HomeLayoutInfo(12,"菜单项","学习Menus的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(13,"进度条控件","学习ProgressIndicators的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(14,"SnackBar控件","学习SnackBar的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(15,"Toast提醒","学习Toast的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(16,"Dialog控件","学习FragmentDialog的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(17,"BottomSheet控件","学习BottomSheet控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(18,"SeekBar控件","学习SeekBar控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(19,"BadgeDrawable控件","学习BadgeDrawable控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(20,"轮播图控件","学习Banner控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(21,"Tabs控件","学习TableLayout,TabItem控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(22,"ViewPage控件","学习ViewPage控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(23,"RecycleView列表","学习RecycleView控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(24,"其他控件","学习一些杂类控件的各种使用方式"))
-            homeLayoutInfos.add(HomeLayoutInfo(25,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
+        fun loadRecycleInfoList():MutableList<CardInfo> {
+            val homeLayoutInfos = mutableListOf<CardInfo>()
+            homeLayoutInfos.add(CardInfo(1,"按钮控件","学习button的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(2,"文本控件","学习TextView的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(3,"图片控件","学习imageView,ShapeableImageView的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(4,"输入控件","学习editText控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(5,"单选按钮控件","学习radioButton控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(6,"多选按钮控件","学习checkBox控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(7,"切换按钮控件","学习switch控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(8,"Chips控件","学习Chips的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(9,"fab按钮控件","学习Floating action buttons的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(10,"导航栏控件","学习各种导航栏实现效果"))
+            homeLayoutInfos.add(CardInfo(11,"导航抽屉控件","学习drawLayout,navigationView实现效果"))
+            homeLayoutInfos.add(CardInfo(12,"菜单项","学习Menus的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(13,"进度条控件","学习ProgressIndicators的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(14,"SnackBar控件","学习SnackBar的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(15,"Toast提醒","学习Toast的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(16,"Dialog控件","学习FragmentDialog的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(17,"BottomSheet控件","学习BottomSheet控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(18,"SeekBar控件","学习SeekBar控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(19,"BadgeDrawable控件","学习BadgeDrawable控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(20,"轮播图控件","学习Banner控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(21,"Tabs控件","学习TableLayout,TabItem控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(22,"ViewPage控件","学习ViewPage控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(23,"RecycleView列表","学习RecycleView控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(24,"其他控件","学习一些杂类控件的各种使用方式"))
+            homeLayoutInfos.add(CardInfo(25,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
 
 
 //             for (i in 1..20) {
-//                 homeLayoutInfos.add(HomeLayoutInfo("标题${i}", "描述${i}"))
+//                 homeLayoutInfos.add(CardInfo("标题${i}", "描述${i}"))
 //             }
             return homeLayoutInfos
+        }
+
+        fun loadCenterRecycleInfoList():MutableList<CardInfo> {
+            val centerLayoutInfo = mutableListOf<CardInfo>()
+            centerLayoutInfo.add(CardInfo(1,"网络请求","学习如何实现加载网络数据"))
+            centerLayoutInfo.add(CardInfo(2,"图片加载","学习高效率的加载图片"))
+            centerLayoutInfo.add(CardInfo(3,"Activity和Fragment深度使用","学习activity,fragment的其他用法"))
+            centerLayoutInfo.add(CardInfo(4,"后台服务(Service)","学习service用法"))
+            centerLayoutInfo.add(CardInfo(5,"广播(Broadcast Receive)","学习广播的用法"))
+            centerLayoutInfo.add(CardInfo(6,"内容提供者(Content Provider","学习内容提供者的用法"))
+            centerLayoutInfo.add(CardInfo(3,"触摸进阶","学习触摸的用法"))
+            centerLayoutInfo.add(CardInfo(3,"手势进阶","学习手势的用法"))
+            centerLayoutInfo.add(CardInfo(3,"触觉反馈","学习触觉反馈的用法"))
+            centerLayoutInfo.add(CardInfo(3,"拖放实现","学习如何实现拖放view"))
+            centerLayoutInfo.add(CardInfo(3,"添加应用启动页","学习如何添加应用启动页"))
+            centerLayoutInfo.add(CardInfo(3,"添加应用快捷方式","学习如何添加应用快捷方式"))
+            centerLayoutInfo.add(CardInfo(3,"权限管理","学习如何添加权限管理"))
+            centerLayoutInfo.add(CardInfo(3,"自定义View","学习如何渲染UI"))
+            centerLayoutInfo.add(CardInfo(3,"本地存储","学习各种本地存储的方式"))
+            centerLayoutInfo.add(CardInfo(2,"通知管理","学习通知用法"))
+            centerLayoutInfo.add(CardInfo(3,"系统栏管理","学习状态栏的格式使用"))
+            centerLayoutInfo.add(CardInfo(3,"窗口管理","学习窗口的概念"))
+            centerLayoutInfo.add(CardInfo(3,"蓝牙","学习蓝牙的使用"))
+            centerLayoutInfo.add(CardInfo(3,"动画","学习各种动画的使用"))
+            centerLayoutInfo.add(CardInfo(3,"软键盘与输入框的最佳实践","学习如何优雅弹出软键盘的同时输入框不被遮挡"))
+            centerLayoutInfo.add(CardInfo(3,"音频播放","学习播放视频"))
+            centerLayoutInfo.add(CardInfo(3,"视频播放","学习播放视频"))
+            centerLayoutInfo.add(CardInfo(3,"摄像头控制","学习控制摄像头"))
+            centerLayoutInfo.add(CardInfo(3,"JetPack库:ViewModal和liveData","学习ViewModal和liveData相关用法"))
+            centerLayoutInfo.add(CardInfo(3,"JetPack库：WorkManager","学习WorkManager用法"))
+            centerLayoutInfo.add(CardInfo(3,"JetPack库：Paging分页","学习Paging分页"))
+
+            return centerLayoutInfo
         }
 
         fun loadRecycleViewList(): MutableList<String> {
