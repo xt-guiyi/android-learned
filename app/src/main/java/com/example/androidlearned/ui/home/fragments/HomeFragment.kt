@@ -1,12 +1,11 @@
 package com.example.androidlearned.ui.home.fragments
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidlearned.R
@@ -15,25 +14,30 @@ import com.example.androidlearned.dataSource.HomeDataSource
 import com.example.androidlearned.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
+    lateinit var binding:FragmentHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.i("test","homeFragment")
+//        Toaster.show("homeFragment")
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentHomeBinding.inflate(inflater,container,false)
-        initRecycleView(binding)
+         binding = FragmentHomeBinding.inflate(inflater,container,false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initRecycleView()
     }
 
 
     /**
      * 初始化列表
      * */
-    private fun initRecycleView(binding: FragmentHomeBinding) {
+    private fun initRecycleView() {
         binding.homeRecycleList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
         val adapter = CardRecycleViewAdapter(HomeDataSource.loadRecycleInfoList())
         adapter.setOnClickListener { layoutInfo,view ->

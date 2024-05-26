@@ -16,7 +16,7 @@
             android:background="@color/primary_color"
             app:title="进阶学习"
             app:titleCentered="true"
-            app:subtitle="学习各种api、第三方库的用法以及安卓进阶知识"
+            app:subtitle="学习api、第三方库用法以及其他知识"
             app:subtitleCentered="true"
             app:titleTextColor="@color/black"
             app:subtitleTextColor="@color/black"
@@ -25,14 +25,14 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
-        android:id="@+id/home_nested_container"
+        android:id="@+id/center_nested_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/home_recycle_list"
+            android:id="@+id/center_recycle_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bilibili_pink"
+    android:theme="@style/ThemeOverlay.AndroidLearned.FullscreenContainer"
+    tools:context=".ui.center.activitys.SystemBarActivity"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:fitsSystemWindows="true"
+        android:id="@+id/materialToolbar12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="系统栏管理"
+        app:titleCentered="true" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:stateListAnimator="@null"
+        android:text="隐藏状态栏"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:stateListAnimator="@null"
+        android:text="隐藏导航栏"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:stateListAnimator="@null"
+        android:text="隐藏状态栏与导航栏"
+        android:textColor="@color/white"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:stateListAnimator="@null"
+        android:text="修改状态栏和字体颜色为蓝色"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:stateListAnimator="@null"
+        android:text="修改导航栏颜色为黑色"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_shape_5"
+        android:backgroundTint="@color/primary_color"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:stateListAnimator="@null"
+        android:text="开启全面屏"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar12" />
+</androidx.constraintlayout.widget.ConstraintLayout>

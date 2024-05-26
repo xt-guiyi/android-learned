@@ -3,10 +3,7 @@ package com.example.androidlearned.utils
 import android.content.Context
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
-import com.example.androidlearned.R
-import com.example.androidlearned.customNavgination.FragmentNavigator
 
 
 /**
@@ -26,7 +23,7 @@ class CommonCode {
             val navController = navHostFragment.navController
             // navHostFragment.childFragmentManager,防止导航失败， view does not have a NavController set错误
             // 先设置导航器，后设置Graph
-            navController.navigatorProvider.addNavigator("fragment", FragmentNavigator(context,navHostFragment.childFragmentManager,navHostFragment.id))
+//            navController.navigatorProvider.addNavigator(FragmentNavigator(context,navHostFragment.childFragmentManager,navHostFragment.id))
             navController.setGraph(graph)
             return navController
         }
