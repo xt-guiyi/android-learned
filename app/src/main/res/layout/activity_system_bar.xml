@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bilibili_pink"
-    android:theme="@style/ThemeOverlay.AndroidLearned.FullscreenContainer"
     tools:context=".ui.center.activitys.SystemBarActivity"
     android:fitsSystemWindows="true">
 

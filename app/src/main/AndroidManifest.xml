@@ -17,9 +17,7 @@
         <activity
             android:name=".ui.center.activitys.SystemBarActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_system_bar"
-            android:theme="@style/Theme.AndroidLearned.Fullscreen" />
+            android:exported="false" />
         <activity
             android:name=".ui.home.activitys.RecycleViewActivity"
             android:exported="false" />
