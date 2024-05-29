@@ -54,25 +54,25 @@ class WindowActivity : AppCompatActivity() {
         floatButton2.text = "子窗口层级窗口"
         floatButton.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
         floatButton2.layoutParams = ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.MATCH_PARENT)
-            binding.window1.setOnClickListener {
-                if (binding.window1.text == "打开一个应用层级窗口") {
-                    binding.window1.text = "关闭一个应用层级窗口"
-                    val windowParams = WindowManager.LayoutParams(
-                        400,
-                        200,
-                        WindowManager.LayoutParams.LAST_APPLICATION_WINDOW,
-                        WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, // 设置这个才可以按返回键退出页面
-                        PixelFormat.TRANSPARENT
-                    )
-                    windowParams.x =  0
-                    windowParams.y  = 0
-                    windowManager.addView(floatButton,windowParams)
-                }else {
-                    binding.window1.text = "打开一个应用层级窗口"
-                    windowManager.removeView(floatButton)
-                }
-
+        binding.window1.setOnClickListener {
+            if (binding.window1.text == "打开一个应用层级窗口") {
+                binding.window1.text = "关闭一个应用层级窗口"
+                val windowParams = WindowManager.LayoutParams(
+                    400,
+                    200,
+                    WindowManager.LayoutParams.LAST_APPLICATION_WINDOW,
+                    WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, // 设置这个才可以按返回键退出页面
+                    PixelFormat.TRANSPARENT
+                )
+                windowParams.x =  0
+                windowParams.y  = 0
+                windowManager.addView(floatButton,windowParams)
+            }else {
+                binding.window1.text = "打开一个应用层级窗口"
+                windowManager.removeView(floatButton)
             }
+
+        }
 
         binding.window2.setOnClickListener {
             if (binding.window2.text == "打开一个子窗口层级窗口") {
