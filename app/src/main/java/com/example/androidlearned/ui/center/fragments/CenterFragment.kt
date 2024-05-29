@@ -8,9 +8,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidlearned.adapters.CardRecycleViewAdapter
+import com.example.androidlearned.dataSource.CenterDataSource
 import com.example.androidlearned.dataSource.HomeDataSource
 import com.example.androidlearned.databinding.FragmentCenterBinding
 import com.example.androidlearned.ui.center.activitys.SystemBarActivity
+import com.example.androidlearned.ui.center.activitys.WindowActivity
 
 
 class CenterFragment : Fragment() {
@@ -40,11 +42,12 @@ class CenterFragment : Fragment() {
     private fun initRecycleView() {
         binding.centerRecycleList.layoutManager = LinearLayoutManager(requireContext(),
             LinearLayoutManager.VERTICAL,false)
-        val adapter = CardRecycleViewAdapter(HomeDataSource.loadCenterRecycleInfoList())
-        adapter.setOnClickListener { layoutInfo,view ->
+        val adapter = CardRecycleViewAdapter(CenterDataSource.loadRecycleInfoList())
+        adapter.setOnClickListener { layoutInfo,_ ->
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             val intent =  when(layoutInfo.id) {
                 1 -> Intent(requireContext(),SystemBarActivity::class.java)
+                3 -> Intent(requireContext(),WindowActivity::class.java)
                 else -> null
             }
             intent?.let {

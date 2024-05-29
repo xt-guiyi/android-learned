@@ -11,10 +11,6 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivitySystemBarBinding
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- */
 class SystemBarActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySystemBarBinding
@@ -22,7 +18,6 @@ class SystemBarActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
         // 防止布局抖动，让窗口可以延生到裁剪区域，同时设置窗口背景色为黑色，这样状态栏消失时会显示黑色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
             window.attributes.layoutInDisplayCutoutMode = LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
