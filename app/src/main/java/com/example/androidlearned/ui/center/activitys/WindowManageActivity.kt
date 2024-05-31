@@ -13,15 +13,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androidlearned.R
-import com.example.androidlearned.databinding.ActivityWindowBinding
+import com.example.androidlearned.databinding.ActivityWindowManageBinding
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.hjq.toast.Toaster
 
 
-class WindowActivity : AppCompatActivity() {
-    lateinit var binding: ActivityWindowBinding
-    lateinit var floatButton3: FloatingActionButton
+class WindowManageActivity : AppCompatActivity() {
+    lateinit var binding: ActivityWindowManageBinding
+    private lateinit var floatButton3: FloatingActionButton
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { _ ->
@@ -39,7 +39,7 @@ class WindowActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityWindowBinding.inflate(LayoutInflater.from(this))
+        binding = ActivityWindowManageBinding.inflate(LayoutInflater.from(this))
         floatButton3 = FloatingActionButton(this)
         enableEdgeToEdge()
         setContentView(binding.root)

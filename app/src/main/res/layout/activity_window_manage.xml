@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/second_color"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.center.activitys.WindowManageActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="窗口管理"
+        android:fitsSystemWindows="true"
+        app:titleCentered="true" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/window_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="打开一个应用层级窗口"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar16" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/window_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="打开一个子窗口层级窗口"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/window_1"
+        app:layout_constraintTop_toBottomOf="@+id/window_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/window_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="打开一个系统层级窗口"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@+id/window_2"
+        app:layout_constraintTop_toBottomOf="@+id/window_2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

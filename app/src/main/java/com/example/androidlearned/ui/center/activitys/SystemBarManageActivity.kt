@@ -9,11 +9,11 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.androidlearned.R
-import com.example.androidlearned.databinding.ActivitySystemBarBinding
+import com.example.androidlearned.databinding.ActivitySystemBarManageBinding
 
-class SystemBarActivity : AppCompatActivity() {
+class SystemBarManageActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySystemBarBinding
+    private lateinit var binding: ActivitySystemBarManageBinding
     private lateinit var windowInsetsController: WindowInsetsControllerCompat
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class SystemBarActivity : AppCompatActivity() {
             window.attributes.layoutInDisplayCutoutMode = LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
             window.setBackgroundDrawableResource(R.color.black)
         }
-        binding = ActivitySystemBarBinding.inflate(layoutInflater)
+        binding = ActivitySystemBarManageBinding.inflate(layoutInflater)
         windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
         windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         init()

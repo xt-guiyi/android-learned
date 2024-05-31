@@ -5,64 +5,63 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/second_color"
+    android:background="@color/second_color"
     android:fitsSystemWindows="false"
-    tools:context=".ui.center.activitys.WindowActivity">
+    tools:context=".ui.center.activitys.AuthorizationManageActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar16"
+        android:id="@+id/materialToolbar14"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="窗口管理"
-        android:fitsSystemWindows="true"
+        app:title="权限管理"
         app:titleCentered="true" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/window_1"
+        android:id="@+id/author_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="56dp"
         android:background="@drawable/background_shape_4"
-        android:padding="16dp"
+        android:padding="10dp"
         android:stateListAnimator="@null"
-        android:text="打开一个应用层级窗口"
+        android:text="请求摄像头权限(运行时权限)"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar16" />
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/window_2"
+        android:id="@+id/author_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/background_shape_4"
-        android:padding="16dp"
+        android:padding="10dp"
         android:stateListAnimator="@null"
-        android:text="打开一个子窗口层级窗口"
+        android:text="请求闹钟权限(特殊权限)"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/window_1"
-        app:layout_constraintTop_toBottomOf="@+id/window_1" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_1" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/window_3"
+        android:id="@+id/author_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/background_shape_4"
-        android:padding="16dp"
+        android:padding="10dp"
         android:stateListAnimator="@null"
-        android:text="打开一个系统层级窗口"
+        android:text="请求闹钟权限(特殊权限)"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="@+id/window_2"
-        app:layout_constraintTop_toBottomOf="@+id/window_2" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/author_2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
