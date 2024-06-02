@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.center.activitys.NotificationManageActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/soft_keyBoard_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_shape_3"
+        android:fitsSystemWindows="false"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="软键盘最佳实践"
+        app:titleCentered="true" />
+
+
+    <ScrollView
+        android:id="@+id/content_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/editText_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@+id/soft_keyBoard_toolbar">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="200dp"
+               android:scaleType="fitXY"
+               android:src="@drawable/img_2" />
+           <TextView
+               android:layout_width="80dp"
+               android:layout_height="wrap_content"
+               android:textSize="64sp"
+               android:fontFamily="@font/a_li_mama_dao_li_ti"
+               android:text="软键盘与输入框最佳实践" />
+       </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/editText_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center|center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_shape_14"
+            android:backgroundTint="#31000000"
+            android:hint="请输入内容"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_add_reaction_24" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
