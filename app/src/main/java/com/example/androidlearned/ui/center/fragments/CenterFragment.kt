@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidlearned.adapters.CardRecycleViewAdapter
 import com.example.androidlearned.dataSource.CenterDataSource
 import com.example.androidlearned.databinding.FragmentCenterBinding
-import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
-import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
-import com.example.androidlearned.ui.center.activitys.WindowManageActivity
+import com.example.androidlearned.ui.center.activitys.SystemBarActivity
+import com.example.androidlearned.ui.center.activitys.WindowActivity
 
 
 class CenterFragment : Fragment() {
@@ -47,8 +46,10 @@ class CenterFragment : Fragment() {
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             val intent =  when(layoutInfo.id) {
                 1 -> Intent(requireContext(),SystemBarManageActivity::class.java)
-                3 -> Intent(requireContext(),WindowManageActivity::class.java)
                 4 -> Intent(requireContext(),AuthorizationManageActivity::class.java)
+                2 -> Intent(requireContext(),NotificationManageActivity::class.java)
+                3 -> Intent(requireContext(),WindowActivity::class.java)
+                5 -> Intent(requireContext(),SoftKeyboardActivity::class.java)
                 else -> null
             }
             intent?.let {

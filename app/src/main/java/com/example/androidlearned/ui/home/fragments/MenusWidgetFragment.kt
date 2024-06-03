@@ -7,10 +7,8 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.util.Log
 import android.view.ContextMenu
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -22,6 +20,7 @@ import android.widget.ListPopupWindow
 import android.widget.PopupMenu
 import android.widget.PopupWindow
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import com.example.androidlearned.R
 import com.example.androidlearned.databinding.FragmentMenusWidgetBinding
 import com.example.androidlearned.utils.Display
@@ -47,7 +46,6 @@ class MenusWidgetFragment : Fragment() {
     }
 
     fun init(){
-
         // toolbar菜单
         binding.otherToolbarMenu.overrideAllPopupMenus{ context, anchor ->
             val toolbarMenu = CascadePopupMenu(context, anchor)
