@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidlearned.databinding.ActivitySoftKeyboardBinding
+import com.hjq.toast.Toaster
 
 class SoftKeyboardActivity : AppCompatActivity() {
     lateinit var binding: ActivitySoftKeyboardBinding
@@ -20,20 +21,20 @@ class SoftKeyboardActivity : AppCompatActivity() {
         binding = ActivitySoftKeyboardBinding.inflate(layoutInflater)
 
         // 监听软键盘高度变化
-//        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { v, insets ->
 //            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-////            binding.softKeyBoardToolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
-////            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
-////            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
-////            Toaster.show(imeHeight)
-//            insets
-//        }
+//            binding.softKeyBoardToolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
+//            val imeVisible = insets.isVisible(WindowInsetsCompat.Type.ime())
+//            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+//            Toaster.show(imeHeight)
+            insets
+        }
 
         var startBottom = 0f
         var endBottom = 0f
         ViewCompat.setWindowInsetsAnimationCallback(
-            binding.editTextContainer,
+            binding.root,
             object : WindowInsetsAnimationCompat.Callback(DISPATCH_MODE_STOP) {
 
                 override fun onPrepare(
@@ -63,9 +64,8 @@ class SoftKeyboardActivity : AppCompatActivity() {
                     } ?: return insets
 
                     // Offset the view based on the interpolated fraction of the IME animation.
-                    Log.d("SoftKeyboardActivity", "onProgress: -${startBottom}-${endBottom}-${imeAnimation.interpolatedFraction}")
+                    Log.d("SoftKeyboardActivity", "onProgress: ${(startBottom - endBottom) * (1 - imeAnimation.interpolatedFraction)}")
                     binding.editTextContainer.translationY = (startBottom - endBottom) * (1 - imeAnimation.interpolatedFraction)
-
                     return insets
                 }
             }

@@ -101,20 +101,14 @@ class AuthorizationManageActivity : AppCompatActivity() {
                     alarmManager.canScheduleExactAlarms() -> {
                         // 可以用闹钟
                         Toaster.show("有闹钟权限")
-//                        startActivity(Intent(ACTION_REQUEST_SCHEDULE_EXACT_ALARM))
 
                     }
                     else -> {
                         // ask users to grant the permission in the corresponding settings page
-//                        startActivity(Intent(ACTION_REQUEST_SCHEDULE_EXACT_ALARM))
                         requestAlarmPermissionLauncher.launch(Intent(ACTION_REQUEST_SCHEDULE_EXACT_ALARM))
-
                     }
                 }
             }
-        }
-        binding.author3.setOnClickListener {
-            binding.author3.isSelected = !binding.author3.isSelected
         }
     }
 }
