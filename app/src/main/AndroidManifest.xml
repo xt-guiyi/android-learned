@@ -20,13 +20,15 @@
         android:roundIcon="@mipmap/launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearned"
-        tools:targetApi="31">
+        tools:targetApi="34">
+        <activity
+            android:name=".ui.center.activitys.SoftKeyboardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false" />
         <activity
             android:name=".ui.center.activitys.AuthorizationManageActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_authorizaton_manage_acticity"
-            android:theme="@style/Theme.AndroidLearned.Fullscreen" />
+            android:exported="false" />
         <activity
             android:name=".ui.center.activitys.WindowManageActivity"
             android:exported="false" />
