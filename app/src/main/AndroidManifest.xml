@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 闹钟-->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 闹钟 -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
+        <activity
+            android:name=".ui.center.activitys.AcPracticeActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.center.activitys.SoftKeyboardActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

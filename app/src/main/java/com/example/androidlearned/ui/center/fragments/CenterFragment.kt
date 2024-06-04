@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidlearned.adapters.CardRecycleViewAdapter
 import com.example.androidlearned.dataSource.CenterDataSource
 import com.example.androidlearned.databinding.FragmentCenterBinding
+import com.example.androidlearned.ui.center.activitys.AcPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.SoftKeyboardActivity
@@ -53,6 +54,7 @@ class CenterFragment : Fragment() {
                 3 -> Intent(requireContext(),WindowManageActivity::class.java)
                 4 -> Intent(requireContext(), AuthorizationManageActivity::class.java)
                 5 -> Intent(requireContext(), SoftKeyboardActivity::class.java)
+                6 -> Intent(requireContext(), AcPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {

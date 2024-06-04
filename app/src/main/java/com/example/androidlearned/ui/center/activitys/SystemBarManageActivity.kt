@@ -33,7 +33,7 @@ class SystemBarManageActivity : AppCompatActivity() {
         binding = ActivitySystemBarManageBinding.inflate(layoutInflater)
         windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
         windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        // 设置后状态栏导航栏颜色修改不生效
+        // 监听window.decorView后，状态栏，导航栏颜色修改就不生效了
         ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { _, inset ->
             val statusBarInset = inset.getInsets(WindowInsetsCompat.Type.statusBars())
             val navigatorBarInset = inset.getInsets(WindowInsetsCompat.Type.navigationBars())
