@@ -61,6 +61,14 @@ class AuthorizationManageActivity : AppCompatActivity() {
         binding = ActivityAuthorizationManageActivityBinding.inflate(layoutInflater)
         init()
         setContentView(binding.root)
+        // 获取上个界面给的数据
+        intent.getIntExtra("id", 0).let {
+           if (it != 0) Toaster.show("id:$it")
+        }
+        // 设置返回结果给上一个页面
+        setResult(RESULT_OK, Intent().apply {
+            putExtra("msg", "获取到的数据为:${Math.random() * 10}")
+        })
     }
 
     fun init(){

@@ -45,13 +45,14 @@
         android:background="@drawable/background_shape_4"
         android:padding="10dp"
         android:stateListAnimator="@null"
-        android:text="跳转页面(获取返回结果)"
+        android:text="跳转页面(获取返回结果，给下个页面传值)"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ac_1" />
 
     <TextView
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"

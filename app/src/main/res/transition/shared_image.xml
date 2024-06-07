@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="375"
+    >
+    <!-- 使用介绍  https://developer.android.com/reference/androidx/transition/ArcMotion-->
+    <!-- 改变目标视图的布局边界 -->
+    <changeBounds />
+    <!--  裁剪目标视图边界。  -->
+    <changeClipBounds />
+    <!--  改变目标图片的大小和缩放比例。  -->
+    <changeImageTransform />
+    <!-- 改变目标的缩放比例和旋转角度。-->
+    <changeTransform/>
+    <!-- 运动路径更加自然   -->
+    <arcMotion android:maximumAngle="90" android:minimumVerticalAngle="0" android:minimumHorizontalAngle="0"/>
+</transitionSet>

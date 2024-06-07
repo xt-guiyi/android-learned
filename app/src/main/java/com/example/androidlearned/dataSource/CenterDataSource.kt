@@ -22,7 +22,7 @@ class CenterDataSource {
             centerLayoutInfo.add(CardInfo(9,"广播(Broadcast Receive)","学习广播的用法"))
             centerLayoutInfo.add(CardInfo(10,"内容提供者(Content Provider","学习内容提供者的用法"))
             centerLayoutInfo.add(CardInfo(11,"本地存储","学习各种本地存储的方式"))
-            centerLayoutInfo.add(CardInfo(12,"多线程与协程","学习安卓多线程和协程"))
+            centerLayoutInfo.add(CardInfo(12,"异步方法实践","学习安卓多线程和协程"))
 //            centerLayoutInfo.add(CardInfo(3,"触摸进阶","学习触摸的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"手势进阶","学习手势的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"触觉反馈","学习触觉反 馈的用法"))

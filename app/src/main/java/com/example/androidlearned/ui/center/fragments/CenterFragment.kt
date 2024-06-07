@@ -11,7 +11,9 @@ import com.example.androidlearned.adapters.CardRecycleViewAdapter
 import com.example.androidlearned.dataSource.CenterDataSource
 import com.example.androidlearned.databinding.FragmentCenterBinding
 import com.example.androidlearned.ui.center.activitys.AcPracticeActivity
+import com.example.androidlearned.ui.center.activitys.AsynchronousPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
+import com.example.androidlearned.ui.center.activitys.FragPracticeActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.SoftKeyboardActivity
 import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
@@ -48,13 +50,15 @@ class CenterFragment : Fragment() {
         val adapter = CardRecycleViewAdapter(CenterDataSource.loadRecycleInfoList())
         adapter.setOnClickListener { layoutInfo,_ ->
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
-            val intent =  when(layoutInfo.id) {
+            val intent = when(layoutInfo.id) {
                 1 -> Intent(requireContext(), SystemBarManageActivity::class.java)
                 2 -> Intent(requireContext(), NotificationManageActivity::class.java)
                 3 -> Intent(requireContext(),WindowManageActivity::class.java)
                 4 -> Intent(requireContext(), AuthorizationManageActivity::class.java)
                 5 -> Intent(requireContext(), SoftKeyboardActivity::class.java)
                 6 -> Intent(requireContext(), AcPracticeActivity::class.java)
+                7 -> Intent(requireContext(), FragPracticeActivity::class.java)
+                12 -> Intent(requireContext(), AsynchronousPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {
