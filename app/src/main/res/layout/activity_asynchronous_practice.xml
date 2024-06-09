@@ -257,7 +257,151 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流"
+                android:text="flow流，中间操作符（onEmpty，filter，map，onEach），终端操作符（collect）"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,终端操作符（count）"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,终端操作符（reduce）"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,终端操作符（fold）"
+                android:textColor="@color/white" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,拉平（flatMapConcat）"
+                android:textColor="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,拉平（flatMapMerge）"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,flowOn 操作符，切换流执行线程"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,缓冲， buffer 操作符"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,合并,conflate"
+                android:textColor="@color/white" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流, 处理最新值,collectLatest"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,组合多个流,Zip"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,组合多个流,Combine"
                 android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
