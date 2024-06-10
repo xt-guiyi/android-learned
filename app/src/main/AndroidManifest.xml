@@ -23,6 +23,15 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
         <activity
+            android:name=".ui.center.activitys.ServicePracticeActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".services.MyService1"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
             android:name=".ui.center.activitys.AsynchronousPracticeActivity"
             android:exported="false" />
         <activity

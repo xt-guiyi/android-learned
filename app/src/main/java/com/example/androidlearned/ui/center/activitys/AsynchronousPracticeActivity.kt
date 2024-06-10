@@ -44,6 +44,9 @@ import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import kotlin.system.measureTimeMillis
 
+/**
+ * 异步方法实践
+ * */
 class AsynchronousPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityAsynchronousPracticeBinding
     private val fixedThreadExecutor = Executors.newFixedThreadPool(3) // 适合少量任务，控制并发数量

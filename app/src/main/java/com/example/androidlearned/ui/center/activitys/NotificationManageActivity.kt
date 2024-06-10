@@ -20,7 +20,9 @@ import com.example.androidlearned.MainActivity
 import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivityNotificationManageBinding
 import com.hjq.toast.Toaster
-
+/**
+ * 通知管理
+ * */
 class NotificationManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityNotificationManageBinding
     private val CHANNEL_ID = "ad_channel"

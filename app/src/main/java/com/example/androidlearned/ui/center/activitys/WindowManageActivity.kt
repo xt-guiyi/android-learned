@@ -18,7 +18,9 @@ import com.google.android.material.floatingactionbutton.ExtendedFloatingActionBu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.hjq.toast.Toaster
 
-
+/**
+ * 窗口管理
+ * */
 class WindowManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityWindowManageBinding
     private lateinit var floatButton3: FloatingActionButton

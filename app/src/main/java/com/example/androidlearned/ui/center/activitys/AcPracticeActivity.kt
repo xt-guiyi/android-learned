@@ -2,17 +2,18 @@ package com.example.androidlearned.ui.center.activitys
 
 import android.content.Intent
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Log
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivityAcPracticeBinding
 import com.example.androidlearned.ui.home.activitys.CoordinationLayoutActivity
 import com.hjq.toast.Toaster
 
+/**
+ * Activity使用
+ * */
 class AcPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityAcPracticeBinding
     private val requestParamsLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {

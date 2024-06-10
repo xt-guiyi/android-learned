@@ -1,18 +1,17 @@
 package com.example.androidlearned.ui.center.activitys
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
-import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsAnimationCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidlearned.databinding.ActivitySoftKeyboardBinding
-import com.hjq.toast.Toaster
 
+/**
+ * 软键盘与输入框是实践
+ * */
 class SoftKeyboardActivity : AppCompatActivity() {
     lateinit var binding: ActivitySoftKeyboardBinding
     override fun onCreate(savedInstanceState: Bundle?) {

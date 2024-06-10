@@ -1,10 +1,6 @@
 package com.example.androidlearned.dataSource
 
-import com.example.androidlearned.adapters.RecycleViewExample3Adapter
 import com.example.androidlearned.domain.CardInfo
-import com.example.androidlearned.domain.People
-import com.example.androidlearned.domain.StickHeadInfo
-import java.util.Collections
 
 
 class CenterDataSource {
@@ -18,7 +14,7 @@ class CenterDataSource {
             centerLayoutInfo.add(CardInfo(5,"软键盘与输入框实践","学习如何弹出软键盘的同时输入框不被遮挡"))
             centerLayoutInfo.add(CardInfo(6,"Activity使用","学习activity用法"))
             centerLayoutInfo.add(CardInfo(7,"Fragment使用","学习fragment的用法"))
-            centerLayoutInfo.add(CardInfo(8,"后台服务(Service)","学习service用法"))
+            centerLayoutInfo.add(CardInfo(8,"服务(Service)","学习service用法"))
             centerLayoutInfo.add(CardInfo(9,"广播(Broadcast Receive)","学习广播的用法"))
             centerLayoutInfo.add(CardInfo(10,"内容提供者(Content Provider","学习内容提供者的用法"))
             centerLayoutInfo.add(CardInfo(11,"本地存储","学习各种本地存储的方式"))

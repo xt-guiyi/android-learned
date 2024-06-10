@@ -2,12 +2,10 @@ package com.example.androidlearned.ui.center.activitys
 
 import android.Manifest
 import android.app.AlarmManager
-import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
-import android.os.SystemClock
 import android.provider.MediaStore
 import android.provider.Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM
 import androidx.activity.enableEdgeToEdge
@@ -18,6 +16,9 @@ import androidx.core.content.ContextCompat
 import com.example.androidlearned.databinding.ActivityAuthorizationManageActivityBinding
 import com.hjq.toast.Toaster
 
+/**
+ * 权限管理
+ * */
 class AuthorizationManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthorizationManageActivityBinding
     private val requestCameraPermissionLauncher =

@@ -3,12 +3,12 @@ package com.example.androidlearned.ui.center.activitys
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivityFragPracticeBinding
 import com.example.androidlearned.ui.center.fragments.FragPracticeChild1Fragment
 
+/**
+ * Fragment 使用
+ * */
 class FragPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityFragPracticeBinding
     override fun onCreate(savedInstanceState: Bundle?) {

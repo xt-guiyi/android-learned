@@ -15,6 +15,7 @@ import com.example.androidlearned.ui.center.activitys.AsynchronousPracticeActivi
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
 import com.example.androidlearned.ui.center.activitys.FragPracticeActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
+import com.example.androidlearned.ui.center.activitys.ServicePracticeActivity
 import com.example.androidlearned.ui.center.activitys.SoftKeyboardActivity
 import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
 import com.example.androidlearned.ui.center.activitys.WindowManageActivity
@@ -58,6 +59,7 @@ class CenterFragment : Fragment() {
                 5 -> Intent(requireContext(), SoftKeyboardActivity::class.java)
                 6 -> Intent(requireContext(), AcPracticeActivity::class.java)
                 7 -> Intent(requireContext(), FragPracticeActivity::class.java)
+                8 -> Intent(requireContext(), ServicePracticeActivity::class.java)
                 12 -> Intent(requireContext(), AsynchronousPracticeActivity::class.java)
                 else -> null
             }

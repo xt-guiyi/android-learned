@@ -1,12 +1,9 @@
 package com.example.androidlearned.ui.center.activitys
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.view.WindowManager
 import android.view.WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +15,9 @@ import com.example.androidlearned.R
 import com.example.androidlearned.databinding.ActivitySystemBarManageBinding
 import kotlin.math.abs
 
+/**
+ * 系统栏管理
+ * */
 class SystemBarManageActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySystemBarManageBinding
