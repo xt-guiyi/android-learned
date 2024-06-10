@@ -1,10 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.center.activitys.ServicePracticeActivity">
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.center.activitys.AsynchronousPracticeActivity">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="服务"
+        app:titleCentered="true" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Service 是一种可在后台执行长时间运行的操作的应用组件。不提供界面。启动后，服务可能会继续运行一段时间，即使在用户切换到其他应用后也是如此。"
+                android:textSize="20sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="后台服务"
+                android:textSize="34sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bc_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="启动后台服务"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="前台服务"
+                android:textSize="34sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/fg_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="启动前台服务"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="绑定服务"
+                android:textSize="34sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/binding_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="启动绑定服务"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

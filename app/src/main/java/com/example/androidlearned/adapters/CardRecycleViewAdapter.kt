@@ -1,20 +1,17 @@
 package com.example.androidlearned.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidlearned.domain.CardInfo
 import com.example.androidlearned.R
+import com.example.androidlearned.domain.CardInfo
 
 class CardRecycleViewAdapter(private val homeLayoutInfoList: MutableList<CardInfo>):RecyclerView.Adapter<CardRecycleViewAdapter.ViewHolder> ()
 {
     private  var mClickCall: ( (CardInfo, View) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        Log.i("test","onCreateViewHolder")
-
         val view = LayoutInflater.from(parent.context).inflate(R.layout.fragment_home_recycle_item,parent,false)
         return ViewHolder(view)
     }
