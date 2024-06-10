@@ -13,8 +13,11 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.async
+import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.buffer
 import kotlinx.coroutines.flow.collectLatest
@@ -199,7 +202,7 @@ class AsynchronousPracticeActivity : AppCompatActivity() {
             }
             Log.i("coroutine2", "执行协程2")
             Handler(Looper.getMainLooper()).postDelayed({
-                job.cancel()
+                job.cancel() // 会取消当前作用域下所有协程
                 Toaster.show("取消协程")
             }, 6000)
         }
@@ -233,11 +236,10 @@ class AsynchronousPracticeActivity : AppCompatActivity() {
                 val time = measureTimeMillis {
                     // 这里使用 async 并发执行
                     Log.i("coroutine4", "执行协程1")
-                    val one = async { doSomethingUsefulOne() }
+                    val one = async { doSomethingUsefulOne() } // 这里不会等到doSomethingUsefulOne执行完才到下一行，而是会立即执行下一行代码
                     val two = async { doSomethingUsefulTwo() }
                     Log.i("coroutine4", "执行协程2")
-                    println("The answer is ${one.await() + two.await()}")
-                    Toaster.show("结果是 ${one.await() + two.await()}")
+                    Toaster.show("结果是 ${one.await() + two.await()}") // 到了这里才会等待doSomethingUsefulOne和doSomethingUsefulTwo执行完，才继续向下走
                 }
                 println("Completed in $time ms") // 不使用 async 会需要 2000ms左右，而使用 async 只会需要 1000ms左右
             }
@@ -569,6 +571,51 @@ class AsynchronousPracticeActivity : AppCompatActivity() {
                         println("$value at ${System.currentTimeMillis() - startTime} ms from start")
                         Toaster.show("$value at ${System.currentTimeMillis() - startTime} ms from start")
                     }
+            }
+        }
+
+        binding.coroutine19.setOnClickListener {
+            // reply:重放数据个数，当新订阅者注册时会重放缓存replay个数。
+            // extraBufferCapacity：额外缓存容量，在 replay 之外的额外容量，ShareFlow 的缓存容量 capacity = replay + extraBufferCapacity。
+            // onBufferOverflow 缓存溢出策略，即缓存容量 capacity 满时的处理策略（SUSPEND、DROP_OLDEST、DROP_LAST）。
+            // SharedFlow 默认容量 capacity 为 0，重放 replay 为 0，缓存溢出策略是 SUSPEND，意味着发射数据时会直接丢弃数据并挂起（阅读 emit 的源码），而订阅者订不会受到任何数据。
+            val shareFlow = MutableSharedFlow<Int>(replay = 3, extraBufferCapacity = 0, onBufferOverflow = BufferOverflow.DROP_OLDEST)
+            CoroutineScope(Dispatchers.Main).launch {
+                shareFlow.emit(1) // 被丢弃，因为为最大缓存数量为 3
+                shareFlow.emit(2)
+                shareFlow.emit(3)
+                shareFlow.emit(4)
+                shareFlow.collect {
+                    delay(1000)
+                    Toaster.show("订阅值->,${it}")
+                }
+
+            }
+        }
+
+        binding.coroutine20.setOnClickListener {
+            // StateFlow是SharedFlow的一种特殊配置，MutableStateFlow(initialValue) 这样一行代码本质上和下面使用 SharedFlow 的方式是完全相同的：
+            // val shared = MutableSharedFlow(
+            //    replay = 1,
+            //    onBufferOverflow = BufferOverflow.DROP_OLDEST
+            // )
+            // shared.tryEmit(initialValue) // emit the initial value
+            // val state = shared.distinctUntilChanged() // get StateFlow-like behavior
+            // 有初始值： StateFlow 初始化时必须传入初始值；
+            // 容量为 1： StateFlow 只会保存一个值；
+            // 重放为 1： StateFlow 会向新订阅者重放最新的值；
+            // 不支持 resetReplayCache 重置重放缓存： StateFlow 的 resetReplayCache() 方法抛出 UnsupportedOperationException
+            // 缓存溢出策略为 DROP_OLDEST： 意味着每次发射的新数据会覆盖旧数据
+            val stateFlow = MutableStateFlow(1)
+            CoroutineScope(Dispatchers.Main).launch {
+                stateFlow.emit(2)
+                stateFlow.emit(3)
+                stateFlow.value = 4 // 等价emit,一般用这种写法，
+                stateFlow.collect {
+                    delay(1000)
+                    Toaster.show("订阅值->,${it}") // 这里永远只会打印最新值 4
+                }
+
             }
         }
     }

@@ -246,7 +246,15 @@
                 android:textAllCaps="false"
                 android:text="withContext、suspend,async,支持用同步方式，编写异步代码,支持并发执行，自动切换线程，执行完后在切回来"
                 android:textColor="@color/white" />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="flow流"
+                android:textSize="34sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/coroutine_7"
                 android:layout_width="wrap_content"
@@ -270,7 +278,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,终端操作符（count）"
+                android:text="flow流,终端操作符（count），计算值"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -308,7 +316,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,拉平（flatMapConcat）"
+                android:text="flow流,拉平（flatMapConcat）,嵌套流拉平成一个流"
                 android:textColor="@color/white" />
 
 
@@ -348,7 +356,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,缓冲， buffer 操作符"
+                android:text="flow流,缓冲功能， buffer操作符,把发射器里的值存放在缓存里，让收集器慢慢取，解决发射器过快，而收集器慢的问题"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -361,7 +369,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,合并,conflate"
+                android:text="flow流,合并,conflate,跳过发射器中间的值，解决发射器过快，而收集器慢的问题"
                 android:textColor="@color/white" />
 
 
@@ -375,7 +383,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流, 处理最新值,collectLatest"
+                android:text="flow流, 处理最新值（collectLatest），每次发射一个值，收集器重启执行，不管之前的执行"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -388,7 +396,7 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,组合多个流,Zip"
+                android:text="flow流,组合多个流（Zip）,在一起，两个流更新了才会触发一次组合"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -401,7 +409,33 @@
                 android:stateListAnimator="@null"
                 android:layout_gravity="center"
                 android:textAllCaps="false"
-                android:text="flow流,组合多个流,Combine"
+                android:text="flow流,组合多个流,Combine，只要有一个流更新，就会触发一次"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,状态流（shareFlow）"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/coroutine_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:text="flow流,状态流（stateFlow）"
                 android:textColor="@color/white" />
         </LinearLayout>
     </ScrollView>
