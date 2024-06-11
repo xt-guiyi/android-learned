@@ -34,6 +34,15 @@
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="动态注册"
+                android:textSize="22sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/broadCast_1"
                 android:layout_width="wrap_content"
@@ -80,20 +89,25 @@
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 />
-
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/broadCast_4"
-                android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/background_shape_4"
-                android:padding="10dp"
-                android:stateListAnimator="@null"
-                android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:text="接受"
-                android:textColor="@color/white" />
+                android:text="静态注册"
+                android:textSize="22sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="网络状态变化广播，修改网络状态会收到"
+                android:textSize="20sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+
 
         </LinearLayout>
     </ScrollView>
