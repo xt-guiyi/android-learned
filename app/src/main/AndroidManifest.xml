@@ -5,8 +5,9 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="false" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 闹钟 -->
     <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -14,6 +15,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,6 +25,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
+        <receiver
+            android:name=".broadcasts.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"></receiver>
+
+        <activity
+            android:name=".ui.center.activitys.BroadcastPracticeActivity"
+            android:exported="false" />
+
         <service
             android:name=".services.MyService1"
             android:enabled="true"
@@ -31,7 +42,12 @@
             android:name=".services.MyService2"
             android:enabled="true"
             android:exported="false"
-            android:foregroundServiceType="dataSync"/>
+            android:foregroundServiceType="dataSync" />
+        <service
+            android:name=".services.MyService3"
+            android:enabled="true"
+            android:exported="false" />
+
         <activity
             android:name=".ui.center.activitys.ServicePracticeActivity"
             android:exported="false" />

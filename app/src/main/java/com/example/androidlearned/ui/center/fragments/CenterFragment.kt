@@ -13,6 +13,7 @@ import com.example.androidlearned.databinding.FragmentCenterBinding
 import com.example.androidlearned.ui.center.activitys.AcPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AsynchronousPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
+import com.example.androidlearned.ui.center.activitys.BroadcastPracticeActivity
 import com.example.androidlearned.ui.center.activitys.FragPracticeActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.ServicePracticeActivity
@@ -60,6 +61,7 @@ class CenterFragment : Fragment() {
                 6 -> Intent(requireContext(), AcPracticeActivity::class.java)
                 7 -> Intent(requireContext(), FragPracticeActivity::class.java)
                 8 -> Intent(requireContext(), ServicePracticeActivity::class.java)
+                9 -> Intent(requireContext(), BroadcastPracticeActivity::class.java)
                 12 -> Intent(requireContext(), AsynchronousPracticeActivity::class.java)
                 else -> null
             }
