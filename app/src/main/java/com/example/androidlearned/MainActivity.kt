@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val navController = CommonCode.addNaviGator(this,supportFragmentManager,R.id.fragmentContainerView,R.navigation.nav_graph)
         // 设置底部导航
+        // ps: 注意需要覆盖掉默认的导航动画，不然会会有默认的淡入淡出效果，覆盖方法https://blog.csdn.net/qq_43680303/article/details/139222828
         binding.bottomNavView.setupWithNavController(navController)
 
         // 添加badge

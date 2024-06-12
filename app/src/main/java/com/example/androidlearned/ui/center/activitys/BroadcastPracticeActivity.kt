@@ -11,6 +11,10 @@ import com.example.androidlearned.databinding.ActivityBroadcastPracticeBinding
 import com.hjq.toast.Toaster
 
 
+/**
+ * 广播
+ * @see <a href="https://developer.android.com/develop/background-work/background-tasks/broadcasts?hl=zh-cn">官方文档</a>
+ * */
 class BroadcastPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityBroadcastPracticeBinding
     private lateinit var mBroadcastReceiver: BroadcastReceiver
@@ -45,7 +49,7 @@ class BroadcastPracticeActivity : AppCompatActivity() {
             addAction("xt-msg")
         }
         // 本地广播
-        // registerReceiver(mBroadcastReceiver,intentFilter, RECEIVER_NOT_EXPORTED)
+        // registerReceiver(mBroadcastReceiver,intentFilter, RECEIVER_NOT_EXPORTED) // 这种也可以
          localBroadcastManager  = LocalBroadcastManager.getInstance(this);
         localBroadcastManager.registerReceiver(mBroadcastReceiver, intentFilter);
     }

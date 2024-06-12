@@ -17,6 +17,7 @@ import kotlin.math.abs
 
 /**
  * 系统栏管理
+ * @see <a href="https://developer.android.com/develop/ui/views/layout/insets?hl=zh-cn">官方文档</a>
  * */
 class SystemBarManageActivity : AppCompatActivity() {
 

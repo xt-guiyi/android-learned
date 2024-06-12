@@ -8,6 +8,7 @@ import com.example.androidlearned.ui.center.fragments.FragPracticeChild1Fragment
 
 /**
  * Fragment 使用
+ * @see <a href="https://developer.android.com/guide/fragments?hl=zh-cn">官方文档</a>
  * */
 class FragPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityFragPracticeBinding

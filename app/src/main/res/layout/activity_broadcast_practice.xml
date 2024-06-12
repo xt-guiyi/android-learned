@@ -101,7 +101,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="网络状态变化广播，修改网络状态会收到"
+                android:text="充电状态变化广播，开始充电时会收到"
                 android:textSize="20sp"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:textAlignment="center"

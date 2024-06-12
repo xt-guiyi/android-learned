@@ -22,6 +22,7 @@ import com.example.androidlearned.databinding.ActivityNotificationManageBinding
 import com.hjq.toast.Toaster
 /**
  * 通知管理
+ * @see <a href="https://developer.android.com/develop/ui/views/notifications?hl=zh-cn">官方文档</a>
  * */
 class NotificationManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityNotificationManageBinding

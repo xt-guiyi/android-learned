@@ -18,7 +18,8 @@ class CenterDataSource {
             centerLayoutInfo.add(CardInfo(9,"广播(Broadcast Receive)","学习广播的用法"))
             centerLayoutInfo.add(CardInfo(10,"内容提供者(Content Provider","学习内容提供者的用法"))
             centerLayoutInfo.add(CardInfo(11,"本地存储","学习各种本地存储的方式"))
-            centerLayoutInfo.add(CardInfo(12,"异步方法实践","学习安卓多线程和协程"))
+            centerLayoutInfo.add(CardInfo(12,"文件IO","学习文件读取"))
+            centerLayoutInfo.add(CardInfo(13,"异步方法实践","学习安卓多线程和协程"))
 //            centerLayoutInfo.add(CardInfo(3,"触摸进阶","学习触摸的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"手势进阶","学习手势的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"触觉反馈","学习触觉反 馈的用法"))
@@ -28,14 +29,16 @@ class CenterDataSource {
 //            centerLayoutInfo.add(CardInfo(3,"添加应用快捷方式","学习如何添加应用快捷方式"))
 //            centerLayoutInfo.add(CardInfo(3,"蓝牙","学习蓝牙的使用"))
 //            centerLayoutInfo.add(CardInfo(3,"动画","学习各种动画的使用"))
+//            centerLayoutInfo.add(CardInfo(3,"lottie动画","学习各种动画的使用"))
 //            centerLayoutInfo.add(CardInfo(3,"音频播放","学习播放视频"))
 //            centerLayoutInfo.add(CardInfo(3,"视频播放","学习播放视频"))
-//            centerLayoutInfo.add(CardInfo(3,"摄像头控制","学习控制摄像头"))
+//            centerLayoutInfo.add(CardInfo(3,"摄像头自定义","学习控制摄像头"))
 //            centerLayoutInfo.add(CardInfo(3,"JetPack库:ViewModal和liveData","学习ViewModal和liveData相关用法"))
 //            centerLayoutInfo.add(CardInfo(3,"JetPack库：WorkManager","学习WorkManager用法"))
 //            centerLayoutInfo.add(CardInfo(3,"JetPack库：Paging分页","学习Paging分页"))
+            //            centerLayoutInfo.add(CardInfo(2,"图片加载","学习高效率的加载图片"))
             //            centerLayoutInfo.add(CardInfo(1,"网络请求","学习如何实现加载网络数据"))
-//            centerLayoutInfo.add(CardInfo(2,"图片加载","学习高效率的加载图片"))
+
             return centerLayoutInfo
         }
     }

@@ -20,6 +20,7 @@ import com.hjq.toast.Toaster
 
 /**
  * 窗口管理
+ * @see <a href="https://juejin.cn/post/7076274407416528909?searchId=202406121129113C24FA161A0673A0328A">参考文档</a>
  * */
 class WindowManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityWindowManageBinding

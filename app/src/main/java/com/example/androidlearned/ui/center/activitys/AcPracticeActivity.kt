@@ -13,6 +13,7 @@ import com.hjq.toast.Toaster
 
 /**
  * Activity使用
+ * @see <a href="https://developer.android.com/guide/components/activities/intro-activities?hl=zh-cn">官方文档</a>
  * */
 class AcPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityAcPracticeBinding

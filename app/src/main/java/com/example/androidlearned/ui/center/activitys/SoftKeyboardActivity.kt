@@ -10,7 +10,8 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.androidlearned.databinding.ActivitySoftKeyboardBinding
 
 /**
- * 软键盘与输入框是实践
+ * 软键盘与输入框实践
+ * @see <a href="https://developer.android.com/develop/ui/views/layout/sw-keyboard?hl=zh-cn">官方文档</a>
  * */
 class SoftKeyboardActivity : AppCompatActivity() {
     lateinit var binding: ActivitySoftKeyboardBinding

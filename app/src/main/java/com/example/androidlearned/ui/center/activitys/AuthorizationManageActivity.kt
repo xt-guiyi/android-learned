@@ -18,6 +18,7 @@ import com.hjq.toast.Toaster
 
 /**
  * 权限管理
+ * @see <a href="https://developer.android.com/guide/topics/permissions/overview?hl=zh-cn">官方文档</a>
  * */
 class AuthorizationManageActivity : AppCompatActivity() {
     lateinit var binding: ActivityAuthorizationManageActivityBinding

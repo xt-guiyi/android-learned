@@ -46,6 +46,7 @@ import kotlin.system.measureTimeMillis
 
 /**
  * 异步方法实践
+ * @see <a href="https://developer.android.com/develop/background-work/background-tasks/asynchronous/java-threads?hl=zh-cn">官方文档</a>
  * */
 class AsynchronousPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityAsynchronousPracticeBinding

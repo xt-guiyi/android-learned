@@ -14,10 +14,11 @@ import com.hjq.toast.Toaster
 
 /**
  * 服务
- * PS: 当应用处于后台时（回到主屏幕，切换到其他app。
+ * @see <a href="https://developer.android.com/develop/background-work/services?hl=zh-cn">官方文档</a>
+ * <p>ps: 当应用处于后台时（回到主屏幕，切换到其他app。
  * 发现使用线程、协程、后台服务、前台服务，在国产手机（oppo)上，后台执行20秒后就会停止运行，重新回到应用才会继续执行。哪怕声明为前台服务也没用，而谷歌原生安卓系统没有这个问题。
  * 这是因为国产手机厂商的省电策略导致的，为了避免有的app一直在后台执行后台任务，导致手机发热，耗电快。不同的手机厂商都会定制系统，使用相应的策略去阻止后台任务一直运行。
- * 解决办法：打开应用设置，允许应用在后台运行。
+ * 解决办法：打开应用设置，允许应用在后台运行。</p>
  * */
 class ServicePracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityServicePracticeBinding
