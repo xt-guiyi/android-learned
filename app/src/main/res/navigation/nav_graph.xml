@@ -137,7 +137,7 @@
             app:enterAnim="@anim/slider_in_right_enter"
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
-            app:popExitAnim="@anim/slider_in_right_enter" />
+            app:popExitAnim="@anim/slider_out_right_exit" />
         <action
             android:id="@+id/action_homeFragment_to_bottomSheetWidgetActivity"
             app:destination="@id/bottomSheetWidgetActivity"

@@ -28,13 +28,21 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
         <activity
+            android:name=".ui.center.activitys.LocalStorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.center.activitys.FileIOActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.center.activitys.ContentProviderPracticeActivity"
             android:exported="false" />
+
         <provider
             android:name=".contentProvider.MyContentProvider"
             android:authorities="com.xtguiyi.provider"
             android:enabled="true"
             android:exported="false" />
+
         <receiver
             android:name=".broadcasts.MyBroadcast1Receiver"
             android:enabled="true"
@@ -46,7 +54,8 @@
         <receiver
             android:name=".broadcasts.MyBroadcastReceiver"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
+
         <activity
             android:name=".ui.center.activitys.BroadcastPracticeActivity"
             android:exported="false" />

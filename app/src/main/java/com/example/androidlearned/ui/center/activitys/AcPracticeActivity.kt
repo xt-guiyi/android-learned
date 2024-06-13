@@ -107,7 +107,7 @@ class AcPracticeActivity : AppCompatActivity() {
                     val currentTIme = System.currentTimeMillis()
                     if (lastBackPressTime == -1L || currentTIme - lastBackPressTime >= 2000) {
                         // 显示提示信息
-                        Toaster.show("请再点一次")
+                        Toaster.show("请再返回一次")
                         // 记录时间
                         lastBackPressTime = currentTIme
                     } else {
@@ -119,8 +119,4 @@ class AcPracticeActivity : AppCompatActivity() {
         }
     }
 
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-    }
 }

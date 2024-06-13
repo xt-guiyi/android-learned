@@ -15,7 +15,7 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:title="内容提供者"
+        app:title="本地存储"
         app:titleCentered="true" />
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="使用自定义的contentProvider,contentResolver进行查询"
+                android:text="保存到应用专属空间"
                 android:textSize="22sp"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:textAlignment="center"
@@ -37,14 +37,90 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ps:数据在控制台查看"
+                android:text="内部存储空间"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="11"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="外部存储空间"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/external_storage_1"
+                android:layout_width="104dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="11"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="保存键值对数据，适合简单数据"
+                android:textSize="22sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SharedPreferences方案(过时)"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sp_storage_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="11"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DataStore方案（推荐）"
                 android:textSize="16sp"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cp_1"
+                android:id="@+id/data_storage_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
@@ -54,65 +130,7 @@
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:text="增加"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cp_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/background_shape_4"
-                android:padding="10dp"
-                android:stateListAnimator="@null"
-                android:layout_gravity="center"
-                android:textColor="@color/white"
-                android:textAllCaps="false"
-                android:text="删除"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cp_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/background_shape_4"
-                android:padding="10dp"
-                android:stateListAnimator="@null"
-                android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:text="查找"/>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cp_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/background_shape_4"
-                android:padding="10dp"
-                android:stateListAnimator="@null"
-                android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:text="修改"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="使用contentResolver查询手机的手机联系人(contentProvider)"
-                android:textSize="22sp"
-                android:fontFamily="@font/a_li_mama_dao_li_ti"
-                android:textAlignment="center"
-                android:layout_marginTop="10dp"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cp_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="48dp"
-                android:background="@drawable/background_shape_4"
-                android:padding="10dp"
-                android:stateListAnimator="@null"
-                android:layout_gravity="center"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:text="查找"/>
+                android:text="11"/>
         </LinearLayout>
     </ScrollView>
 

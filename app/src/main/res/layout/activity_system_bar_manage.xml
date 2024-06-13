@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bilibili_pink"
+    android:background="@color/white"
     tools:context=".ui.center.activitys.SystemBarManageActivity"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="false">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:fitsSystemWindows="true"
@@ -131,7 +131,7 @@
         android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="22sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_5"
@@ -143,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="29dp"
         android:textSize="22sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/status_bar_height"

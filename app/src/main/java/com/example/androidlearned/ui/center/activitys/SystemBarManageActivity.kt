@@ -27,15 +27,15 @@ class SystemBarManageActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivitySystemBarManageBinding.inflate(layoutInflater)
         // 防止布局抖动，让窗口可以延生到裁剪区域，同时设置窗口背景色为黑色，这样状态栏消失时会显示黑色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P){
             window.attributes.layoutInDisplayCutoutMode = LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
             window.setBackgroundDrawableResource(R.color.black)
         }
-        binding = ActivitySystemBarManageBinding.inflate(layoutInflater)
         windowInsetsController = WindowCompat.getInsetsController(window, window.decorView)
         windowInsetsController.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
-        // 监听window.decorView后，状态栏，导航栏颜色修改就不生效了
+        // notice: 监听window.decorView后，状态栏，导航栏颜色修改就不生效了
         ViewCompat.setOnApplyWindowInsetsListener(window.decorView) { _, inset ->
             val statusBarInset = inset.getInsets(WindowInsetsCompat.Type.statusBars())
             val navigatorBarInset = inset.getInsets(WindowInsetsCompat.Type.navigationBars())

@@ -12,10 +12,19 @@ import android.provider.ContactsContract.CommonDataKinds.Phone
 import android.util.Log
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleCoroutineScope
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.androidlearned.contentProvider.MyContentProvider
 import com.example.androidlearned.databinding.ActivityContentProviderPracticeBinding
 import com.example.androidlearned.domain.People
 import com.hjq.toast.Toaster
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Delay
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 /**
@@ -127,25 +136,26 @@ class ContentProviderPracticeActivity : AppCompatActivity() {
         val selection = "${ContactsContract.Data.MIMETYPE} = ?"
         val selectArg = arrayOf(Phone.CONTENT_ITEM_TYPE)
         val sortOrder = "${ContactsContract.Contacts.CONTACT_LAST_UPDATED_TIMESTAMP} ASC"
-        contentResolver.query(
+        val cursor = contentResolver.query(
             ContactsContract.Data.CONTENT_URI,
             mProjection,
             selection,
             selectArg ,
             sortOrder
-        ).use {
-            if (it != null) {
-                it.moveToFirst()
-                while (it.moveToNext()){
-                    val id = it.getInt(it.getColumnIndex(ContactsContract.Data._ID))
-                    val name = it.getString(it.getColumnIndex(ContactsContract.Data.DISPLAY_NAME))
-                    val number = it.getString(it.getColumnIndex(Phone.NUMBER))
-                    val miType = it.getString(it.getColumnIndex(ContactsContract.Data.MIMETYPE))
-                    Log.i("List","id:$id 姓名:$name 电话号码：$number 类型：$miType ")
-                    Toaster.show("id:$id 姓名:$name 电话号码：$number 类型：$miType ")
-                }
+        )
+        if (cursor != null) {
+            lifecycleScope.launch(Dispatchers.Default) {
+                    cursor.moveToFirst()
+                    while (cursor.moveToNext()){
+                        val id = cursor.getInt(cursor.getColumnIndex(ContactsContract.Data._ID))
+                        val name = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.DISPLAY_NAME))
+                        val number = cursor.getString(cursor.getColumnIndex(Phone.NUMBER))
+                        val miType = cursor.getString(cursor.getColumnIndex(ContactsContract.Data.MIMETYPE))
+                        Toaster.show("id:$id 姓名:$name 电话号码：$number 类型：$miType ")
+                        delay(1000)
+                    }
+                    cursor.close()
             }
-
         }
     }
 }
