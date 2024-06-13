@@ -38,11 +38,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="内部存储空间"
+                android:textSize="20sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="持久性文件"
                 android:textSize="16sp"
                 android:fontFamily="@font/a_li_mama_dao_li_ti"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="访问持久性文件,不存在就创建一个"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/internal_storage_1"
@@ -55,7 +77,80 @@
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:text="11"/>
+                android:text="使用信息流存储文件"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="使用信息流访问文件"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="查看文件列表"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="创建目录"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="缓存文件"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="创建缓存文件"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/internal_storage_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="移除缓存文件"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +160,15 @@
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 />
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="持久性文件"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/external_storage_1"
                 android:layout_width="104dp"
@@ -75,10 +178,57 @@
                 android:background="@drawable/background_shape_4"
                 android:padding="10dp"
                 android:stateListAnimator="@null"
-                android:text="11"
+                android:text="验证外部存储空间的可用性"
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/external_storage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="访问持久性文件,不存在就创建一个"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="缓存文件"
+                android:textSize="16sp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/external_storage_3"
+                android:layout_width="104dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="创建缓存文件"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/external_storage_4"
+                android:layout_width="104dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="移除缓存文件"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,7 +259,31 @@
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:text="11"/>
+                android:text="获取共享偏好设置的句柄"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sp_storage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="写入共享偏好设置"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sp_storage_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="读取共享偏好设置"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
