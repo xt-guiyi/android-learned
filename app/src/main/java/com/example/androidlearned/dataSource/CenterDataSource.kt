@@ -20,7 +20,7 @@ class CenterDataSource {
             centerLayoutInfo.add(CardInfo(11,"本地存储","学习各种本地存储的方式"))
             centerLayoutInfo.add(CardInfo(12,"文件IO操作","学习文件操作"))
             centerLayoutInfo.add(CardInfo(13,"异步方法实践","学习安卓多线程和协程"))
-//            centerLayoutInfo.add(CardInfo(3,"触摸事件","学习触摸的用法"))
+            centerLayoutInfo.add(CardInfo(14,"触摸事件","学习触摸的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"手势进阶","学习手势的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"触觉反馈","学习触觉反 馈的用法"))
 //            centerLayoutInfo.add(CardInfo(3,"拖放实现","学习如何实现拖放view"))

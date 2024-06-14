@@ -1,21 +1,48 @@
 package com.example.androidlearned.ui.center.activitys
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Environment
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.androidlearned.databinding.ActivityLocalStorageBinding
 import com.hjq.toast.ToastStrategy
 import com.hjq.toast.Toaster
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.launch
 import java.io.File
+
+// 在kotlin文件的文件的顶层放一个扩展函数，就可以在应用的所有其余部分通过此属性访问该实例，
+// 一般来说这个要放在一个全局的application类中，这里为了演示就放在这里
+val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
 class LocalStorageActivity : AppCompatActivity() {
     lateinit var binding: ActivityLocalStorageBinding
+    val EXAMPLE_COUNTER = intPreferencesKey("example_counter")
+    private lateinit var exampleCounterFlow: Flow<Int>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLocalStorageBinding.inflate(layoutInflater)
-        appStorageByProprietary() // 使用(应用专属文件数据)进行数据管理
-        appSharedPreferences() // 使用(SharedPreferences)进行数据管理
+        // 使用(应用专属文件数据)进行数据管理
+        appStorageByProprietary() //
+
+        // 使用(SharedPreferences)进行数据管理
+        exampleCounterFlow =  dataStore.data.map {
+            it[EXAMPLE_COUNTER] ?: 0
+        }
+        appSharedPreferences()
         setContentView(binding.root)
     }
 
@@ -84,16 +111,16 @@ class LocalStorageActivity : AppCompatActivity() {
         binding.internalStorage6.setOnClickListener {
             val cacheFile = File(cacheDir, "test.txt")
             cacheFile.delete()
-           // cacheFile.deleteRecursively() //删除此文件及其所有子文件。请注意，如果此操作失败，则可能发生部分删除。
+            // cacheFile.deleteRecursively() //删除此文件及其所有子文件。请注意，如果此操作失败，则可能发生部分删除。
             Toaster.show("移除成功")
         }
         // 验证外部存储空间的可用性
-        binding.externalStorage1.setOnClickListener{
+        binding.externalStorage1.setOnClickListener {
             val status = Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED
             Toaster.show("可用状态$status")
         }
         // 访问持久性文件,不存在就创建一个
-        binding.externalStorage2.setOnClickListener{
+        binding.externalStorage2.setOnClickListener {
             val file = File(getExternalFilesDir(null), "test.text")
             Toaster.setStrategy(ToastStrategy(ToastStrategy.SHOW_STRATEGY_TYPE_QUEUE));
             if (!file.exists()) {
@@ -103,7 +130,7 @@ class LocalStorageActivity : AppCompatActivity() {
             Toaster.show("val file = File(getExternalFilesDir(null), \"test.text\")")
         }
         // 创建缓存文件
-        binding.externalStorage3.setOnClickListener{
+        binding.externalStorage3.setOnClickListener {
             val externalCacheFile = File(externalCacheDir, "test.text")
             if (!externalCacheFile.exists()) {
                 externalCacheFile.createNewFile()
@@ -113,7 +140,7 @@ class LocalStorageActivity : AppCompatActivity() {
             Toaster.show("val externalCacheFile = File(externalCacheDir, \"test.text\")")
         }
         // 移除缓存文件
-        binding.externalStorage4.setOnClickListener{
+        binding.externalStorage4.setOnClickListener {
             val externalCacheFile = File(externalCacheDir, "test.text")
             externalCacheFile.delete()
             Toaster.show("移除成功")
@@ -146,6 +173,32 @@ class LocalStorageActivity : AppCompatActivity() {
             val age = sharedPref.getInt("age", 0)
             val isMarried = sharedPref.getBoolean("isMarried", false)
             Toaster.show("name:$name, age:$age, isMarried:$isMarried")
+        }
+
+        binding.dataStorage1.setOnClickListener {
+            Toaster.show("创建成功：${dataStore}")
+        }
+        binding.dataStorage2.setOnClickListener {
+            val job = lifecycleScope.launch(Dispatchers.Main) {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+//                    exampleCounterFlow.collect {
+//
+//                    }
+                    val value = exampleCounterFlow.first()
+                    Toaster.show("读取成功：$value")
+                }
+            }
+        }
+        binding.dataStorage3.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.Main) {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    dataStore.edit {
+                        val currentValue = it[EXAMPLE_COUNTER] ?: 0
+                        it[EXAMPLE_COUNTER] = currentValue + 1
+                        Toaster.show("写入成功")
+                    }
+                }
+            }
         }
     }
 

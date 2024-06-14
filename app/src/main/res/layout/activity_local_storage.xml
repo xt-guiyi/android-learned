@@ -304,7 +304,31 @@
                 android:layout_gravity="center"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:text="11"/>
+                android:text="创建 Preferences DataStore"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/data_storage_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="从 Preferences DataStore 读取内容"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/data_storage_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="向 Preferences DataStore 写入数据"/>
         </LinearLayout>
     </ScrollView>
 

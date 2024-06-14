@@ -28,6 +28,9 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
         <activity
+            android:name=".ui.center.activitys.TouchPracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.center.activitys.LocalStorageActivity"
             android:exported="false" />
         <activity

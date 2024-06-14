@@ -22,6 +22,7 @@ import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.ServicePracticeActivity
 import com.example.androidlearned.ui.center.activitys.SoftKeyboardActivity
 import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
+import com.example.androidlearned.ui.center.activitys.TouchPracticeActivity
 import com.example.androidlearned.ui.center.activitys.WindowManageActivity
 
 
@@ -69,6 +70,7 @@ class CenterFragment : Fragment() {
                 11 -> Intent(requireContext(), LocalStorageActivity::class.java)
                 12 -> Intent(requireContext(), FileIOActivity::class.java)
                 13 -> Intent(requireContext(), AsynchronousPracticeActivity::class.java)
+                14 -> Intent(requireContext(), TouchPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {
