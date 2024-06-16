@@ -5,7 +5,6 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Rect
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,9 +14,7 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.androidlearned.databinding.FragmentRecycleViewExample3ItemTitleBinding
-import com.example.androidlearned.utils.CommonCode
 import com.example.androidlearned.utils.Display
-import java.lang.RuntimeException
 import kotlin.math.abs
 
 /**
@@ -102,13 +99,15 @@ class CustomItemDecoration2(val context: Context, val callback: Callback): ItemD
         // 设置标题
         mTitleViewBinding.stickTitle.text = callback.getHeadTitle(firstViewIndex)
         // 测量
+        // 通常在父视图已经确定了子视图的确切大小时使用。这种模式通常用于 match_parent 或具体的像素/DP值。
         // 宽度固定为 recycleView 的宽度，无论子节点怎么设置宽度
         val widthSpec = View.MeasureSpec.makeMeasureSpec(parent.measuredWidth,View.MeasureSpec.EXACTLY)
-        // 高度有子节点控制，容器不做约束
-        val heightSpec = View.MeasureSpec.UNSPECIFIED
+        // 通常在父视图希望子视图根据自身内容调整大小，但不超过某个最大值时使用。这种模式通常用于 wrap_content，
+        // 高度最大不能超过 100dp
+        val heightSpec = View.MeasureSpec.makeMeasureSpec(Display.dip2px(context, 100f),View.MeasureSpec.AT_MOST)
         mTitleViewBinding.root.measure(widthSpec, heightSpec)
-        // 布局， 这里的值可以随意设置，只需要有调用 layout 方法，因为宽高已经在测量阶段决定了
-        mTitleViewBinding.root.layout(0, 0, mTitleViewBinding.root.measuredWidth,mTitleViewBinding.root.measuredHeight )
+        // 布局
+        mTitleViewBinding.root.layout(0, 0, mTitleViewBinding.root.measuredWidth ,mTitleViewBinding.root.measuredHeight)
         mTitleHeight = mTitleViewBinding.root.measuredHeight
         mTitleViewBinding.root.draw(c)
     }

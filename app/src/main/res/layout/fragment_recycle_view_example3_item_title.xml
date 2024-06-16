@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:layout_height="wrap_content"
+    android:background="@color/primary_color"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
@@ -8,7 +9,6 @@
         android:id="@+id/stick_title"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/primary_color"
         tools:text="标题"
         android:textSize="18sp"
         android:gravity="start|center"

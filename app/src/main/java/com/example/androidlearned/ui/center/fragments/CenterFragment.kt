@@ -15,8 +15,10 @@ import com.example.androidlearned.ui.center.activitys.AsynchronousPracticeActivi
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
 import com.example.androidlearned.ui.center.activitys.BroadcastPracticeActivity
 import com.example.androidlearned.ui.center.activitys.ContentProviderPracticeActivity
+import com.example.androidlearned.ui.center.activitys.CustomViewPracticeActivity
 import com.example.androidlearned.ui.center.activitys.FileIOActivity
 import com.example.androidlearned.ui.center.activitys.FragPracticeActivity
+import com.example.androidlearned.ui.center.activitys.GesturePracticeActivity
 import com.example.androidlearned.ui.center.activitys.LocalStorageActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.ServicePracticeActivity
@@ -71,6 +73,8 @@ class CenterFragment : Fragment() {
                 12 -> Intent(requireContext(), FileIOActivity::class.java)
                 13 -> Intent(requireContext(), AsynchronousPracticeActivity::class.java)
                 14 -> Intent(requireContext(), TouchPracticeActivity::class.java)
+                15 -> Intent(requireContext(), GesturePracticeActivity::class.java)
+                16 -> Intent(requireContext(), CustomViewPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {

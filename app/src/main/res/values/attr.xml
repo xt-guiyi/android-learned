@@ -10,4 +10,14 @@
     <declare-styleable name="NavHostFragment">
         <attr name="defaultNavHost" format="boolean" />
     </declare-styleable>
+    <declare-styleable name="MyCustomViewGroup">
+        <attr name="title" format="string" />
+        <attr name="des" format="string" />
+    </declare-styleable>
+    <declare-styleable name="MyCustomView">
+        <attr name="maxLength" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="DrawView">
+        <attr name="circleColor" format="color"/>
+    </declare-styleable>
 </resources>

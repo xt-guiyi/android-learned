@@ -69,7 +69,7 @@
                    android:backgroundTint="@color/light_blue_A200"
                    android:background="@drawable/background_shape_13"
                    />
-            <com.example.androidlearned.customVIew.DrawView
+            <com.example.androidlearned.customView.DrawView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:backgroundTint="@color/bilibili_pink"
