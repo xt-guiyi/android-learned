@@ -7,6 +7,7 @@
         <item name="android:statusBarColor" >@color/primary_color</item>
         <item name="toolbarStyle">@style/ToolbarTitleStyle</item>
         <item name="android:windowSplashScreenAnimatedIcon">@mipmap/launcher_round</item>
-        <item name="android:windowSplashScreenBackground">@color/primary_color</item>
+        <!--    启动动画背景颜色      -->
+        <item name="android:windowSplashScreenBackground">@color/second_color</item>
     </style>
 </resources>

@@ -11,6 +11,7 @@ import com.example.androidlearned.adapters.CardRecycleViewAdapter
 import com.example.androidlearned.dataSource.CenterDataSource
 import com.example.androidlearned.databinding.FragmentCenterBinding
 import com.example.androidlearned.ui.center.activitys.AcPracticeActivity
+import com.example.androidlearned.ui.center.activitys.AnimationPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AsynchronousPracticeActivity
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
 import com.example.androidlearned.ui.center.activitys.BroadcastPracticeActivity
@@ -75,6 +76,7 @@ class CenterFragment : Fragment() {
                 14 -> Intent(requireContext(), TouchPracticeActivity::class.java)
                 15 -> Intent(requireContext(), GesturePracticeActivity::class.java)
                 16 -> Intent(requireContext(), CustomViewPracticeActivity::class.java)
+                17 -> Intent(requireContext(), AnimationPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {

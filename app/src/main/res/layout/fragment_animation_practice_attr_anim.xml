@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.center.fragments.AnimationPracticeRootFragment">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:textSize="20sp"
+               android:gravity="center"
+               android:layout_marginTop="20dp"
+               android:text="属性动画" />
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/rect_1_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="开始动画(objectAnimator)"
+               android:textColor="@color/white" />
+           <ImageView
+               android:id="@+id/rect_1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_1"/>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/rect_2_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="开始动画(AnimatorSet 编排多个动画)"
+               android:textColor="@color/white" />
+           <ImageView
+               android:id="@+id/rect_2_1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_8"/>
+           <ImageView
+               android:id="@+id/rect_2_2"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/seek_bar_style"/>
+
+       </LinearLayout>
+   </ScrollView>
+
+</FrameLayout>
