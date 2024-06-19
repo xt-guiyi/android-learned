@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:duration="375"
     >
-    <!-- 使用介绍  https://developer.android.com/reference/androidx/transition/ArcMotion-->
+    <!-- 使用介绍1  https://developer.android.google.cn/develop/ui/views/animations/transitions/start-activity?hl=zh-cn-->
+    <!-- 使用介绍2  https://developer.android.com/reference/androidx/transition/ArcMotion-->
     <!-- 改变目标视图的布局边界 -->
     <changeBounds />
     <!--  裁剪目标视图边界。  -->

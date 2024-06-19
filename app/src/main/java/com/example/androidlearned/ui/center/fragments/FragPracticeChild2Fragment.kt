@@ -1,7 +1,10 @@
 package com.example.androidlearned.ui.center.fragments
 
 import android.annotation.SuppressLint
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +14,8 @@ import android.widget.TextView
 import androidx.core.app.SharedElementCallback
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.setFragmentResult
+import androidx.transition.Explode
+import androidx.transition.Slide
 import androidx.transition.Transition
 import androidx.transition.TransitionInflater
 import androidx.transition.TransitionListenerAdapter
@@ -36,6 +41,11 @@ class FragPracticeChild2Fragment : Fragment() {
             mid = it.getString(ARG_PARAM1)
             msg = it.getString(ARG_PARAM2)
         }
+        // 入场转换动画
+//        enterTransition = TransitionInflater.from(requireContext()).inflateTransition(R.transition.slide) // xml定义方式
+        enterTransition = Slide(Gravity.BOTTOM) // 类实例化方式
+//        enterTransition = Explode() // 类实例化方式
+
     }
 
     @SuppressLint("SetTextI18n", "CutPasteId")
@@ -50,6 +60,7 @@ class FragPracticeChild2Fragment : Fragment() {
         setFragmentResult("child2",Bundle().apply {
             putString("name","李四")
         })
+
         // 1.设置唯一的转换名称
         val img = mainView.findViewById<ImageView>(R.id.child_2_img)
         ViewCompat.setTransitionName(img, "img_2")

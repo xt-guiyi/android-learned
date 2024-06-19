@@ -13,14 +13,6 @@
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:orientation="vertical">
-<!--           <TextView-->
-<!--               android:layout_width="match_parent"-->
-<!--               android:layout_height="match_parent"-->
-<!--               android:textSize="20sp"-->
-<!--               android:gravity="center"-->
-<!--               android:layout_marginTop="20dp"-->
-<!--               android:text="属性动画" />-->
-
            <androidx.appcompat.widget.AppCompatButton
                android:id="@+id/attr_animate"
                android:layout_width="wrap_content"
@@ -34,6 +26,44 @@
                android:text="属性动画"
                android:textColor="@color/white" />
 
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/drawable_animate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="图片动画"
+               android:textColor="@color/white" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/transition_animate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="过渡框架(使用转场动效为布局变化添加动画效果)"
+               android:textColor="@color/white" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/motion_layout_animate"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="motionLayout布局动画"
+               android:textColor="@color/white" />
        </LinearLayout>
    </ScrollView>
 

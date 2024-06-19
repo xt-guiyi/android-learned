@@ -19,12 +19,18 @@ import androidx.core.view.ViewCompat
 import androidx.fragment.app.commit
 import androidx.fragment.app.setFragmentResultListener
 import androidx.savedstate.SavedStateRegistry
+import androidx.transition.Fade
 import androidx.transition.TransitionInflater
 import com.example.androidlearned.R
 import com.hjq.toast.Toaster
 
 private const val ARG_PARAM1 = "id"
 private const val ARG_PARAM2 = "msg"
+/**
+ * Fragment 使用
+ * @see <a href="https://developer.android.google.cn/develop/ui/views/animations/transitions/start-activity?hl=zh-cn">使用动画启动 activity/Fragment</a>
+ * @see <a href="https://developer.android.google.cn/guide/fragments/animate?hl=zh-cn">使用动画启动 activity/Fragment</a>
+ * */
 class FragPracticeChild1Fragment : Fragment() {
     private var mid: String? = null
     private var msg: String? = null
@@ -48,8 +54,9 @@ class FragPracticeChild1Fragment : Fragment() {
             mid = it.getString(ARG_PARAM1)
             msg = it.getString(ARG_PARAM2)
         }
-//        转换动画比我在fragment管理器设置的补间动画优先级高，这里设置了，补间动画就不会生效
-//        exitTransition = TransitionInflater.from(requireContext()).inflateTransition (R.transition.fade)
+//        转换动画比我在fragment管理器设置的视图补间动画优先级高，这里设置了，补间动画就不会生效
+        exitTransition = TransitionInflater.from(requireContext()).inflateTransition (R.transition.fade) // xml定义方式
+//        exitTransition = Fade(Fade.OUT) // 类实例化方式
     }
 
     @SuppressLint("SetTextI18n")
@@ -70,7 +77,8 @@ class FragPracticeChild1Fragment : Fragment() {
         mainView.findViewById<TextView>(R.id.child_1_button).setOnClickListener {
             parentFragmentManager.commit {
                 setReorderingAllowed(true)
-                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
+                // 设置补间动画效果
+//                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
                 replace(R.id.fragment_container_view_frag, FragPracticeChild2Fragment.newInstance("2", "哈哈哈哈"),"child2")
                 addToBackStack("child2")
             }

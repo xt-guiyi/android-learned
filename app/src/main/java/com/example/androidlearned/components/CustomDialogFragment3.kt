@@ -42,7 +42,7 @@ class CustomDialogFragment3: DialogFragment() {
     }
 
 
-    // 从下到上
+    // 从小到大
     private fun animateContentUp(view:View) {
         val scaleX = ObjectAnimator.ofFloat(view, View.SCALE_X, 0f, 1f)
         val scaleY = ObjectAnimator.ofFloat(view, View.SCALE_Y, 0f, 1f)

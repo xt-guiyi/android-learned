@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.center.fragments.AnimationPracticeRootFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:gravity="center"
+                android:text="1.为fragment,activity的页面切换，设置过渡动画"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:gravity="center"
+                android:text="这个在《Fragment使用》实现了，详情可去那查看"
+                android:textColor="@color/red"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:gravity="center"
+                android:text="2.在两种布局之间添加动画效果"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/transitionManage_animate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="开始"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/transitionManage_container"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/second_color"
+                android:padding="20dp">
+
+                <include layout="@layout/custom_snackbar_view" />
+
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/a_li_mama_dao_li_ti"
+                android:gravity="center"
+                android:text="3.应用没有场景的过渡,只是某些View被新增，或删除,或显示，隐藏"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/no_scene_animate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/background_shape_4"
+                android:padding="10dp"
+                android:stateListAnimator="@null"
+                android:text="开始"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/no_scene_container"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/red_2">
+
+                <TextView
+                    android:id="@+id/content_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/a_li_mama_dao_li_ti"
+                    android:gravity="start"
+                    android:lineHeight="24dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:text="更改视图层次结构并不是修改界面的唯一方式。您还可以通过添加、修改和移除当前层次结构中的子视图来进行更改。\n这个和android:animateLayoutChanges 属性设置为 true是一样的用法，区别是这个可以自定义过渡效果，而那个不能"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/loading_progress_bar"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:indeterminate="false"
+                    android:indeterminateTint="@color/bilibili_pink" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

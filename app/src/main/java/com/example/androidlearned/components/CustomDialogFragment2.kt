@@ -75,6 +75,7 @@ class CustomDialogFragment2: DialogFragment() {
 
     // 设置从下到上弹出的动画
     private fun slideToUp() {
+        // 视图动画，可用属性动画替代
         val slide =  TranslateAnimation(Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 0f, Animation.RELATIVE_TO_SELF, 1.0f, Animation.RELATIVE_TO_SELF, 0f);
         slide.setDuration(400);
         slide.isFillEnabled = true;

@@ -35,5 +35,32 @@ class AnimationPracticeRootFragment : Fragment() {
                 addToBackStack("attrAnim")
             }
         }
+
+        binding.drawableAnimate.setOnClickListener{
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
+                replace(R.id.fragment_container_view_animate, AnimationPracticeDrawableAnimFragment(),"drawableAnim")
+                addToBackStack("drawableAnim")
+            }
+        }
+
+        binding.transitionAnimate.setOnClickListener{
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
+                replace(R.id.fragment_container_view_animate, AnimationPracticeTransitionAnimFragment(),"transitionAnim")
+                addToBackStack("transitionAnim")
+            }
+        }
+
+        binding.motionLayoutAnimate.setOnClickListener{
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
+                replace(R.id.fragment_container_view_animate, AnimationPracticeMotionLayoutAnimFragment(),"motionLayoutAnim")
+                addToBackStack("motionLayoutAnim")
+            }
+        }
     }
 }

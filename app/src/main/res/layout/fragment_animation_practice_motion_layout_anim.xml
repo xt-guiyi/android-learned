@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.center.fragments.AnimationPracticeRootFragment">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:textSize="20sp"
+               android:gravity="center"
+               android:textColor="@color/red"
+               android:layout_marginTop="20dp"
+               android:text="使用场景：当你需要移动，缩放或者动画 实际的 UI 组件 (button，title bar 等) 来提供与用户的互动时。" />
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:textSize="20sp"
+               android:gravity="center"
+               android:layout_marginTop="20dp"
+               android:text="MotionLayout 的创建是为了弥补布局过渡和复杂运动处理之间的差距。从功能上来说，您可以将其视为属性动画框架、TransitionManager 和 CoordinatorLayout 的混合体。您可以从功能角度将其视为属性动画框架、TransitionManager 和 CoordinatorLayout 的混合体。" />
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/motion_1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="示例1"
+               android:textColor="@color/white" />
+
+       </LinearLayout>
+   </ScrollView>
+
+</FrameLayout>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<transitionSet>
-    <fade android:duration="1000" android:startDelay="25" xmlns:android="http://schemas.android.com/apk/res/android" />
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <fade android:duration="100" android:startDelay="0" android:fadingMode="fade_out"  />
 </transitionSet>

@@ -44,7 +44,7 @@
                android:id="@+id/rect_2_start"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
-               android:layout_marginTop="20dp"
+               android:layout_marginTop="200dp"
                android:background="@drawable/background_shape_4"
                android:padding="10dp"
                android:stateListAnimator="@null"
@@ -66,7 +66,115 @@
                android:layout_gravity="center"
                android:layout_marginTop="20dp"
                android:src="@drawable/seek_bar_style"/>
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/vg_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="为 ViewGroup 对象的布局更改添加动画效果"
+               android:textColor="@color/white" />
 
+           <LinearLayout
+               android:id="@+id/vg_layout"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:animateLayoutChanges="true"
+               android:layout_marginTop="20dp"
+               android:background="@color/second_color">
+                    <View
+                        android:id="@+id/vg_1_react"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@color/red"
+                        android:layout_margin="10dp"/>
+           </LinearLayout>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/state_list_animator_start"
+               android:layout_width="200dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:stateListAnimator="@animator/animate_scale"
+               android:text="使用 StateListAnimator 为视图状态更改添加动画效果（按我）"
+               android:textColor="@color/white" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/keyFrame_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="开始动画(关键帧动画)"
+               android:textColor="@color/white" />
+           <ImageView
+               android:id="@+id/keyFrame_1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_1"/>
+
+           <ImageView
+               android:id="@+id/keyFrame_2"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_8"/>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/multiple_animate_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="推荐：开始动画(ViewPropertyAnimator)"
+               android:textColor="@color/white" />
+           <ImageView
+               android:id="@+id/multiple_animate_1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_1"/>
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/xml_animate_start"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/background_shape_4"
+               android:padding="10dp"
+               android:stateListAnimator="@null"
+               android:layout_gravity="center"
+               android:textAllCaps="false"
+               android:text="开始动画(使用XML文件声明动画)"
+               android:textColor="@color/white" />
+           <ImageView
+               android:id="@+id/xml_animate_1"
+               android:layout_width="100dp"
+               android:layout_height="100dp"
+               android:layout_gravity="center"
+               android:layout_marginTop="20dp"
+               android:src="@drawable/background_shape_1"/>
        </LinearLayout>
    </ScrollView>
 
