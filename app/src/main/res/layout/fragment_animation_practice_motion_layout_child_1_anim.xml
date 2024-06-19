@@ -8,16 +8,17 @@
     android:background="@color/white"
     app:layoutDescription="@xml/fragment_animation_practice_motion_layout_child_1_anim_scene"
     tools:context=".ui.center.fragments.AnimationPracticeRootFragment"
-    tools:showPaths="true">
+    app:showPaths="true">
 
 
     <View
-        android:id="@+id/button"
+        android:id="@+id/mt_1_button_1"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:background="@color/black"
         android:text="Button"
-     />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="70dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/mt_guideline_1"
@@ -25,4 +26,34 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="204dp" />
+
+    <View
+        android:id="@+id/mt_1_button_2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/black"
+        android:text="Button"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mt_guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <View
+        android:id="@+id/mt_1_button_3"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/black"
+        android:text="Button"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mt_guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
 </androidx.constraintlayout.motion.widget.MotionLayout>
