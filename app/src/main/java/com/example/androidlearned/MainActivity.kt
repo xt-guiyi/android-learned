@@ -3,7 +3,9 @@ package com.example.androidlearned
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.View
 import android.widget.Toast
+import androidx.core.view.forEach
 import androidx.core.view.get
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
@@ -22,9 +24,15 @@ class MainActivity : AppCompatActivity() {
         // 设置底部导航
         // ps: 注意需要覆盖掉默认的导航动画，不然会会有默认的淡入淡出效果，覆盖方法https://blog.csdn.net/qq_43680303/article/details/139222828
         binding.bottomNavView.setupWithNavController(navController)
-
         // 添加badge
         val badge = binding.bottomNavView.getOrCreateBadge(binding.bottomNavView.menu.getItem(0).itemId)
+        // 去除长按提示，拦截长按事件
+        binding.bottomNavView.menu.forEach {
+            val menuItemView: View = findViewById(it.itemId)
+            menuItemView.setOnLongClickListener {
+                true
+            }
+        }
         badge.isVisible = true
         badge.number = 100
         badge.maxNumber = 99

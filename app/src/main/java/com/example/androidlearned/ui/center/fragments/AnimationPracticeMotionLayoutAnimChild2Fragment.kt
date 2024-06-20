@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.androidlearned.databinding.FragmentAnimationPracticeMotionLayoutAnimBinding
 import com.example.androidlearned.databinding.FragmentAnimationPracticeMotionLayoutChild2AnimBinding
+import com.hjq.toast.Toaster
 
 
 class AnimationPracticeMotionLayoutAnimChild2Fragment : Fragment() {
@@ -29,8 +31,15 @@ class AnimationPracticeMotionLayoutAnimChild2Fragment : Fragment() {
     }
 
     fun init() {
-        binding.motion1.setOnClickListener {
 
+        binding.navDrawLayout.addDrawerListener(object :DrawerLayout.SimpleDrawerListener(){
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                binding.motionLayout2.progress = slideOffset
+            }
+        })
+
+        binding.openMenu.setOnClickListener{
+            binding.navDrawLayout.open()
         }
     }
 }

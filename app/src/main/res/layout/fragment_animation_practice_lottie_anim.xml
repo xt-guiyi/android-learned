@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".ui.center.fragments.AnimationPracticeRootFragment">
 
@@ -18,32 +19,29 @@
                android:layout_height="match_parent"
                android:textSize="20sp"
                android:gravity="center"
-               android:textColor="@color/red"
                android:layout_marginTop="20dp"
-               android:text="使用场景：当你需要移动，缩放或者动画实际的UI组件 (button，title bar 等)来提供与用户的互动时。" />
+               android:text="lottie动画👇" />
 
-           <TextView
+           <com.airbnb.lottie.LottieAnimationView
+               android:id="@+id/lottie_animate_1"
+               android:layout_width="250dp"
+               android:layout_height="250dp"
+               android:layout_gravity="center"
+               app:lottie_loop="true"
+               app:lottie_autoPlay="true"
+               app:lottie_rawRes="@raw/load_animate"/>
+
+           <com.airbnb.lottie.LottieAnimationView
+               android:id="@+id/lottie_animate_2"
                android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:textSize="20sp"
-               android:gravity="center"
-               android:layout_marginTop="20dp"
-               android:text="MotionLayout 的创建是为了弥补布局过渡和复杂运动处理之间的差距。从功能上来说，您可以将其视为属性动画框架、TransitionManager 和 CoordinatorLayout 的混合体。" />
-           <androidx.appcompat.widget.AppCompatButton
-               android:id="@+id/motion_1"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="20dp"
-               android:background="@drawable/background_shape_4"
-               android:padding="10dp"
-               android:stateListAnimator="@null"
-               android:layout_gravity="center"
-               android:textAllCaps="false"
-               android:text="示例1"
-               android:textColor="@color/white" />
+               android:layout_height="200dp"
+               app:lottie_loop="true"
+               app:lottie_autoPlay="true"
+               app:lottie_rawRes="@raw/dog_animate"/>
+
 
            <androidx.appcompat.widget.AppCompatButton
-               android:id="@+id/motion_2"
+               android:id="@+id/lottie_animate_action"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginTop="20dp"
@@ -52,7 +50,7 @@
                android:stateListAnimator="@null"
                android:layout_gravity="center"
                android:textAllCaps="false"
-               android:text="示例2"
+               android:text="暂停动画"
                android:textColor="@color/white" />
 
        </LinearLayout>

@@ -62,5 +62,14 @@ class AnimationPracticeRootFragment : Fragment() {
                 addToBackStack("motionLayoutAnim")
             }
         }
+
+        binding.lottieAnimate.setOnClickListener{
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                setCustomAnimations(R.anim.slider_in_right_enter,R.anim.slider_out_left_exit,R.anim.slider_in_left_enter,R.anim.slider_out_right_exit)
+                replace(R.id.fragment_container_view_animate, AnimationPracticeLottieAnimFragment(),"lottieAnim")
+                addToBackStack("lottieAnim")
+            }
+        }
     }
 }

@@ -79,6 +79,6 @@ dependencies {
     implementation("com.github.getActivity:XXPermissions:18.63")
     // banner控件：https://github.com/youth5201314/banner
     implementation("io.github.youth5201314:banner:2.2.3")
-
-
+    // Lottie动画：https://github.com/airbnb/lottie-android
+    implementation("com.airbnb.android:lottie:6.4.1")
 }

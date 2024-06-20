@@ -17,8 +17,8 @@
         android:layout_height="64dp"
         android:background="@color/black"
         android:text="Button"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="72dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/mt_guideline_1"

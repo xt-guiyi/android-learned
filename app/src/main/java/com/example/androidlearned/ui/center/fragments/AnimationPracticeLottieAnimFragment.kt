@@ -20,26 +20,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.BounceInterpolator
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.commit
-import androidx.transition.AutoTransition
 import com.example.androidlearned.R
 import com.example.androidlearned.databinding.FragmentAnimationPracticeDrawableAnimBinding
-import com.example.androidlearned.databinding.FragmentAnimationPracticeMotionLayoutAnimBinding
+import com.example.androidlearned.databinding.FragmentAnimationPracticeLottieAnimBinding
 import com.example.androidlearned.utils.Display
 
 
-class AnimationPracticeMotionLayoutAnimFragment : Fragment() {
-    lateinit var binding: FragmentAnimationPracticeMotionLayoutAnimBinding
+class AnimationPracticeLottieAnimFragment : Fragment() {
+    lateinit var binding: FragmentAnimationPracticeLottieAnimBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        exitTransition = AutoTransition()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentAnimationPracticeMotionLayoutAnimBinding.inflate(inflater, container, false)
+        binding = FragmentAnimationPracticeLottieAnimBinding.inflate(inflater, container, false)
         init()
         return binding.root
     }
@@ -49,20 +46,17 @@ class AnimationPracticeMotionLayoutAnimFragment : Fragment() {
     }
 
     fun init() {
-        binding.motion1.setOnClickListener {
-            parentFragmentManager.commit {
-                setReorderingAllowed(true)
-                replace(R.id.fragment_container_view_animate, AnimationPracticeMotionLayoutAnimChild1Fragment(),"motionLayoutAnimateChild1")
-                addToBackStack("motionLayoutAnimateChild1")
-            }
-        }
-
-        binding.motion2.setOnClickListener {
-            parentFragmentManager.commit {
-                setReorderingAllowed(true)
-                replace(R.id.fragment_container_view_animate, AnimationPracticeMotionLayoutAnimChild2Fragment(),"motionLayoutAnimateChild2")
-                addToBackStack("motionLayoutAnimateChild2")
+        binding.lottieAnimateAction.setOnClickListener {
+            if(binding.lottieAnimateAction.text == "暂停动画") {
+                binding.lottieAnimateAction.text = "播放动画"
+                binding.lottieAnimate1.pauseAnimation()
+                binding.lottieAnimate2.pauseAnimation()
+            } else {
+                binding.lottieAnimateAction.text = "暂停动画"
+                binding.lottieAnimate1.playAnimation()
+                binding.lottieAnimate2.playAnimation()
             }
         }
     }
+
 }
