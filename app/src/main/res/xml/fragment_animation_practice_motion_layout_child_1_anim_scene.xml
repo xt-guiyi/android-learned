@@ -1,56 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:motion="http://schemas.android.com/tools">
-
-    <ConstraintSet android:id="@+id/start">
-        <Constraint
-            android:id="@id/button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginBottom="40dp"
-            android:rotation="0"
-            app:layout_constraintBottom_toBottomOf="@+id/mt_guideline_1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <!--     修改背景色       -->
-            <CustomAttribute
-                app:attributeName="backgroundColor"
-                app:customColorValue="@color/black" />
-        </Constraint>
-    </ConstraintSet>
-
-    <ConstraintSet android:id="@+id/end">
-        <Constraint
-            android:id="@id/button"
-            android:layout_width="84dp"
-            android:layout_height="84dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="40dp"
-            android:rotation="360"
-            app:layout_constraintBottom_toBottomOf="@+id/mt_guideline_1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-            <!--     修改背景色       -->
-            <CustomAttribute
-                app:attributeName="backgroundColor"
-                app:customColorValue="@color/red" />
-        </Constraint>
-    </ConstraintSet>
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        app:constraintSetEnd="@id/end"
-        app:constraintSetStart="@+id/start"
-        app:duration="1000">
-<!--        -->
-<!--        app:dragDirection="dragRight"-->
-<!--        motion:dragDirection="dragRight"-->
-
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="1000">
+<!--        OnSwipe 的主要属性-->
+<!--        motion:touchAnchorId: 指定触摸锚点所在的视图。触摸锚点是 MotionLayout 用来计算动画进度的参考点。-->
+<!--        motion:touchAnchorSide: 指定触摸锚点的边（left、right、top、bottom）。-->
+<!--        motion:dragDirection: 指定拖动方向（dragRight、dragLeft、dragUp、dragDown）。-->
+<!--        motion:maxVelocity: 指定最大滑动速度。-->
+<!--        motion:maxAcceleration: 指定最大滑动加速度。-->
+<!--        motion:onTouchUp: 指定当用户抬起手指时动画的行为（touchUpStop、touchUpComplete、touchUpCompleteIfSnapElseStop）。-->
+<!--        motion:springBoundary: 指定动画到达边界时的行为（overshoot、bounceStart、bounceEnd、bounceBoth）。-->
+<!--        motion:springDamping: 指定动画的阻尼系数。-->
+<!--        motion:springMass: 指定动画的质量。-->
+<!--        motion:springStiffness: 指定动画的刚度。-->
+<!--        motion:springStopThreshold: 指定动画停止的阈值。-->
+<!--        OnSwipe 的作用-->
+<!--        通过在 MotionScene 文件中定义 OnSwipe 元素，你可以创建各种基于滑动的手势交互效果。 例如， 你可以让视图在用户向右滑动时向右移动， 或者在用户向上滑动时向上移动。-->
         <OnSwipe
-            app:touchAnchorId="@+id/button"
-            app:touchAnchorSide="right"
-            app:dragDirection="dragRight"
-            />
+            motion:touchAnchorId="@+id/mt_1_button_1"
+            motion:touchAnchorSide="right"
+            motion:dragDirection="dragRight" />
+
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:rotation="-45"
+                android:scaleX="2"
+                android:scaleY="2"
+                motion:framePosition="50"
+                motion:motionTarget="@+id/mt_1_button_2" />
+<!--            KeyPosition 的主要属性-->
+<!--            motion:framePosition: 指定 KeyPosition 在动画中的时间点，取值范围为 0 到 100，表示动画的百分比进度。-->
+<!--            motion:keyPositionType: 指定 KeyPosition 的类型，可以是以下值之一：-->
+<!--            parentRelative：相对于父布局定位。-->
+<!--            deltaRelative：相对于前一个关键帧定位。-->
+<!--            pathRelative：沿着路径定位。-->
+<!--            motion:percentX: 指定视图在水平方向上的位置，取值范围为 0 到 1，表示相对于父布局的宽度百分比。-->
+<!--            motion:percentY: 指定视图在垂直方向上的位置，取值范围为 0 到 1，表示相对于父布局的高度百分比。-->
+<!--            motion:percentWidth: 指定视图的宽度，取值范围为 0 到 1，表示相对于父布局的宽度百分比。-->
+<!--            motion:percentHeight: 指定视图的高度，取值范围为 0 到 1，表示相对于父布局的高度百分比。-->
+<!--            motion:rotation: 指定视图的旋转角度。-->
+<!--            motion:translationX: 指定视图在水平方向上的平移距离。-->
+<!--            motion:translationY: 指定视图在垂直方向上的平移距离。-->
+<!--            motion:scaleX: 指定视图的水平缩放比例。-->
+<!--            motion:scaleY: 指定视图的垂直缩放比例。-->
+<!--            KeyPosition 的作用-->
+<!--            通过在 MotionScene 文件中定义 KeyPosition，你可以创建更复杂的动画效果，例如让视图沿着曲线路径移动， 或者在动画过程中改变视图的大小和旋转。-->
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@+id/mt_1_button_2"
+                motion:percentY="-0.3" />
+        </KeyFrameSet>
+
+        <KeyFrameSet>
+<!--            <KeyCycle> 元素用于定义循环动画效果，例如让视图在动画过程中不断旋转、 缩放或平移。 它允许你为视图的属性指定周期性变化。-->
+<!--            <KeyCycle> 的主要属性-->
+<!--            motion:framePosition: 指定 <KeyCycle> 在动画中的时间点，取值范围为 0 到 100，表示动画的百分比进度。-->
+<!--            motion:targetId: 指定应用 <KeyCycle> 效果的目标视图。-->
+<!--            motion:waveShape: 指定动画的波形，可以是以下值之一：-->
+<!--            sin：正弦波。-->
+<!--            square：方波。-->
+<!--            triangle：三角波。-->
+<!--            sawtooth：锯齿波。-->
+<!--            reverseSawtooth：反向锯齿波。-->
+<!--            cos：余弦波。-->
+<!--            bounce：弹跳波。-->
+<!--            motion:wavePeriod: 指定动画的周期，即完成一个完整循环所需的时间。-->
+<!--            motion:waveOffset: 指定动画的偏移量，即波形的起始位置。-->
+<!--            motion:wavePhase: 指定动画的相位，即波形的水平偏移量。-->
+<!--            motion:alpha: 指定视图的透明度，取值范围为 0 到 1。-->
+<!--            motion:elevation: 指定视图的海拔高度。-->
+<!--            motion:rotation: 指定视图的旋转角度。-->
+<!--            motion:translationX: 指定视图在水平方向上的平移距离。-->
+<!--            motion:translationY: 指定视图在垂直方向上的平移距离。-->
+<!--            motion:scaleX: 指定视图的水平缩放比例。-->
+<!--            motion:scaleY: 指定视图的垂直缩放比例。-->
+<!--            motion:progress: 指定动画的进度，取值范围为 0 到 1-->
+            <KeyCycle
+                android:translationY="50dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/mt_1_button_3"
+                motion:waveOffset="0"
+                motion:wavePeriod="0"
+                motion:waveShape="sin" />
+            <KeyCycle
+                android:translationY="50dp"
+                motion:framePosition="50"
+                motion:motionTarget="@id/mt_1_button_3"
+                motion:waveOffset="0"
+                motion:wavePeriod="1"
+                motion:waveShape="sawtooth" />
+            <KeyCycle
+                android:translationY="50dp"
+                motion:framePosition="0"
+                motion:motionTarget="@id/mt_1_button_3"
+                motion:waveOffset="0"
+                motion:wavePeriod="0"
+                motion:waveShape="bounce" />
+        </KeyFrameSet>
     </Transition>
+<!--开始状态-->
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/mt_1_button_1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:rotation="0"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_1"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" motion:transitionEasing="linear">
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/mt_1_button_2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:rotation="0"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_2"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/mt_guideline_1" >
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/mt_1_button_3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:rotation="0"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_3"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/mt_guideline_2" >
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+    </ConstraintSet>
+<!--结束状态-->
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/mt_1_button_1"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_1"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/red" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/mt_1_button_2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/mt_guideline_1" >
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/red" />
+        </Constraint>
+
+
+        <Constraint
+            android:id="@+id/mt_1_button_3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="360"
+            motion:layout_constraintBottom_toBottomOf="@+id/mt_guideline_3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/mt_guideline_2" >
+            <!--     修改背景色       -->
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/red" />
+        </Constraint>
+    </ConstraintSet>
+
 </MotionScene>
