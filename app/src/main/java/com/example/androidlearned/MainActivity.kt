@@ -1,16 +1,11 @@
 package com.example.androidlearned
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.forEach
-import androidx.core.view.get
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.androidlearned.databinding.ActivityMainBinding
-import com.example.androidlearned.customNavgination.FragmentNavigator
 import com.example.androidlearned.utils.CommonCode
 import com.example.androidlearned.utils.Display
 import com.hjq.toast.Toaster

@@ -22,11 +22,13 @@ import com.example.androidlearned.ui.center.activitys.FragPracticeActivity
 import com.example.androidlearned.ui.center.activitys.GesturePracticeActivity
 import com.example.androidlearned.ui.center.activitys.LocalStorageActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
+import com.example.androidlearned.ui.center.activitys.RoomPracticeActivity
 import com.example.androidlearned.ui.center.activitys.ServicePracticeActivity
 import com.example.androidlearned.ui.center.activitys.SoftKeyboardActivity
 import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
 import com.example.androidlearned.ui.center.activitys.TouchPracticeActivity
 import com.example.androidlearned.ui.center.activitys.WindowManageActivity
+import com.example.androidlearned.ui.center.activitys.WorkManagerPracticeActivity
 
 
 class CenterFragment : Fragment() {
@@ -77,6 +79,9 @@ class CenterFragment : Fragment() {
                 15 -> Intent(requireContext(), GesturePracticeActivity::class.java)
                 16 -> Intent(requireContext(), CustomViewPracticeActivity::class.java)
                 17 -> Intent(requireContext(), AnimationPracticeActivity::class.java)
+                18 -> Intent(requireContext(), AnimationPracticeActivity::class.java)
+                19 -> Intent(requireContext(), WorkManagerPracticeActivity::class.java)
+                20 -> Intent(requireContext(), RoomPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {

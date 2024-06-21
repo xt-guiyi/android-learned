@@ -28,6 +28,12 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
         <activity
+            android:name=".ui.center.activitys.RoomPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.center.activitys.WorkManagerPracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.center.activitys.AnimationPracticeActivity"
             android:exported="false" />
         <activity

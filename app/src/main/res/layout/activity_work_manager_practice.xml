@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.center.activitys.AuthorizationManageActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitle="注意：此库在国内手机不可用，国外手机支持"
+        app:subtitleCentered="true"
+        app:title="WorkManager 使用"
+        app:titleCentered="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:autoLink="all"
+        android:text="执行结果在控制台"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wm_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="开始任务(立即执行,必须立即开始且很快就完成的任务，可以加急。)"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wm_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="开始任务(可延期执行,延期开始并且可以定期运行的预定任务。)"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wm_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/background_shape_4"
+        android:padding="10dp"
+        android:stateListAnimator="@null"
+        android:text="开始任务(长时间运行的任务,运行时间可能较长（可能超过 10 分钟）的任务。)"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="348dp"
+        android:autoLink="all"
+        android:textAlignment="center"
+        android:text="具体实现文档：https://developer.android.com/develop/background-work/background-tasks/persistent/how-to/long-running?hl=zh-cn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
