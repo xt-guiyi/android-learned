@@ -11,7 +11,6 @@ import com.example.androidlearned.entity.User
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
 }
-
 object AppDatabaseSingleton {
     @Volatile private var instance: AppDatabase? = null
 

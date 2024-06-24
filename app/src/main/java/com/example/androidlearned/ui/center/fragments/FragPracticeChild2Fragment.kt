@@ -1,20 +1,16 @@
 package com.example.androidlearned.ui.center.fragments
 
 import android.annotation.SuppressLint
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.app.SharedElementCallback
 import androidx.core.view.ViewCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
-import androidx.transition.Explode
 import androidx.transition.Slide
 import androidx.transition.Transition
 import androidx.transition.TransitionInflater
@@ -69,7 +65,7 @@ class FragPracticeChild2Fragment : Fragment() {
             .inflateTransition(R.transition.shared_image)
         sharedElementEnterTransition = transitionClient
         // 监听转换动画结束
-        transitionClient.addListener(object : TransitionListenerAdapter() {
+        transitionClient?.addListener(object : TransitionListenerAdapter() {
             override fun onTransitionEnd(transition: Transition) {
                 transitionClient.removeListener(this)
                 mainView.findViewById<TextView>(R.id.child_2_animate_text).post{
