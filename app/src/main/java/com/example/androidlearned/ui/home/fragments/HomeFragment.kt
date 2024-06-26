@@ -67,7 +67,10 @@ class HomeFragment : Fragment() {
                 22-> view.findNavController().navigate(R.id.action_homeFragment_to_viewPageActivity)
                 23-> view.findNavController().navigate(R.id.action_homeFragment_to_recycleViewActivity)
                 24-> view.findNavController().navigate(R.id.action_homeFragment_to_otherWidgetActivity)
-                25 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
+                25-> view.findNavController().navigate(R.id.action_homeFragment_to_otherWidgetActivity)
+                26-> view.findNavController().navigate(R.id.action_homeFragment_to_otherWidgetActivity)
+                27-> view.findNavController().navigate(R.id.action_homeFragment_to_otherWidgetActivity)
+                28 -> view.findNavController().navigate(R.id.action_homeFragment_to_coordinationLayoutActivity)
 
             }
         }

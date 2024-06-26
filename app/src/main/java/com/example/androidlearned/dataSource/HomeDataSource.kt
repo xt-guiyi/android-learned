@@ -35,10 +35,10 @@ class HomeDataSource {
             homeLayoutInfos.add(CardInfo(22,"ViewPage控件","学习ViewPage控件的各种使用方式"))
             homeLayoutInfos.add(CardInfo(23,"RecycleView列表","学习RecycleView控件的各种使用方式"))
             homeLayoutInfos.add(CardInfo(24,"其他控件","学习一些杂类控件的各种使用方式"))
-//            homeLayoutInfos.add(CardInfo(24,"WebView控件","学习一些杂类控件的各种使用方式"))
-//            homeLayoutInfos.add(CardInfo(24,"评分控件","学习一些杂类控件的各种使用方式"))
-//            homeLayoutInfos.add(CardInfo(24,"骨架屏，加载页","学习一些杂类控件的各种使用方式"))
-            homeLayoutInfos.add(CardInfo(25,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
+            homeLayoutInfos.add(CardInfo(25,"WebView控件","学习WebView控件"))
+            homeLayoutInfos.add(CardInfo(26,"评分控件","学习评分控件"))
+            homeLayoutInfos.add(CardInfo(27,"骨架屏，加载页","学习骨架屏，加载页"))
+            homeLayoutInfos.add(CardInfo(28,"协调者布局","学习协调者布局的使用，学习scrollFlags、behavior的用法等等"))
 //             for (i in 1..20) {
 //                 homeLayoutInfos.add(CardInfo("标题${i}", "描述${i}"))
 //             }

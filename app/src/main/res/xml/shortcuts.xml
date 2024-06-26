@@ -1,0 +1,24 @@
+<?xml version ="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  定义静态快捷方式 -->
+    <!-- Add shortcuts that launch your app to a specific screen or task. -->
+    <!-- Learn more at https://developer.android.com/guide/topics/ui/shortcuts/creating-shortcuts -->
+    <shortcut android:shortcutId="START_TWO_ACTIVITY"
+        android:enabled="true"
+        android:shortcutShortLabel="@string/short_cut_one_short_label"
+        android:shortcutLongLabel="@string/short_cut_one_long_label"
+        android:shortcutDisabledMessage="@string/short_cut_disable_message"
+        android:icon="@drawable/baseline_radio_button_unchecked_24">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.example.androidlearned.ui.center.activitys.FileIOActivity"
+            android:targetPackage="com.example.androidlearned" />
+    </shortcut>
+
+    <!-- Integrate with Google Assistant App Actions for launching your app with various voice commands. -->
+    <!-- Learn more at: https://developers.google.com/assistant/app/overview -->
+    <!-- <capability android:name="actions.intent.OPEN_APP_FEATURE"> -->
+    <!--     Provide query fulfillment instructions for this capability, or bind it to a shortcut. -->
+    <!--     Learn more at: https://developers.google.com/assistant/app/action-schema -->
+    <!-- </capability> -->
+</shortcuts>
