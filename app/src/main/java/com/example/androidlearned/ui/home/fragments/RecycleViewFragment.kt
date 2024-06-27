@@ -41,6 +41,14 @@ class RecycleViewFragment : Fragment() {
         binding.recycleViewExample5.setOnClickListener{
             it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample5Fragment)
         }
+
+        binding.recycleViewExample6.setOnClickListener{
+            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample6Fragment)
+        }
+
+        binding.recycleViewExample7.setOnClickListener{
+            it.findNavController().navigate(R.id.action_recycleViewFragment_to_recycleViewExample7Fragment)
+        }
     }
 
 }

@@ -45,6 +45,21 @@
             app:exitAnim="@anim/slider_out_left_exit"
             app:popEnterAnim="@anim/slider_in_left_enter"
             app:popExitAnim="@anim/slider_out_right_exit"/>
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample6Fragment"
+            app:destination="@id/recycleViewExample6Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
+
+        <action
+            android:id="@+id/action_recycleViewFragment_to_recycleViewExample7Fragment"
+            app:destination="@id/recycleViewExample7Fragment"
+            app:enterAnim="@anim/slider_in_right_enter"
+            app:exitAnim="@anim/slider_out_left_exit"
+            app:popEnterAnim="@anim/slider_in_left_enter"
+            app:popExitAnim="@anim/slider_out_right_exit"/>
     </fragment>
     <fragment
         android:id="@+id/recycleViewExample4Fragment"
@@ -71,4 +86,12 @@
         android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample5Fragment"
         android:label="fragment_recycle_view_example5"
         tools:layout="@layout/fragment_recycle_view_example5" />
+    <fragment
+        android:id="@+id/recycleViewExample6Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample6Fragment"
+        android:label="RecycleViewExample6Fragment" />
+    <fragment
+        android:id="@+id/recycleViewExample7Fragment"
+        android:name="com.example.androidlearned.ui.home.fragments.RecycleViewExample7Fragment"
+        android:label="RecycleViewExample7Fragment" />
 </navigation>
