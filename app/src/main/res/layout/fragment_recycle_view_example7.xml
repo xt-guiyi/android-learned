@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             app:title="示例7"
             app:titleCentered="true"
             android:background="@color/primary_color"/>
@@ -24,8 +24,18 @@
           android:layout_height="match_parent"
           app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
           <androidx.recyclerview.widget.RecyclerView
-              android:id="@+id/refresh_and_load_more_list"
+              android:id="@+id/rv_list"
               android:layout_width="match_parent"
               android:layout_height="500dp"/>
       </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:indeterminate="false"
+        android:indeterminateTint="@color/bilibili_pink"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

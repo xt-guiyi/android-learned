@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class NetworkPracticeActivity : AppCompatActivity() {
     lateinit var binding: ActivityNetworkPracticeBinding
-    val apiClent: MokeAPi = ApiConfig.retrofit.create(MokeAPi::class.java)
+    private val apiClient: MokeAPi = MokeAPi.create()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNetworkPracticeBinding.inflate(layoutInflater)
@@ -22,6 +22,7 @@ class NetworkPracticeActivity : AppCompatActivity() {
     }
 
     fun init() {
+        // okhttp用法
         binding.net1.setOnClickListener {
            lifecycleScope.launch(Dispatchers.IO) {
                val result = OkHttpUtil.get("https://www.wanandroid.com/hotkey/json")
@@ -29,11 +30,11 @@ class NetworkPracticeActivity : AppCompatActivity() {
            }
         }
 
-
+        // retrofit用法
         binding.net2.setOnClickListener {
             lifecycleScope.launch(Dispatchers.IO) {
                 try {
-                    val result =  apiClent.getSay("不填也可以")
+                    val result =  apiClient.getHeatWord("不填也可以")
                     Toaster.show(result.data[0])
                 }catch (e:Exception){
                     e.printStackTrace()
