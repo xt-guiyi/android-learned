@@ -1,12 +1,12 @@
 package com.example.androidlearned.ui.home.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -15,18 +15,24 @@ import androidx.paging.LoadState
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidlearned.R
+import com.example.androidlearned.adapters.FooterAdapter
 import com.example.androidlearned.adapters.RecycleViewExample7Adapter
 import com.example.androidlearned.databinding.FragmentRecycleViewExample7Binding
 import com.example.androidlearned.entity.Article
 import com.example.androidlearned.viewModal.ExampleViewModel
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.hjq.toast.Toaster
+import com.scwang.smart.refresh.header.ClassicsHeader
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 class RecycleViewExample7Fragment : Fragment() {
     lateinit var binding: FragmentRecycleViewExample7Binding
     lateinit var layout: LinearLayoutManager
-    private val viewModel by viewModels<ExampleViewModel>()
+//    private val viewModel by viewModels<ExampleViewModel>() // 默认创建方式
+    private val viewModel by viewModels<ExampleViewModel> { ExampleViewModel.Factory } // 工厂函数创建方式
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +47,6 @@ class RecycleViewExample7Fragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun init() {
         val adapter = RecycleViewExample7Adapter(object : DiffUtil.ItemCallback<Article>() {
             override fun areContentsTheSame(oldItem: Article, newItem: Article): Boolean {
@@ -49,84 +54,72 @@ class RecycleViewExample7Fragment : Fragment() {
             }
 
             override fun areItemsTheSame(oldItem: Article, newItem: Article): Boolean {
+                Log.i("toaster", "areItemsTheSame: ${oldItem.id == newItem.id}")
                 return oldItem.id == newItem.id
             }
 
         })
+
         // 设置布局
         layout = LinearLayoutManager(requireContext())
         binding.rvList.layoutManager = layout
         // 设置适配器
-        binding.rvList.adapter = adapter
+        binding.rvList.adapter = adapter.withLoadStateFooter(FooterAdapter(adapter::retry)) // 添加页脚加载状态
         // 添加分割线
         val divide = MaterialDividerItemDecoration(requireContext(), LinearLayoutManager.VERTICAL)
         divide.dividerColor = ResourcesCompat.getColor(resources,R.color.silver_2,null)
         divide.isLastItemDecorated = false
         binding.rvList.addItemDecoration(divide)
 
-        lifecycleScope.launch {
+        lifecycleScope.launch(Dispatchers.IO) {
            repeatOnLifecycle(Lifecycle.State.STARTED) {
-               viewModel.ExamplePagingDataFlow.collect { pagingData ->
-                   adapter.submitData(pagingData)
-               }
+                   delay(500) // 延迟500秒，等待进入动画完成，不然进入动画会卡顿
+                   viewModel.examplePagingDataFlow.collect { pagingData ->
+                       // 提交数据
+                       adapter.submitData(pagingData)
+                   }
            }
         }
 
-        adapter.addLoadStateListener {
-            when (it.refresh) {
-                is LoadState.NotLoading -> {
-                    binding.progressBar.visibility = View.INVISIBLE
-                    binding.rvList.visibility = View.VISIBLE
-                }
-                is LoadState.Loading -> {
-                    binding.progressBar.visibility = View.VISIBLE
-                    binding.rvList.visibility = View.INVISIBLE
-                }
-                is LoadState.Error -> {
+
+        // 加载状态监听,推荐写法
+        lifecycleScope.launch(Dispatchers.Main) {
+            adapter.loadStateFlow.collectLatest {
+                val isListEmpty = it.refresh is LoadState.NotLoading && adapter.itemCount == 0 // 判断是否为空，说明一条数据都没有，这时应该显示空页面图片
+                binding.progressBar.visibility = if (it.refresh is LoadState.Loading) View.VISIBLE else View.INVISIBLE
+                binding.rvList.visibility = if (it.refresh is LoadState.Loading) View.INVISIBLE else View.VISIBLE
+                if(it.refresh is LoadState.Error) {
                     val state = it.refresh as LoadState.Error
-                    binding.progressBar.visibility = View.INVISIBLE
                     Toaster.show("加载错误: ${state.error.message}")
                 }
+
             }
         }
-//        // 下拉刷新
-//        binding.swipeRefresh.setColorSchemeColors(requireContext().resources.getColor(R.color.bilibili_pink,null))
-//        binding.swipeRefresh.setOnRefreshListener {
-//            Handler(requireContext().mainLooper).postDelayed({
-//                Toaster.show("刷新完成")
-//                pageSize = 20
-//                currentPage = 1
-//                data.clear()
-//                data.add("新增项")
-//                data.addAll(HomeDataSource.loadRecycleViewListByPage(currentPage,pageSize))
-//                adapter.notifyDataSetChanged()
-//                binding.swipeRefresh.isRefreshing = false
-//            },2000)
-//        }
-//
-//        // 上拉加载,简单实现，没有任何加载样式
-//        binding.refreshAndLoadMoreList.addOnScrollListener(object : RecyclerView.OnScrollListener(){
-//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-//                super.onScrollStateChanged(recyclerView, newState)
-//                val lastCompleteViewItemPosition  =  layout.findLastCompletelyVisibleItemPosition()
-//                val pages = pageTotals / pageSize
-//                if(lastCompleteViewItemPosition == adapter.itemCount - 1 && pages != currentPage) {
-//                    currentPage++
-//                    val newData = HomeDataSource.loadRecycleViewListByPage(currentPage,pageSize)
-//                    data.addAll(newData)
-//                    adapter.notifyDataSetChanged()
-//                    Toaster.show("加载完成")
-//                }else if(lastCompleteViewItemPosition == adapter.itemCount - 1 && pages == currentPage) {
-//                    Toaster.show("没有数据辣")
+
+        // 加载状态监听, 另一种写法
+//        adapter.addLoadStateListener {
+//            when (it.refresh) {
+//                is LoadState.NotLoading -> {
+//                    binding.progressBar.visibility = View.INVISIBLE
+//                    binding.rvList.visibility = View.VISIBLE
+//                }
+//                is LoadState.Loading -> {
+//                    binding.progressBar.visibility = View.VISIBLE
+//                    binding.rvList.visibility = View.INVISIBLE
+//                }
+//                is LoadState.Error -> {
+//                    val state = it.refresh as LoadState.Error
+//                    binding.progressBar.visibility = View.INVISIBLE
+//                    Toaster.show("加载错误: ${state.error.message}")
 //                }
 //            }
-//
-//            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-//                super.onScrolled(recyclerView, dx, dy)
-//                Log.i("滚动：",dy.toString())
-//            }
-//        })
-
+//        }
+        val smRefreshLayout = binding.smRefreshLayout
+        smRefreshLayout.setRefreshHeader(ClassicsHeader(requireContext()))
+        smRefreshLayout.setOnRefreshListener { refreshLayout ->
+            adapter.refresh()
+            refreshLayout.finishRefresh()
+        }
     }
 
 }

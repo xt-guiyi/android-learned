@@ -18,16 +18,21 @@
             android:background="@color/primary_color"/>
     </com.google.android.material.appbar.AppBarLayout>
 
-      <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-          android:id="@+id/swipe_refresh"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-          <androidx.recyclerview.widget.RecyclerView
-              android:id="@+id/rv_list"
-              android:layout_width="match_parent"
-              android:layout_height="500dp"/>
-      </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/sm_refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
 
     <ProgressBar
         android:id="@+id/progress_bar"

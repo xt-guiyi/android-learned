@@ -3,9 +3,9 @@
     <string name="bottom_nav_home">控件</string>
     <string name="bottom_nav_me">案例库</string>
     <string name="bottom_nav_center">进阶</string>
-    <string name="short_cut_one_short_label" >静态快捷方式</string>
-    <string name="short_cut_one_long_label" >静态快捷方式</string>
-    <string name="short_cut_disable_message" >快捷方式停用啦</string>
+    <string name="short_cut_one_short_label">静态快捷方式</string>
+    <string name="short_cut_one_long_label">静态快捷方式</string>
+    <string name="short_cut_disable_message">快捷方式停用啦</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">空fragment</string>
 </resources>

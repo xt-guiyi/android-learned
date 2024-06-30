@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +14,6 @@ import android.widget.MediaController
 import androidx.fragment.app.Fragment
 import com.example.androidlearned.databinding.FragmentOtherWidgetBinding
 import com.hjq.toast.Toaster
-import java.time.ZoneId
 import java.util.TimeZone
 
 
@@ -59,7 +57,7 @@ class OtherWidgetFragment : Fragment() {
             }
         }
         // videoView
-        binding.videoView.setVideoURI(Uri.parse("https://vdept3.bdstatic.com/mda-pf67yz864q7avwdh/720p/h264/1686116258113519827/mda-pf67yz864q7avwdh.mp4?v_from_s=hkapp-haokan-hnb&auth_key=1713631564-0-0-38ceaa34590bacf63a12dd67990058ed&bcevod_channel=searchbox_feed&pd=1&cr=2&cd=0&pt=3&logid=2764954496&vid=6224617423035670594&klogid=2764954496&abtest=101830_2-102148_2-17451_2-3000225_1"))
+        binding.videoView.setVideoURI(Uri.parse("https://videos.cubox.pro/iw3rni/file/2024062923083169063/mda-qdq8qnmw9x5wm9jx.mp4"))
         val mediaController =MediaController(requireActivity())
         mediaController.setAnchorView(binding.videoView)
         binding.videoView.setMediaController(mediaController)

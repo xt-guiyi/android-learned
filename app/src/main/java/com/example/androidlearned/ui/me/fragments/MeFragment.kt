@@ -13,8 +13,8 @@ import com.example.androidlearned.dataSource.MeDataSource
 import com.example.androidlearned.databinding.FragmentMeBinding
 import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivity
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
-import com.example.androidlearned.ui.center.activitys.SystemBarManageActivity
 import com.example.androidlearned.ui.center.activitys.WindowManageActivity
+import com.example.androidlearned.ui.me.acticitys.AudioPracticeActivity
 
 
 class MeFragment : Fragment() {
@@ -46,7 +46,7 @@ class MeFragment : Fragment() {
         adapter.setOnClickListener { layoutInfo,_ ->
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             val intent = when(layoutInfo.id) {
-                1 -> Intent(requireContext(), SystemBarManageActivity::class.java)
+                1 -> Intent(requireContext(), AudioPracticeActivity::class.java)
                 2 -> Intent(requireContext(), NotificationManageActivity::class.java)
                 3 -> Intent(requireContext(), WindowManageActivity::class.java)
                 4 -> Intent(requireContext(), AuthorizationManageActivity::class.java)
