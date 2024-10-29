@@ -15,6 +15,8 @@ import com.example.androidlearned.ui.center.activitys.AuthorizationManageActivit
 import com.example.androidlearned.ui.center.activitys.NotificationManageActivity
 import com.example.androidlearned.ui.center.activitys.WindowManageActivity
 import com.example.androidlearned.ui.me.acticitys.AudioPracticeActivity
+import com.example.androidlearned.ui.me.acticitys.BottomDialogPracticeActivity
+import com.example.androidlearned.ui.me.acticitys.DownMenuPracticeActivity
 
 
 class MeFragment : Fragment() {
@@ -47,10 +49,8 @@ class MeFragment : Fragment() {
             Toast.makeText(requireContext(), "点击了：${layoutInfo.title}", Toast.LENGTH_SHORT).show()
             val intent = when(layoutInfo.id) {
                 1 -> Intent(requireContext(), AudioPracticeActivity::class.java)
-                2 -> Intent(requireContext(), NotificationManageActivity::class.java)
-                3 -> Intent(requireContext(), WindowManageActivity::class.java)
-                4 -> Intent(requireContext(), AuthorizationManageActivity::class.java)
-                5 -> Intent(requireContext(), AuthorizationManageActivity::class.java)
+                2 -> Intent(requireContext(), DownMenuPracticeActivity::class.java)
+                3 -> Intent(requireContext(), BottomDialogPracticeActivity::class.java)
                 else -> null
             }
             intent?.let {

@@ -26,6 +26,12 @@
         android:theme="@style/Theme.AndroidLearned"
         tools:targetApi="34">
         <activity
+            android:name=".ui.me.acticitys.BottomDialogPracticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.me.acticitys.DownMenuPracticeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.me.acticitys.AudioPracticeActivity"
             android:exported="false" />
         <activity

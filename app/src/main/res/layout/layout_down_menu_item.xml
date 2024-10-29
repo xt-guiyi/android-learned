@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:maxHeight="500dp"
+            app:layout_constraintHeight_max="500dp"
+            app:layout_constrainedHeight="true"
+            android:orientation="vertical"
+            android:paddingBottom="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/divider">
+            <LinearLayout
+                android:id="@+id/filter_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingHorizontal="10dp"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="这是下拉菜单内容,会出现在按钮下方"
+                    android:layout_gravity="center"
+                    android:textSize="32sp"
+                    />
+                <!--            <include layout="@layout/include_manuscripts_filter_list_item" />-->
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="重置"
+            android:textColor="#FFFFFF"
+            android:stateListAnimator="@null"
+            android:background="#BBBBBB"
+            app:layout_constraintEnd_toStartOf="@+id/confirm_buttom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_buttom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="确认"
+            android:textColor="#FFFFFF"
+            android:stateListAnimator="@null"
+            android:background="#1989FA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cancel_button"
+            app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:id="@+id/mark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4d000000"/>
+</LinearLayout>

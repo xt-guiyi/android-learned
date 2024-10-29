@@ -210,4 +210,18 @@
         <item name="android:minHeight">32dp</item>
         <item name="android:maxHeight">32dp</item>
     </style>
+
+
+    <!-- dialog样式   -->
+    <style name="CustomDialog1" parent="Theme.AppCompat.Light.Dialog">
+        <!-- true（默认值）：对话框会以浮动窗口的形式显示，通常会有圆角和阴影效果，并且不会占满整个屏幕。-->
+        <!-- false：对话框将作为一个普通的 Activity 窗口显示，可以占满整个屏幕或根据需要自定义大小。此时，它不会表现出浮动窗口的特性 -->
+        <!-- 如果需要的是一个展示在中间的弹窗，那么为ture就可以了-->
+        <!--  如果需要的是底部弹框，比如评论框，那么可以设置为false,然后做一些其他适配，这样能适配底部导航栏颜色一致，达到最好效果，当然如果嫌麻烦也可不适配，直接设置为ture,就不管了，虽然会不美观 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- dialog外点击关闭-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!--  兼容安卓R以下必须设置   -->
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
 </resources>
